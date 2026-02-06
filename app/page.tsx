@@ -20,6 +20,7 @@ export default function HomePage() {
           "Promos",
           "Player Trust & Safety",
           "Help",
+          
         ].map((item) => (
           <button
             key={item}
