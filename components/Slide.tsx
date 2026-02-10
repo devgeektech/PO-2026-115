@@ -1,0 +1,71 @@
+"use client";
+import Image from "next/image";
+import { Slide } from "@/data/SlideData";
+
+type Props = {
+  slide: Slide;
+};
+
+export default function SlideCard({ slide }: Props) {
+  return (
+    <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-black">
+      <div className="pt-3 pl-3 h-full w-full relative">
+        {/* Badges */}
+        {(slide.isNew || slide.isExclusive) && (
+          <div className="absolute top-0 left-0 z-10 flex gap-2">
+            {slide.isNew && (
+              <span className="bg-[#2A9CFF] border-2 border-[#006ECD] text-white text-[1rem] px-5 py-2 rounded-full">
+                {slide.isNew}
+              </span>
+            )}
+            {slide.isExclusive && (
+              <span className="bg-[#7A03AE] border-2 border-[#460065] text-white text-[1rem] px-5 py-2 rounded-full">
+                {slide.isNew}
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* Media (Video OR Image) */}
+        {(slide.video || slide.image) && (
+          <>
+            {slide.video && (
+              <video
+                src={slide.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[350px] object-cover rounded-[5px]"
+              />
+            )}
+
+            {!slide.video && slide.image && (
+              <Image
+                src={slide.image}
+                alt={slide.title ?? "slide image"}
+                width={300}
+                height={400}
+                className="w-full h-full object-cover rounded-[5px]"
+              />
+            )}
+          </>
+        )}
+
+        {/* Content */}
+        {(slide.title || slide.provider) && (
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            {slide.title && (
+              <h3 className="text-white font-bold text-sm">{slide.title}</h3>
+            )}
+            {slide.provider && (
+              <p className="text-gray-300 text-xs uppercase">
+                {slide.provider}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
+import { Ubuntu } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import DashboardShell from "@/components/DashboardShell";
 
+/* ---------------- Google Font ---------------- */
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  display: "swap",
+  variable: "--font-ubuntu",
+});
+
+/* ---------------- Metadata ---------------- */
 export const metadata: Metadata = {
   metadataBase: new URL("https://yourdomain.com"),
   title: {
@@ -30,6 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
+/* ---------------- Root Layout ---------------- */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,9 +50,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        <main className="max-w-5xl mx-auto p-6">{children}</main>
+      <body className={ubuntu.variable}>
+        <DashboardShell>{children}</DashboardShell>
       </body>
     </html>
   );

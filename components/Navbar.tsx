@@ -1,61 +1,94 @@
+import { Menu, Search } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/public/images/logo777.png";
+import MarqueeSlider from "./MarqueeSlider";
 
-export default function Navbar() {
+export default function Navbar({
+  collapsed,
+  onToggle,
+  onMobileToggle,
+}: {
+  collapsed: boolean;
+  onToggle: () => void;
+  onMobileToggle: () => void;
+}) {
   return (
-    <nav className="sticky top-0 z-50 bg-[#0b0b0f]/90 backdrop-blur border-b border-white/10">
-      <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo / Brand */}
-        <Link
-          href="/"
-          className="text-lg font-extrabold tracking-wide text-orange-400"
-        >
-          ONLINE SLOTS
-        </Link>
+    <header className="h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] px-4">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={onMobileToggle}
+        className="lg:hidden text-gray-300 hover:text-white"
+      >
+        <Menu size={22} />
+      </button>
 
-        {/* Navigation */}
-        <div className="flex items-center gap-6 text-sm font-medium">
-          <Link
-            href="/"
-            className="text-white/80 hover:text-white transition"
-          >
-            Home
-          </Link>
-          <Link
-            href="/recommended"
-            className="text-white/80 hover:text-white transition"
-          >
-            Recommended
-          </Link>
-          <Link
-            href="/promotions"
-            className="text-white/80 hover:text-white transition"
-          >
-            Promotions
-          </Link>
-          <Link
-            href="/help"
-            className="text-white/80 hover:text-white transition"
-          >
-            Help
-          </Link>
-        </div>
+      {/* Desktop Collapse Button */}
+      <button
+        onClick={onToggle}
+        className="hidden lg:block text-gray-300 hover:text-white cursor-pointer"
+      >
+        <Menu size={20} />
+      </button>
 
-        {/* Actions */}
-        <div className="flex items-center gap-3">
-          <Link
-            href="/login"
-            className="text-sm font-semibold text-white/80 hover:text-white transition"
+      <Link href="/" className="flex items-center gap-3">
+        <Image
+          width={109}
+          height={90}
+          className="min-w-[109px]"
+          src={Logo}
+          alt="Logo"
+        />
+      </Link>
+      <div className="">
+        {/* <div className="marquee">
+          <div className="marquee__inner">
+            <span className="">
+              JUWA, MILKWAY, FIREKIRIN, ORIONSTAR, GAME VAULT, VEGASSWEEP,
+              VBLINK, ULTRAPANDA, PANDAMASTER, RIVERSWEEPS
+            </span>
+          </div>
+        </div> */}
+        {/* <div className="marquee-container">
+          <Swiper
+            modules={[Autoplay]}
+            loop={true}
+            speed={5000} // Adjust speed (ms) for transition duration
+            slidesPerView="auto" // Allows slides to fit their content width
+            spaceBetween={30}
+            allowTouchMove={false} // Makes it non-interactive like a marquee
+            autoplay={{
+              delay: 0, // No delay between transitions
+              disableOnInteraction: false,
+            }}
+            className="my-marquee"
           >
-            Login
-          </Link>
-          <Link
-            href="/signup"
-            className="rounded-lg bg-orange-500 px-4 py-2 text-sm font-semibold text-black hover:bg-orange-400 transition"
-          >
-            Sign Up
-          </Link>
-        </div>
+            {["React", "TypeScript", "Swiper", "Marquee", "Frontend"].map(
+              (text, i) => (
+                <SwiperSlide key={i} style={{ width: "auto" }}>
+                  <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
+                    {text}
+                  </span>
+                </SwiperSlide>
+              )
+            )}
+          </Swiper>
+        </div> */}
+        <MarqueeSlider />
       </div>
-    </nav>
+      <div className="flex-1" />
+
+      {/* Search */}
+      <div className="relative max-w-[420px] w-full hidden md:block">
+        <Search
+          size={16}
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+        />
+        <input
+          placeholder="Search games and game providers"
+          className="w-full bg-[#171718] rounded-full border border-white/10 pl-9 pr-3 py-4 text-sm text-[#E5E5E5] outline-none focus:border-white/20"
+        />
+      </div>
+    </header>
   );
 }

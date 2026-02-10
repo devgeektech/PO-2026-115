@@ -22,5 +22,105 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ubuntu), sans-serif;
+}
+
+/* .marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 500px;
+} */
+/* 
+.marquee span {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  background: linear-gradient(
+    180deg,
+    #F3DFA3 0%,
+    #CAA972 42.9%,
+    #F6EAC5 65.38%,
+    #F8DCA4 100%
+  );
+
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+  max-width: 750px;
+}
+
+.my-marquee .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.marquee-text {
+  font-size: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    180deg,
+    #f3dfa3 0%,
+    #caa972 42.9%,
+    #f6eac5 65.38%,
+    #f8dca4 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.swiper.multiSlide {
+    padding-top: 80px;
+}
+
+.multiSlide .swiper-button-next {
+  background-image: url("/images/arrowright.svg");
+  width: 80px;
+  height: 67px;
+  background-size: 80px 67px;
+  background-position: center center;
+  top: 30px !important;
+}
+.multiSlide .swiper-button-prev {
+  background-image: url("/images/arrowleft.svg");
+  width: 80px;
+  height: 67px;
+  background-size: 80px 67px;
+  background-position: center center;
+  top: 30px !important;
+  left: auto !important;
+  right: 90px !important;
+}
+.multiSlide .swiper-button-next svg,
+.multiSlide .swiper-button-prev svg {
+  display: none;
+}
+
+.gridSlider .swiper-wrapper {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
 }
