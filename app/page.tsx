@@ -5,6 +5,9 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import GridSlider from "@/components/GridSlider";
+import TopHittingGameSlider from "@/components/TopHittingGameSlider";
+import SlotsGameSlider from "@/components/SlotsGameSlider";
+import FishGameSlider from "@/components/FishGameSlider";
 const games = Array.from({ length: 8 }).map((_, i) => ({
   id: i,
   title: `Game ${i + 1}`,
@@ -119,6 +122,18 @@ export default function HomePage() {
         </div>
         <div className="max-w-[1500px] overflow-hidden">
           <GridSlider />
+        </div>
+        <div className="max-w-[1500px] overflow-hidden">
+          <TopHittingGameSlider />
+        </div>
+        <div className="max-w-[1500px] overflow-hidden">
+          <SlotsGameSlider />
+        </div>
+        <div className="max-w-[1500px] overflow-hidden">
+          <FishGameSlider />
+        </div>
+        <div className="max-w-[1500px] overflow-hidden">
+          <FishGameSlider />
         </div>
 
         <div className="">

@@ -1,23 +1,21 @@
 "use client";
-import React from "react";
+
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { Slides } from "@/data/KenoGamesData";
 
 import "swiper/css";
-import "swiper/css/grid";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-import { Grid, Navigation, Pagination } from "swiper/modules";
-import { Slides } from "@/data/GridSlideData";
-import Link from "next/link";
 import SlideCard from "./Slide";
+import Link from "next/link";
 
-export default function GridSlider() {
+export default function KenoGamesSlider() {
   return (
-    <div className="sliderwrapper relative gridSlider btn_include">
+    <div className="sliderwrapper relative singleLineSlider btn_include">
       <div className="absolute left-0 top-0">
         <h2 className=" text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#C3282E] pl-4">
-          Recently Played
+          Slots Games
         </h2>
       </div>
       <Link
@@ -27,27 +25,17 @@ export default function GridSlider() {
         See All
       </Link>
       <Swiper
-        spaceBetween={20}
-        loop={true}
-        pagination={{ clickable: true }}
-        modules={[Grid, Pagination, Navigation]}
+        modules={[Navigation]}
         navigation
-        className="mySwiper multiSlide"
+        loop={true}
+        spaceBetween={16}
         slidesPerView={5}
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-            grid: { rows: 2 },
-          },
-          640: {
-            slidesPerView: 2,
-            grid: { rows: 2 },
-          },
-          1024: {
-            slidesPerView: 5,
-            grid: { rows: 2 },
-          },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+          1280: { slidesPerView: 5 },
         }}
+        className="mySwiper multiSlide"
       >
         {Slides.map((item) => (
           <SwiperSlide key={item.id}>

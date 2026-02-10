@@ -124,3 +124,16 @@ body {
   flex-direction: row !important;
   flex-wrap: wrap !important;
 }
+.gridSlider .swiper-wrapper .swiper-slide {
+    margin-top: 0px !important;
+    margin-bottom: 25px;
+}
+.swiper-button-lock {
+  display: block !important;
+}
+.btn_include .multiSlide .swiper-button-next {
+    right: 107px;
+}
+.btn_include .multiSlide  .swiper-button-prev {
+    right: 200px !important;
+}
