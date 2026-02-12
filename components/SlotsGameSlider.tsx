@@ -12,15 +12,18 @@ import Link from "next/link";
 
 export default function SlotsGameSlider() {
   return (
-    <div className="sliderwrapper relative singleLineSlider btn_include">
-      <div className="absolute left-0 top-0">
-        <h2 className=" text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#C3282E] pl-4">
+    <div
+      className="sliderwrapper relative singleLineSlider btn_include"
+      id="SlotsGame"
+    >
+      <div className="absolute left-0 top-[15px] md:top-[10px] lg:top-0">
+        <h2 className="text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4">
           Slots Games
         </h2>
       </div>
       <Link
         href={"/"}
-        className="bg-white cursor-pointer z-[12] rounded-full px-5 py-2 text-[20px] text-[#C3282E] absolute right-0 top-[8px]"
+        className="bg-white cursor-pointer z-[12] rounded-full md:px-5 md:py-2 px-2 py-1 md:text-[20px] text-[14px]  md:top-[8px] top-[15px] text-[#bc13fe] absolute right-0"
       >
         See All
       </Link>
@@ -31,9 +34,13 @@ export default function SlotsGameSlider() {
         spaceBetween={16}
         slidesPerView={5}
         breakpoints={{
+          0: { slidesPerView: 3, spaceBetween: 5 },
+          480: { slidesPerView: 3 },
           640: { slidesPerView: 3 },
-          1024: { slidesPerView: 5 },
-          1280: { slidesPerView: 5 },
+          1024: { slidesPerView: 3 },
+          1280: { slidesPerView: 4 },
+          1365: { slidesPerView: 4 },
+          1400: { slidesPerView: 5 },
         }}
         className="mySwiper multiSlide"
       >

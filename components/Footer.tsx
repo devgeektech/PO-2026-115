@@ -10,18 +10,28 @@ const aboutLinks = [
 ];
 
 const gameLinks = [
-  "Recommended Games",
-  "Popular Games",
-  "Live Dealer",
-  "Hold and Win",
-  "New Slots",
-  "Slots",
-  "Slots Themes",
-  "Exclusive GC Games",
-  "Arcade Games",
-  "Unlimited Play",
-  "Game Providers Additional Restrictions",
-  "Slot Volatility",
+  {
+    label: "Top Ten Games",
+    href: "#TopTenGames",
+  },
+  {
+    label: "Recently Played",
+    href: "#RecentlyPlayed",
+  },
+  {
+    label: "Top Hitting Games",
+    href: "#TopHittingGames",
+  },
+  {
+    label: "Social Casino",
+    href: "#SocialCasino",
+  },
+  {
+    label: "Slots Games",
+    href: "#SlotsGames",
+  },
+  { label: "Fish Games", href: "#FishGames" },
+  { label: "Keno Games", href: "#KenoGames" },
 ];
 
 export default function Footer() {
@@ -75,13 +85,13 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 font-normal text-[18px]">Games</h4>
             <div className="flex flex-wrap gap-2">
-              {gameLinks.map((item) => (
+              {gameLinks.map(({ label, href }) => (
                 <Link
-                  key={item}
-                  href="#"
+                  key={label}
+                  href={href}
                   className="px-4 py-2 text-[12px] rounded-full border border-white/30 hover:bg-white hover:text-black transition"
                 >
-                  {item}
+                  {label}
                 </Link>
               ))}
             </div>

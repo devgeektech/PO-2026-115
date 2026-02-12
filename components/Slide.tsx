@@ -18,21 +18,21 @@ type Props = {
 export default function SlideCard({ slide }: Props) {
   return (
     <div className="relative w-full rounded-xl overflow-hidden bg-black">
-      <div className="pt-3 pl-3 h-full w-full relative">
+      <div className="md:pt-3 md:pl-3 pt-1 pl-1 h-full w-full relative">
         {/* Badges */}
         {(slide.isNew || slide.isExclusive) && (
-          <div className="absolute top-3 left-3 z-10 flex gap-2">
+          <div className="absolute md:top-3 md:left-3 top-1 left-1 z-10 flex gap-2">
             {slide.isNew && (
-              <span className="bg-[#2A9CFF] border-2 border-[#006ECD] text-white text-sm px-4 py-1 rounded-full">
+              <span className="bg-[#2A9CFF] border-2 border-[#006ECD] text-white text-[10px] px-2 py-0 sm:text-sm sm:px-4 sm:py-1 rounded-full">
                 NEW
               </span>
             )}
 
-            {slide.isExclusive && (
+            {/* {slide.isExclusive && (
               <span className="bg-[#7A03AE] border-2 border-[#460065] text-white text-sm px-4 py-1 rounded-full">
                 EXCLUSIVE
               </span>
-            )}
+            )} */}
           </div>
         )}
 
@@ -46,7 +46,7 @@ export default function SlideCard({ slide }: Props) {
                 muted
                 loop
                 playsInline
-                className="w-full h-[350px] object-cover rounded-[5px]"
+                className="w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[5px]"
               />
             )}
 

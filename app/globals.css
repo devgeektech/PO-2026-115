@@ -18,7 +18,9 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background);
   color: var(--foreground);
@@ -61,7 +63,12 @@ body {
   }
 } */
 
-
+.bg_img {
+  background-image: url('../public/images/Add-a-subheading_back.png');
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 .marquee-container {
   width: 100%;
   overflow: hidden;
@@ -104,6 +111,7 @@ body {
   background-size: 80px 67px;
   background-position: center center;
   top: 30px !important;
+  background-repeat: no-repeat;
 }
 .multiSlide .swiper-button-prev {
   background-image: url("/images/arrowleft.svg");
@@ -114,6 +122,7 @@ body {
   top: 30px !important;
   left: auto !important;
   right: 90px !important;
+  background-repeat: no-repeat;
 }
 .multiSlide .swiper-button-next svg,
 .multiSlide .swiper-button-prev svg {
@@ -136,4 +145,69 @@ body {
 }
 .btn_include .multiSlide  .swiper-button-prev {
     right: 200px !important;
+}
+
+@media only screen and (max-width: 1475px) {
+  .marquee-container {
+      max-width: 500px;
+  }
+  .marquee-container .swiper .swiper-slide {
+    margin-right: 15px !important;
+  }
+}
+@media only screen and (max-width: 1375px) {
+header.header {
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.search-wrapper {
+    max-width: 100%;
+}
+.marquee-container {
+    max-width: 100%;
+}
+}
+@media only screen and (max-width: 1199px) {
+  a.logosite img {
+      min-width: 75px;
+  }
+  .marquee-text {
+    letter-spacing: normal;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header a.logosite img {
+    min-width: 75px;
+  }
+  header.header {
+    height: auto;
+  }
+  .marquee-container .swiper .swiper-slide {
+    margin-right: 15px !important;
+  }
+  .swiper-slide span {
+    font-size: 12px;
+  }
+  .multiSlide .swiper-button-next, .multiSlide .swiper-button-prev {
+    background-size: 50px 37px;
+    width: 50px;
+    height: 37px;
+    top: 40px !important;
+  }
+  .multiSlide .swiper-button-prev {
+    right: 60px !important;
+  }
+  .swiper.multiSlide {
+    padding-top: 50px;
+  }
+  .btn_include .multiSlide .swiper-button-prev {
+    right: 118px !important;
+  }
+  .btn_include .multiSlide .swiper-button-next {
+    right: 65px;
+  }
 }
