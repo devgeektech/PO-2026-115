@@ -44,9 +44,9 @@ export default function Footer() {
             />
           </Link>
           <p className="text-sm text-white font-light mt-[20px]">
-            At onlineslots717.com, entry and gameplay are always 100% free. No
-            purchase is ever required to play or win. Void where prohibited by
-            law. Terms of Service apply.
+            At onlineslotsofficial.com, entry and gameplay are always 100% free.
+            No purchase is ever required to play or win. Void where prohibited
+            by law. Terms of Service apply.
           </p>
         </div>
 
@@ -98,7 +98,8 @@ export default function Footer() {
             Online support 24/7: Contact Us
           </h4>
           <p className="text-sm text-white/70">
-            US Payment Related Queries (24/7): +1 (123) 456-7890
+            US Payment Related Queries (24/7):{" "}
+            <Link href={"tel:11234567890"}>+1 (123) 456-7890</Link>
           </p>
           <p className="text-xs text-white/50 mt-2">
             Please use the applicable number for your country of residence.
@@ -109,12 +110,12 @@ export default function Footer() {
         {/* Bottom Legal */}
         <div className="pt-6 text-xs text-white/50 space-y-2">
           <p>
-            OnlineSlots717.com is operated by B-Two Operations Limited, a
+            OnlineSlotsofficial.com is operated by B-Two Operations Limited, a
             company incorporated in the Isle of Man under registration number
             021483V, with its registered office at Third Floor, 34 Hope Street,
             Douglas, Isle of Man, IM1 1AP.
           </p>
-          <p>© 2026 onlineslots717.com | All rights reserved.</p>
+          <p>© 2026 onlineslotsofficial.com | All rights reserved.</p>
         </div>
       </div>
     </footer>

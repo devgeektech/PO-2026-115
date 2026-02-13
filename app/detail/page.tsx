@@ -1,10 +1,16 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import signupimg from "@/public/images/signup-btn.png";
 import playnowimg from "@/public/images/playnow-btn.png";
+import iconyellow from "@/public/images/iconyellow.svg";
+import jackpot from "@/public/images/jackpot.png";
+import infoicon from "@/public/images/infoicon.svg";
 import deepSeaPredator from "@/public/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg";
+import Modal from "@/components/Signup";
+import FishGameSlider from "@/components/FishGameSlider";
+import { ChevronDown, CrossIcon, Eye, EyeOff, XCircleIcon } from "lucide-react";
 const bestForYou = [
   {
     title: "Spirit of the Buffalo",
@@ -47,6 +53,10 @@ const newReleases = [
 
 export default function Detail() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [open, setOpen] = useState(false);
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showReferral, setShowReferral] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -56,87 +66,77 @@ export default function Detail() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="bg-black text-white">
-      {/* Breadcrumb */}
-      <ul className="text-sm text-white mb-6 flex gap-2 items-center">
-        <li>
-          <Link className="text-sm text-white" href={"/"}>
-            Games
-          </Link>
-        </li>{" "}
-        <span className="dot w-[7px] h-[7px] bg-white rounded-full"></span>
-        <li>Slots</li>
-      </ul>
+    <>
+      <div className="bg-black text-white">
+        {/* Breadcrumb */}
+        <ul className="text-sm text-white mb-6 flex gap-2 items-center">
+          <li>
+            <Link className="text-sm text-white" href={"/"}>
+              Games
+            </Link>
+          </li>{" "}
+          <span className="dot w-[7px] h-[7px] bg-white rounded-full"></span>
+          <li>Slots</li>
+        </ul>
 
-      {/* Game Title */}
-      <h1 className="flex gap-2 items-center text-[20px] font-normal mb-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-arrow-left-icon lucide-arrow-left"
-        >
-          <path d="m12 19-7-7 7-7" />
-          <path d="M19 12H5" />
-        </svg>{" "}
-        Play Wild West Jackpot Slot
-      </h1>
-
-      {/* Main Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-        {/* Game Preview */}
-        <div className="lg:col-span-1 rounded-xl overflow-hidden bg-neutral-900">
-          <Image src={deepSeaPredator} alt="deepSeaPredator" />
-          {/* <video
-            ref={videoRef}
-            muted
-            loop
-            autoPlay
-            playsInline
-            preload="auto"
-            className="w-full max-h-[480px] object-cover rounded-2xl"
+        <h1 className="flex gap-2 items-center text-[20px] font-normal mb-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-arrow-left-icon lucide-arrow-left"
           >
-            <source src="/videos/bannerVideo.mp4" type="video/mp4" />
-          </video> */}
-        </div>
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>{" "}
+          Play Wild West Jackpot Slot
+        </h1>
 
-        {/* Game Info */}
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
-            {/* Spin Info */}
-            <div className="bg-neutral-900 rounded-xl p-5 flex gap-4 border border-[#FFFFFF14]">
-              {/* <div className="flex justify-between border-b border-[#FFFFFFCC] pb-2">
-                <span className="text-gray-400">Min Spin</span>
-                <span>GC 50</span>
+        {/* Main Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="lg:col-span-1 rounded-xl">
+            <Image
+              className="w-full h-full object-cover rounded-xl"
+              src={deepSeaPredator}
+              alt="deepSeaPredator"
+            />
+          </div>
+
+          {/* Game Info */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
+              {/* Spin Info */}
+              <div className="bg-neutral-900 rounded-xl p-5 flex gap-4 border border-[#FFFFFF14]">
+                <button
+                  className="cursor-pointer w-full"
+                  onClick={() => setOpen(true)}
+                >
+                  <Image
+                    src={signupimg}
+                    className="w-full h-auto"
+                    alt="signupimg"
+                  />
+                </button>
+                <button
+                  className="cursor-pointer w-full"
+                  onClick={() => setOpen(true)}
+                >
+                  <Image
+                    src={playnowimg}
+                    className="w-full h-auto"
+                    alt="playnowimg"
+                  />
+                </button>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-400">Max Spin</span>
-                <span>GC 10,000</span>
-              </div> */}
-              <button className="cursor-pointer w-full">
-                <Image
-                  src={signupimg}
-                  className="w-full h-auto"
-                  alt="signupimg"
-                />
-              </button>
-              <button className="cursor-pointer w-full">
-                <Image
-                  src={playnowimg}
-                  className="w-full h-auto"
-                  alt="playnowimg"
-                />
-              </button>
-            </div>
 
-            {/* Volatility */}
-            {/* <div className="bg-neutral-900 rounded-xl p-5 border border-[#FFFFFF14]">
+              {/* Volatility */}
+              {/* <div className="bg-neutral-900 rounded-xl p-5 border border-[#FFFFFF14]">
               <div className="flex justify-between items-center mb-3">
                 <span className="text-gray-400">Volatility</span>
                 <span>Medium</span>
@@ -154,54 +154,183 @@ export default function Detail() {
                 ))}
               </div>
             </div> */}
-          </div>
-          {/* Jackpot */}
-          <div className="bg-neutral-900 rounded-xl p-5">
-            <h3 className="text-lg font-medium mb-3">
-              Opt-In For A Chance To Win
-            </h3>
-            <div className="bg-neutral-800 p-4 rounded-lg flex items-center justify-between">
-              <span className="font-medium">Gold Coins Jackpot</span>
-              <span className="text-yellow-400 font-bold">GC6,982,948,542</span>
+            </div>
+            {/* Jackpot */}
+            <div className="bg-neutral-900 rounded-xl ">
+              <h3 className="text-[20px] font-normal p-4">
+                Opt-In For A Chance To Win
+              </h3>
+              <div className="bg-neutral-800 p-2 rounded-lg flex items-center justify-between">
+                <div className="flex gap-3 items-center">
+                  <div className="">
+                    <Image src={jackpot} alt="jackpot.png" />
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <span className="font-medium text-[22px] flex gap-2">
+                      Gold Coins Jackpot{" "}
+                      <Image src={infoicon} alt="iconyellow.svg" />
+                    </span>
+                    <span className="text-yellow-400 text-[22px] font-bold flex gap-2">
+                      <Image src={iconyellow} alt="infoicon.svg" />{" "}
+                      GC6,982,948,542
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Features */}
-      <div className="mb-12">
-        <h2 className="text-lg font-semibold mb-4">
-          Wild West Jackpot Features
-        </h2>
-        <div className="flex flex-wrap gap-3">
-          {["OnlyPlay", "New Slots", "High Volatility", "Wild West"].map(
-            (tag, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-neutral-900 rounded-full text-sm text-gray-300"
-              >
-                {tag}
-              </span>
-            )
-          )}
+        {/* Features */}
+        <div className="mb-12">
+          <h2 className="text-lg font-semibold mb-4">
+            Wild West Jackpot Features
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {["OnlyPlay", "New Slots", "High Volatility", "Wild West"].map(
+              (tag, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-neutral-900 rounded-full text-sm text-gray-300 cursor-pointer"
+                >
+                  {tag}
+                </span>
+              )
+            )}
+          </div>
         </div>
+
+        {/* Best For You */}
+        <FishGameSlider />
+        {/* <Section title="Best For You" games={bestForYou} /> */}
+
+        {/* New Releases */}
+        {/* <Section title="New Releases" games={newReleases} /> */}
       </div>
 
-      {/* Best For You */}
-      <Section title="Best For You" games={bestForYou} />
+      <Modal isOpen={open} onClose={() => setOpen(false)}>
+        <div className="flex justify-between items-start gap-2 flex-wrap">
+          <h2 className="text-white text-xl font-semibold mb-4">SignUp</h2>
+          <button
+            className="cursor-pointer rounded-full p-2"
+            onClick={() => setOpen(false)}
+          >
+            <XCircleIcon />
+          </button>
+        </div>
 
-      {/* New Releases */}
-      <Section title="New Releases" games={newReleases} />
+        <div className="">
+          <form>
+            <div className="w-full max-w-md mx-auto rounded-md bg-black text-white p-6 space-y-5">
+              {/* Email */}
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+              />
 
-      {/* Footer */}
-      <footer className="mt-16 pt-10 border-t border-neutral-800 text-sm text-gray-400">
-        <p className="mb-4">
-          OnlineSlots777.com, entry and gameplay are always 100% free. No
-          purchase is ever required to play or win.
-        </p>
-        <p>© 2026 OnlineSlots777. All rights reserved.</p>
-      </footer>
-    </div>
+              {/* Password */}
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+                />
+
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                >
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+
+              <p className="text-xs text-gray-400">
+                8-20 characters. At least one number & one uppercase letter.
+              </p>
+
+              {/* First / Last Name */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+                />
+              </div>
+
+              {/* Date of Birth */}
+              <div>
+                <p className="text-sm text-gray-400 mb-2">Date of birth</p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="relative">
+                    <select className="w-full rounded-md appearance-none bg-[#2c2c2c] border border-[#444] px-4 py-3 text-white focus:outline-none focus:border-[#bc13fe]">
+                      <option>Month</option>
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                    </select>
+                    <ChevronDown
+                      size={16}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                    />
+                  </div>
+
+                  <input
+                    type="text"
+                    placeholder="Day"
+                    className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Year"
+                    className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+                  />
+                </div>
+              </div>
+
+              {/* Referral Toggle */}
+              <button
+                type="button"
+                onClick={() => setShowReferral(!showReferral)}
+                className="flex items-center gap-2 text-sm text-gray-400"
+              >
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${
+                    showReferral ? "rotate-90" : ""
+                  }`}
+                />
+                Referral code (optional)
+              </button>
+
+              {showReferral && (
+                <input
+                  type="text"
+                  placeholder="Enter referral code"
+                  className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+                />
+              )}
+
+              {/* Continue Button */}
+              <button
+                onClick={() => setOpen(false)}
+                className="w-full bg-[#64008b] border-2 border-[#bc13fe]  text-white py-3 rounded-md font-semibold"
+              >
+                Continue
+              </button>
+            </div>
+          </form>
+        </div>
+      </Modal>
+    </>
   );
 }
 
