@@ -18,7 +18,7 @@ type Props = {
 export default function SlideCard({ slide }: Props) {
   return (
     <div className="relative w-full rounded-xl overflow-hidden bg-black">
-      <div className="md:pt-3 md:pl-3 pt-1 pl-1 h-full w-full relative">
+      <div className="h-full w-full relative">
         {/* Badges */}
         {(slide.isNew || slide.isExclusive) && (
           <div className="absolute md:top-3 md:left-3 top-1 left-1 z-10 flex gap-2">

@@ -1,13 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
-import TopTenGameSlider from "@/components/TopTenGameSlider";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import GridSlider from "@/components/GridSlider";
 import TopHittingGameSlider from "@/components/TopHittingGameSlider";
-import SlotsGameSlider from "@/components/SlotsGameSlider";
-import FishGameSlider from "@/components/FishGameSlider";
+import biggestjackpot from "@/public/images/biggestjackpot.gif";
+import joinnow from "@/public/images/joinnow.gif";
+import exclusivepromo from "@/public/images/exclusivepromo.gif";
 const games = Array.from({ length: 8 }).map((_, i) => ({
   id: i,
   title: `Game ${i + 1}`,
@@ -21,13 +20,33 @@ type menu = {
 };
 
 const menu = [
-  { label: "Social Casino", icon: "/icons/homeIcon.svg", href: "/" },
-  { label: "Top Hitting Games", icon: "/icons/topHitIcon.svg", href: "/" },
-  { label: "Recently Played", icon: "/icons/clockIcon.svg", href: "/" },
-  { label: "Live Winners Update", icon: "/icons/greenDotIcon.svg", href: "/" },
-  { label: "Promos", icon: "/icons/giftIcon.svg", href: "/promotions" },
-  { label: "Trust & Safety", icon: "/icons/trustIcon.svg", href: "/trust" },
-  { label: "24/7 Help", icon: "/icons/customerCareIcon.svg", href: "/help" },
+  {
+    label: "Top Ten Games",
+    icon: "/icons/topHitIcon.svg",
+    href: "#TopTenGames",
+  },
+  {
+    label: "Recently Played",
+    icon: "/icons/clockIcon.svg",
+    href: "#RecentlyPlayed",
+  },
+  {
+    label: "Top Hitting Games",
+    icon: "/icons/topHitIcon.svg",
+    href: "#TopHittingGames",
+  },
+  {
+    label: "Social Casino",
+    icon: "/icons/homeIcon.svg",
+    href: "#SocialCasino",
+  },
+  {
+    label: "Slots Games",
+    icon: "/icons/greenDotIcon.svg",
+    href: "#SlotsGames",
+  },
+  { label: "Fish Games", icon: "/icons/giftIcon.svg", href: "#FishGames" },
+  { label: "Keno Games", icon: "/icons/trustIcon.svg", href: "#KenoGames" },
 ];
 
 export default function HomePage() {
@@ -42,15 +61,16 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="flex text-white min-h-screen">
+    <div className="w-full text-white">
       {/* Main Content */}
-      <main className="flex-1 space-y-10">
+      <main className="flex-1 min-w-0 md:space-y-10 space-y-4">
         {/* Hero Banner */}
-        <div className="relative rounded-2xl">
+        <div className="relative rounded-2xl overflow-hidden">
           <video
             ref={videoRef}
             muted
             loop
+            autoPlay
             playsInline
             preload="auto"
             style={{
@@ -63,28 +83,25 @@ export default function HomePage() {
           >
             <source src="/videos/bannerVideo.mp4" type="video/mp4" />
           </video>
-          <div className="absolute bottom-[50px] left-1/2 -translate-x-1/2 flex gap-3">
-            <button className="cursor-pointer">
-              <img
-                className="rounded-full max-w-[125px]"
-                src="/images/joinnowimg.jpg"
-                alt="joinnow"
+          <div className="w-max absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-3">
+            <div className="bg_img w-max flex items-center gap-2">
+              <Image
+                src={joinnow}
+                alt="joinnow.gif"
+                className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
-            </button>
-            <button className="cursor-pointer">
-              <img
-                className="rounded-full max-w-[125px]"
-                src="/images/biggestjackpot.jpg"
-                alt="biggestjackpot"
+              <Image
+                src={biggestjackpot}
+                alt="gifimg.gif"
+                className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
-            </button>
-            <button className="cursor-pointer">
-              <img
-                className="rounded-full max-w-[125px]"
-                src="/images/exclusivepromo.jpg"
-                alt="exclusivepromo"
+
+              <Image
+                src={exclusivepromo}
+                alt="exclusivepromo.gif"
+                className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
-            </button>
+            </div>
           </div>
         </div>
         <div className="">
@@ -97,8 +114,8 @@ export default function HomePage() {
                     "flex items-center gap-2 whitespace-nowrap cursor-pointer",
                     "px-5 py-2.5 rounded-[20px]",
                     "bg-white/5 text-white",
-                    "border border-white/10",
-                    "hover:bg-[#C3282E]",
+                    "border-2 border-white/10",
+                    "hover:bg-[#64008b] hover:border-[#bc13fe]",
                     "transition-all duration-200"
                   )}
                   href={href}
@@ -116,14 +133,14 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="max-w-[1500px] overflow-hidden">
+        {/* <div className="max-w-[1500px] overflow-hidden">
           {" "}
           <TopTenGameSlider />{" "}
         </div>
         <div className="max-w-[1500px] overflow-hidden">
           <GridSlider />
-        </div>
-        <div className="max-w-[1500px] overflow-hidden">
+        </div> */}
+        <div className="w-full min-w-0 overflow-hidden">
           <TopHittingGameSlider />
         </div>
 

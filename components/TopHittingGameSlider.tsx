@@ -12,7 +12,7 @@ import { useState } from "react";
 
 const CategoriesMapping: any = {
   juwa: {
-    image: "/images/fishgamesslider/chillibells.png",
+    image: "/images/Juwa/JuwaFishGamesLogo/BigBassBonzana.png",
     subcategoies: {
       fish: [
         {
@@ -255,6 +255,18 @@ const CategoriesMapping: any = {
     imageWidth: 300,
     imageHeight: 200,
   },
+  gamevault1: {
+    image: "/images/Juwa/JuwaFishGamesLogo/BigBassBonzana.png",
+    subcategories: {},
+    imageWidth: 300,
+    imageHeight: 200,
+  },
+  riversweeps1: {
+    image: "/images/Juwa/JuwaFishGamesLogo/BigBassBonzana.png",
+    subcategories: {},
+    imageWidth: 300,
+    imageHeight: 200,
+  },
 };
 
 export default function TopHittingGameSlider() {
@@ -270,7 +282,7 @@ export default function TopHittingGameSlider() {
   };
 
   const [selectedSubCategory, setSelectedSubCategory] = useState(
-    getInitialSubCategory("juwa"),
+    getInitialSubCategory("juwa")
   );
 
   // ✅ Main categories
@@ -280,16 +292,16 @@ export default function TopHittingGameSlider() {
       image: value.image,
       imageWidth: value.imageWidth,
       imageHeight: value.imageHeight,
-    }),
+    })
   );
 
   // ✅ Sub categories (FIXED)
   const subCategories = Object.keys(
-    CategoriesMapping[selectedCategory]?.subcategoies || {},
+    CategoriesMapping[selectedCategory]?.subcategoies || {}
   );
 
   const subCategorySlides = Object.entries(
-    CategoriesMapping[selectedCategory]?.subcategoies || {},
+    CategoriesMapping[selectedCategory]?.subcategoies || {}
   );
 
   return (
@@ -307,7 +319,7 @@ export default function TopHittingGameSlider() {
           modules={[Navigation]}
           navigation
           loop={true}
-          spaceBetween={16}
+          spaceBetween={8}
           slidesPerView={5}
           breakpoints={{
             0: { slidesPerView: 3, spaceBetween: 5 },
@@ -367,7 +379,7 @@ export default function TopHittingGameSlider() {
         </Swiper>
       </div> */}
       {Object.entries(
-        CategoriesMapping[selectedCategory]?.subcategoies || {},
+        CategoriesMapping[selectedCategory]?.subcategoies || {}
       ).map(([subCategoryName, games]: any) => (
         <div
           key={subCategoryName}
