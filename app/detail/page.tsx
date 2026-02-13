@@ -2,6 +2,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import signupimg from "@/public/images/signup-btn.png";
+import playnowimg from "@/public/images/playnow-btn.png";
 
 const bestForYou = [
   {
@@ -105,21 +107,35 @@ export default function Detail() {
 
         {/* Game Info */}
         <div className="space-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
             {/* Spin Info */}
-            <div className="bg-neutral-900 rounded-xl p-5 space-y-2 border border-[#FFFFFF14]">
-              <div className="flex justify-between border-b border-[#FFFFFFCC] pb-2">
+            <div className="bg-neutral-900 rounded-xl p-5 flex gap-4 border border-[#FFFFFF14]">
+              {/* <div className="flex justify-between border-b border-[#FFFFFFCC] pb-2">
                 <span className="text-gray-400">Min Spin</span>
                 <span>GC 50</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-400">Max Spin</span>
                 <span>GC 10,000</span>
-              </div>
+              </div> */}
+              <button className="cursor-pointer w-full">
+                <Image
+                  src={signupimg}
+                  className="w-full h-auto"
+                  alt="signupimg"
+                />
+              </button>
+              <button className="cursor-pointer w-full">
+                <Image
+                  src={playnowimg}
+                  className="w-full h-auto"
+                  alt="playnowimg"
+                />
+              </button>
             </div>
 
             {/* Volatility */}
-            <div className="bg-neutral-900 rounded-xl p-5 border border-[#FFFFFF14]">
+            {/* <div className="bg-neutral-900 rounded-xl p-5 border border-[#FFFFFF14]">
               <div className="flex justify-between items-center mb-3">
                 <span className="text-gray-400">Volatility</span>
                 <span>Medium</span>
@@ -136,7 +152,7 @@ export default function Detail() {
                   />
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           {/* Jackpot */}
           <div className="bg-neutral-900 rounded-xl p-5">

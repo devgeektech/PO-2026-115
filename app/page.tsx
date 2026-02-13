@@ -10,7 +10,9 @@ import TopHittingGameSlider from "@/components/TopHittingGameSlider";
 import SlotsGameSlider from "@/components/SlotsGameSlider";
 import FishGameSlider from "@/components/FishGameSlider";
 import KenoGamesSlider from "@/components/KenoGamesSlider";
-import gifimg from "@/public/images/gifimg.gif";
+import biggestjackpot from "@/public/images/biggestjackpot.gif";
+import joinnow from "@/public/images/joinnow.gif";
+import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import SocialCasinoSlider from "@/components/SocialCasinoSlider";
 const menu = [
   {
@@ -74,18 +76,19 @@ export default function HomePage() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg_img flex items-center gap-2">
               <Image
-                src={gifimg}
-                alt="gifimg.gif"
+                src={joinnow}
+                alt="joinnow.gif"
                 className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
               <Image
-                src={gifimg}
+                src={biggestjackpot}
                 alt="gifimg.gif"
                 className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
+
               <Image
-                src={gifimg}
-                alt="gifimg.gif"
+                src={exclusivepromo}
+                alt="exclusivepromo.gif"
                 className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
             </div>
