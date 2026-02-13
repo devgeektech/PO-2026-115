@@ -3,7 +3,7 @@ import Image from "next/image";
 
 type Props = {
   slide: {
-    id: number;
+    // id?: number;
     video?: string;
     image?: string;
     title?: string;
