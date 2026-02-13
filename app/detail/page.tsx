@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import signupimg from "@/public/images/signup-btn.png";
 import playnowimg from "@/public/images/playnow-btn.png";
-
+import deepSeaPredator from "@/public/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg";
 const bestForYou = [
   {
     title: "Spirit of the Buffalo",
@@ -92,7 +92,8 @@ export default function Detail() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Game Preview */}
         <div className="lg:col-span-1 rounded-xl overflow-hidden bg-neutral-900">
-          <video
+          <Image src={deepSeaPredator} alt="deepSeaPredator" />
+          {/* <video
             ref={videoRef}
             muted
             loop
@@ -102,7 +103,7 @@ export default function Detail() {
             className="w-full max-h-[480px] object-cover rounded-2xl"
           >
             <source src="/videos/bannerVideo.mp4" type="video/mp4" />
-          </video>
+          </video> */}
         </div>
 
         {/* Game Info */}

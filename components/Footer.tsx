@@ -1,13 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/images/logo777.png";
-const aboutLinks = [
-  "About onlineslots717.com",
-  "Terms of Service",
-  "Player Safety",
-  "Privacy Policy",
-  "Cookie Notice",
-];
+const aboutLinks = ["Terms of Service", "Privacy Policy"];
 
 const gameLinks = [
   {
@@ -74,9 +68,9 @@ export default function Footer() {
 
               <span className="px-4 py-2 text-sm rounded-full border border-white/30 flex items-center gap-2">
                 Your Privacy Choices
-                <span className="bg-blue-600 text-xs px-2 py-0.5 rounded">
+                {/* <span className="bg-blue-600 text-xs px-2 py-0.5 rounded">
                   ✓✓
-                </span>
+                </span> */}
               </span>
             </div>
           </div>
