@@ -300,7 +300,7 @@ export default function Detail() {
               <button
                 type="button"
                 onClick={() => setShowReferral(!showReferral)}
-                className="flex items-center gap-2 text-sm text-gray-400"
+                className="cursor-pointer flex items-center gap-2 text-sm text-gray-400"
               >
                 <ChevronDown
                   size={16}
@@ -322,7 +322,7 @@ export default function Detail() {
               {/* Continue Button */}
               <button
                 onClick={() => setOpen(false)}
-                className="w-full bg-[#64008b] border-2 border-[#bc13fe]  text-white py-3 rounded-md font-semibold"
+                className="cursor-pointer w-full bg-[#64008b] border-2 border-[#bc13fe]  text-white py-3 rounded-md font-semibold"
               >
                 Continue
               </button>

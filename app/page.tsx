@@ -7,6 +7,8 @@ import TopHittingGameSlider from "@/components/TopHittingGameSlider";
 import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
+import TopTenGameSlider from "@/components/TopTenGameSlider";
+import GridSlider from "@/components/GridSlider";
 const games = Array.from({ length: 8 }).map((_, i) => ({
   id: i,
   title: `Game ${i + 1}`,
@@ -133,11 +135,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        {/* <div className="max-w-[1500px] overflow-hidden">
+        <div className="w-full min-w-0 overflow-hidden">
           {" "}
           <TopTenGameSlider />{" "}
         </div>
-        <div className="max-w-[1500px] overflow-hidden">
+        {/* <div className="max-w-[1500px] overflow-hidden">
           <GridSlider />
         </div> */}
         <div className="w-full min-w-0 overflow-hidden">

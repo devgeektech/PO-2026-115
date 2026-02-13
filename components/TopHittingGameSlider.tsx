@@ -399,7 +399,6 @@ export default function TopHittingGameSlider() {
           >
             See All
           </Link>
-
           {/* Swiper */}
           <Swiper
             modules={[Navigation]}

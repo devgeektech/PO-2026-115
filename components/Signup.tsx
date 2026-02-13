@@ -36,8 +36,10 @@ export default function Signup({ isOpen, onClose, children }: ModalProps) {
       />
 
       {/* Modal Box */}
-      <div className="relative z-10 w-full max-w-md bg-[#111111] border border-[#2a2a2a] rounded-xl p-6 shadow-2xl transform transition-all duration-300 scale-100 opacity-100">
-        {children}
+      <div className="h-[100vh] overflow-y-auto lg:flex lg:items-center">
+        <div className=" relative my-4 z-10 w-full max-w-md bg-[#111111] border border-[#2a2a2a] rounded-xl p-6 shadow-2xl transform transition-all duration-300 scale-100 opacity-100">
+          {children}
+        </div>
       </div>
     </div>
   );
