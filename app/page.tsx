@@ -133,10 +133,10 @@ export default function HomePage() {
         <div className="w-full min-w-0 overflow-hidden">
           {" "}
           {/* <TopTenGameSlider />{" "} */}
-          <CommonSlider title="Top Ten Games" data={TopTenGamesData} />
+          <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" />
         </div>
         <div className="w-full min-w-0 overflow-hidden">
-          <CommonSlider title="Top Hitting Games" data={TopHittingGameData} />
+          <CommonSlider title="Top Hitting Games" data={TopHittingGameData} type="topHitting" />
         </div>
 
         <div className="">

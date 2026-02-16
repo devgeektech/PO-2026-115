@@ -7,7 +7,7 @@ import SlideCard from "./Slide";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function CommonSlider({title, data}:any) {
+export default function CommonSlider({title, data, type}:any) {
   const [selectedCategory, setSelectedCategory] = useState("juwa");
 
   const getInitialSubCategory = (category: string) => {
