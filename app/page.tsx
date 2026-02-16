@@ -3,17 +3,12 @@ import { useEffect, useRef } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import TopHittingGameSlider from "@/components/TopHittingGameSlider";
 import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
-import TopTenGameSlider from "@/components/TopTenGameSlider";
-import GridSlider from "@/components/GridSlider";
-const games = Array.from({ length: 8 }).map((_, i) => ({
-  id: i,
-  title: `Game ${i + 1}`,
-  image: `https://picsum.photos/300/400?random=${i + 10}`,
-}));
+import CommonSlider from "@/components/CommonGameSlider";
+import { TopHittingGameData } from "@/data/TopHitGameData";
+import { TopTenGamesData } from "@/data/TopTenGamesData";
 
 type menu = {
   label: string;
@@ -137,24 +132,12 @@ export default function HomePage() {
         </div>
         <div className="w-full min-w-0 overflow-hidden">
           {" "}
-          <TopTenGameSlider />{" "}
+          {/* <TopTenGameSlider />{" "} */}
+          <CommonSlider title="Top Ten Games" data={TopTenGamesData} />
         </div>
-        {/* <div className="max-w-[1500px] overflow-hidden">
-          <GridSlider />
-        </div> */}
         <div className="w-full min-w-0 overflow-hidden">
-          <TopHittingGameSlider />
+          <CommonSlider title="Top Hitting Games" data={TopHittingGameData} />
         </div>
-
-        {/* <div className="max-w-[1500px] overflow-hidden">
-          <SlotsGameSlider />
-        </div>
-        <div className="max-w-[1500px] overflow-hidden">
-          <FishGameSlider />
-        </div>
-        <div className="max-w-[1500px] overflow-hidden">
-          <FishGameSlider />
-        </div> */}
 
         <div className="">
           <h2 className="text-[32px] font-medium">
