@@ -78,7 +78,7 @@ export default function CommonSlider({ title, data, type, initialCategory = 'juw
       </div>
       }
       {selectedCategory &&
-        subCategories.filter(([subCategoryName]) => (subCategoryName !== "top-hitting" && type === 'detail')).map(([subCategoryName, games]: any) =>
+        subCategories.filter(([subCategoryName]) => ((subCategoryName !== "top-hitting" && type === "detail")||(type !== "detail"))).map(([subCategoryName, games]: any) =>
           games && games.length > 0 ? (
             <div
               key={subCategoryName}
@@ -92,12 +92,12 @@ export default function CommonSlider({ title, data, type, initialCategory = 'juw
               </div>
 
               {/* See All Button */}
-              {/* <Link
+              <Link
                 href={"/"}
                 className="bg-white cursor-pointer z-[12] rounded-full md:px-5 md:py-2 px-2 py-1 md:text-[20px] text-[14px] md:top-[8px] top-[15px] text-[#bc13fe] absolute right-0"
               >
                 See All
-              </Link> */}
+              </Link>
 
               {/* Swiper */}
               <Swiper

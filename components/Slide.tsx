@@ -57,6 +57,7 @@ export default function SlideCard({ slide }: Props) {
                 src={slide.video}
                 autoPlay
                 muted
+                preload="none"
                 loop
                 playsInline
                 className="w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[5px]"
