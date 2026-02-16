@@ -174,7 +174,7 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
         </div> */}
 
         {/* Best For You */}
-        <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" initialCategory={cat}/>
+        <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="detail" initialCategory={cat}/>
         {/* <FishGameSlider /> */}
         {/* <Section title="Best For You" games={bestForYou} /> */}
 

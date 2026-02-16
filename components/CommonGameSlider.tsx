@@ -34,7 +34,7 @@ export default function CommonSlider({ title, data, type, initialCategory = 'juw
 
   return (
     <>
-    {!initialCategory &&
+    {type !== 'detail' &&
       <div
         className="sliderwrapper relative singleLineSlider tophitgameslider"
         id="TopHittingGames"
@@ -78,7 +78,7 @@ export default function CommonSlider({ title, data, type, initialCategory = 'juw
       </div>
       }
       {selectedCategory &&
-        subCategories.map(([subCategoryName, games]: any) =>
+        subCategories.filter(([subCategoryName]) => (subCategoryName !== "top-hitting" && type === 'detail')).map(([subCategoryName, games]: any) =>
           games && games.length > 0 ? (
             <div
               key={subCategoryName}
