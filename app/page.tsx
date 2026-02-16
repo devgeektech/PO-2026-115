@@ -7,7 +7,6 @@ import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import CommonSlider from "@/components/CommonGameSlider";
-import { TopHittingGameData } from "@/data/TopHitGameData";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 
 type menu = {
@@ -135,9 +134,9 @@ export default function HomePage() {
           {/* <TopTenGameSlider />{" "} */}
           <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" />
         </div>
-        <div className="w-full min-w-0 overflow-hidden">
+        {/* <div className="w-full min-w-0 overflow-hidden">
           <CommonSlider title="Top Hitting Games" data={TopHittingGameData} type="topHitting" />
-        </div>
+        </div> */}
 
         <div className="">
           <h2 className="text-[32px] font-medium">

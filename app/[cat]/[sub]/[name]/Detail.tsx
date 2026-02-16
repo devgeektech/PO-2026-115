@@ -11,57 +11,29 @@ import deepSeaPredator from "@/public/images/Juwa/InGamePhotos/FishGames/deepSea
 import Modal from "@/components/Signup";
 import FishGameSlider from "@/components/FishGameSlider";
 import { ChevronDown, CrossIcon, Eye, EyeOff, XCircleIcon } from "lucide-react";
-const bestForYou = [
-  {
-    title: "Spirit of the Buffalo",
-    provider: "UROC Studios",
-    image: "/images/game1.jpg",
-  },
-  {
-    title: "Pink Elephants",
-    provider: "Thunderkick",
-    image: "/images/game2.jpg",
-  },
-  { title: "Golden Till", provider: "ELA Games", image: "/images/game3.jpg" },
-  {
-    title: "Trout's Treasure",
-    provider: "Spinomenal",
-    image: "/images/game4.jpg",
-  },
-  { title: "Lore of Thunder", provider: "3 Oaks", image: "/images/game5.jpg" },
-];
-
-const newReleases = [
-  { title: "Coinsweeper", provider: "Reel Riot", image: "/images/game6.jpg" },
-  { title: "Fruits & Jokers", provider: "Playson", image: "/images/game7.jpg" },
-  {
-    title: "Zeus Almighty",
-    provider: "Golden Gopher",
-    image: "/images/game8.jpg",
-  },
-  {
-    title: "Triple Valentine",
-    provider: "Red Rake",
-    image: "/images/game9.jpg",
-  },
-  {
-    title: "Blazing Horses",
-    provider: "Kalamba Games",
-    image: "/images/game10.jpg",
-  },
-];
-
-export default function Detail() {
+import { useRouter } from "next/navigation";
+import { TopTenGamesData } from "@/data/TopTenGamesData";
+import CommonSlider from "@/components/CommonGameSlider";
+export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: any }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  console.log(cat,"cat", sub, "sub", name, "name")
 
   const [showPassword, setShowPassword] = useState(false);
   const [showReferral, setShowReferral] = useState(false);
+
+  const game:any =
+  TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
+    (item:any) =>
+      item.label.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
       videoRef.current?.play();
     }, 3000);
+
 
     return () => clearTimeout(timer);
   }, []);
@@ -69,17 +41,16 @@ export default function Detail() {
     <>
       <div className="bg-black text-white">
         {/* Breadcrumb */}
-        <ul className="text-sm text-white mb-6 flex gap-2 items-center">
+        {/* <ul className="text-sm text-white mb-6 flex gap-2 items-center">
           <li>
             <Link className="text-sm text-white" href={"/"}>
-              Games
+              {name}
             </Link>
           </li>{" "}
-          <span className="dot w-[7px] h-[7px] bg-white rounded-full"></span>
-          <li>Slots</li>
-        </ul>
+        
+        </ul> */}
 
-        <h1 className="flex gap-2 items-center text-[20px] font-normal mb-6">
+        <h1 className="flex gap-2 items-center text-[20px] font-normal mb-6" onClick={() => router.push("/")} >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -95,7 +66,7 @@ export default function Detail() {
             <path d="m12 19-7-7 7-7" />
             <path d="M19 12H5" />
           </svg>{" "}
-          Play Wild West Jackpot Slot
+          {name}
         </h1>
 
         {/* Main Section */}
@@ -103,7 +74,9 @@ export default function Detail() {
           <div className="lg:col-span-1 rounded-xl">
             <Image
               className="w-full h-full object-cover rounded-xl"
-              src={deepSeaPredator}
+              src={game.detailImage}
+              width={300}
+              height={400}
               alt="deepSeaPredator"
             />
           </div>
@@ -182,7 +155,7 @@ export default function Detail() {
         </div>
 
         {/* Features */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-lg font-semibold mb-4">
             Wild West Jackpot Features
           </h2>
@@ -198,10 +171,11 @@ export default function Detail() {
               )
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* Best For You */}
-        <FishGameSlider />
+        <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" initialCategory={cat}/>
+        {/* <FishGameSlider /> */}
         {/* <Section title="Best For You" games={bestForYou} /> */}
 
         {/* New Releases */}
