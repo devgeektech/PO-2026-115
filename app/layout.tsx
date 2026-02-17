@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
-
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import DashboardShell from "@/components/DashboardShell";
@@ -52,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={ubuntu.variable}>
         <DashboardShell>{children}</DashboardShell>
+        <Toaster position="top-right" />
       </body>
     </html>
   );

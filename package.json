@@ -9,11 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
     "clsx": "^2.1.1",
     "lucide-react": "^0.563.0",
+    "mongoose": "^9.2.1",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-hot-toast": "^2.6.0",
     "swiper": "^12.1.0"
   },
   "devDependencies": {
