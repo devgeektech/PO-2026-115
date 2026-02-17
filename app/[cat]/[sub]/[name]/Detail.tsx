@@ -99,7 +99,7 @@ export default function Detail({
               {/* Spin Info */}
               <div className="bg-neutral-900 rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
                 <button
-                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[20px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
+                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
                   onClick={() => setOpen(true)}
                 >
                   <Image
@@ -132,7 +132,7 @@ export default function Detail({
                   />
                 </button> */}
                 <button
-                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[20px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
+                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
                   onClick={() => setOpen(true)}
                 >
                   <Image
