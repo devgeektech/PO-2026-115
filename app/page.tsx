@@ -6,9 +6,15 @@ import Link from "next/link";
 import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
-import CommonSlider from "@/components/CommonGameSlider";
-import { TopHittingGameData } from "@/data/TopHitGameData";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
+import dynamic from "next/dynamic";
+const CommonSlider = dynamic(
+  () => import("@/components/CommonGameSlider"),
+  {
+    ssr: false, // important because Swiper uses window
+    loading: () => <div className="h-[300px]" /> // skeleton placeholder
+  }
+);
 
 type menu = {
   label: string;
@@ -69,7 +75,7 @@ export default function HomePage() {
             loop
             autoPlay
             playsInline
-            preload="auto"
+            preload="none"
             style={{
               width: "100%",
               maxHeight: "850px",
@@ -132,11 +138,7 @@ export default function HomePage() {
         </div>
         <div className="w-full min-w-0 overflow-hidden">
           {" "}
-          {/* <TopTenGameSlider />{" "} */}
           <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" />
-        </div>
-        <div className="w-full min-w-0 overflow-hidden">
-          <CommonSlider title="Top Hitting Games" data={TopHittingGameData} type="topHitting" />
         </div>
 
         <div className="">

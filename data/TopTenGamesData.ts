@@ -4,13 +4,19 @@ export type GameItem = {
     image?: string;   // for fish
     icon?: string;    // for keno & slot
     isNew?: boolean;
+    detailImage?: string;
+    key?: string;
+    type?: string;
+    cat?: string;
+    sub?: string;
+    name?: string;
     isExclusive?: boolean;
 };
 
 export type SubCategories = {
     fish: GameItem[];
     keno: GameItem[];
-    slot: GameItem[];
+    slot?: GameItem[];
 };
 
 export type Category = {
@@ -25,7 +31,7 @@ export type CategoriesType = {
     [key: string]: Category;
 };
 
-export const TopTenGamesData: CategoriesType = {
+export const TopTenGamesData: any = {
     juwa: {
         id: 1,
         video: "/videos/juwa_video.mp4",
@@ -36,130 +42,160 @@ export const TopTenGamesData: CategoriesType = {
                 {
                     isNew: true,
                     isExclusive: true,
+                    type: 'sub-cat',
                     label: "Big Bass Bonzana",
                     image: "/images/Juwa/JuwaFishGamesLogo/BigBassBonzana.png",
+                    detailImage: "",
                     href: "/",
                 },
                 {
-                    label: "Big Bass Bonzana",
+                    label: "Cash Cow",
                     image: "/images/Juwa/JuwaFishGamesLogo/CashCow.png",
+                    detailImage: "",
+                    type: 'sub-cat',
                     href: "/",
                 },
                 {
                     label: "Deep Sea",
                     image: "/images/Juwa/JuwaFishGamesLogo/DeepSea.png",
+                    type: 'sub-cat',
+                    detailImage: "",
                     href: "/",
                 },
                 {
                     isNew: true,
                     label: "Deep Sea Predator",
+                    key: "deepSeaPredator",
+                    type: 'sub-cat',
+                    cat: 'juwa',
+                    sub: 'fish',
+                    name: 'Deep-sea-predator',
                     image: "/images/Juwa/JuwaFishGamesLogo/DeepSeaPredator.png",
+                    detailImage: "/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg",
                     href: "/",
                 },
                 {
                     label: "Dragon Treasure",
                     image: "/images/Juwa/JuwaFishGamesLogo/DragonTreasure.png",
+                    type: 'sub-cat',
+                    cat: 'juwa',
+                    sub: 'fish',
+                    name: 'dragon-treasure',
+                    detailImage: "",
                     href: "/",
                 },
                 {
                     label: "Happy Fishing",
                     image: "/images/Juwa/JuwaFishGamesLogo/HappyFishing.png",
+                    type: 'sub-cat',
+                    cat: 'juwa',
+                    sub: 'fish',
+                    name: 'happy-fishing',
+                    detailImage: "/images/Juwa/InGamePhotos/FishGames/happyfishing.jpg",
                     href: "/",
                 },
             ],
             keno: [
                 {
-                    label: "Social Casino",
+                    label: "BuffaloKeno",
                     icon: "/images/Juwa/JuwaKenoGamesLogo/BuffaloKeno.png",
+                    detailImage: "",
                     href: "/",
                 },
                 {
-                    label: "Top Hitting Games",
+                    label: "HexaKeno",
                     icon: "/images/Juwa/JuwaKenoGamesLogo/HexaKeno.png",
+                    detailImage: "",
                     href: "/",
                 },
                 {
-                    label: "Recently Played",
+                    label: "SuperballKeno",
                     icon: "/images/Juwa/JuwaKenoGamesLogo/SuperballKeno.png",
+                    detailImage: "",
                     href: "/",
                 },
             ],
             slot: [
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/777Lucky.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/BlackWhiteDouble.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/BonusHot7_s.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/BurningHOT.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/CashZone.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/CherryValentine.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/CrystalClovers.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/DiamondRiches.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/EpicSummer.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/EpicVault.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/FarmLife.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/FruitMary.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/FortuneLion.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/Glitz.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/HexGems.png",
-                    href: "/",
-                },
+                // {
+                //     label: "777Lucky",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/777Lucky.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Black White Double",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/BlackWhiteDouble.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "BonusHot7",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/BonusHot7_s.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Burning HOT",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/BurningHOT.png",
+                //     href: "/",
+                // },
+               
+               
+               
+                // {
+                //     label: "Cash Zone",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/CashZone.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Cherry Valentine",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/CherryValentine.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Crystal Clovers",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/CrystalClovers.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/DiamondRiches.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/EpicSummer.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/EpicVault.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/FarmLife.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/FruitMary.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/FortuneLion.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/Glitz.png",
+                //     href: "/",
+                // },
+                
+                
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/HexGems.png",
+                //     href: "/",
+                // },
                 {
                     label: "Social Casino",
                     icon: "/images/Juwa/juwaSlotGamesLogo/HugeCash.png",
@@ -170,87 +206,117 @@ export const TopTenGamesData: CategoriesType = {
                     icon: "/images/Juwa/juwaSlotGamesLogo/JackpotInferno.png",
                     href: "/",
                 },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/KingKong_sRampage.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/LifeofLuxury.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/LoteriaDon.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/MegaballDeluxe.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/MegaMoneyMachine.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/MegsPay.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/MoolahBingo.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/OhmyGirls.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/PerfectPurpleJackpots.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/President45.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/RainbowRiches.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/SimpleTriple.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/SpinGoldenWheel.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/SuperStars.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/WildRoyaleGold.png",
-                    href: "/",
-                },
-                {
-                    label: "Social Casino",
-                    icon: "/images/Juwa/juwaSlotGamesLogo/WildWest.png",
-                    href: "/",
-                },
+                
+                
+                
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/KingKong_sRampage.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/LifeofLuxury.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/LoteriaDon.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/MegaballDeluxe.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/MegaMoneyMachine.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/MegsPay.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/MoolahBingo.png",
+                //     href: "/",
+                // },
+
+
+                
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/OhmyGirls.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/PerfectPurpleJackpots.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/President45.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/RainbowRiches.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/SimpleTriple.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/SpinGoldenWheel.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/SuperStars.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/WildRoyaleGold.png",
+                //     href: "/",
+                // },
+                // {
+                //     label: "Social Casino",
+                //     icon: "/images/Juwa/juwaSlotGamesLogo/WildWest.png",
+                //     href: "/",
+                // },
             ],
+            'top-hitting': [
+                {
+                    isNew: true,
+                    label: "Deep Sea Predator",
+                    key: "deepSeaPredator",
+                    type: 'sub-cat',
+                    cat: 'juwa',
+                    sub: 'fish',
+                    name: 'Deep-sea-predator',
+                    image: "/images/Juwa/JuwaFishGamesLogo/DeepSeaPredator.png",
+                    detailImage: "/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg",
+                    href: "/",
+                },
+                {
+                    label: "Happy Fishing",
+                    image: "/images/Juwa/JuwaFishGamesLogo/HappyFishing.png",
+                    type: 'sub-cat',
+                    cat: 'juwa',
+                    sub: 'fish',
+                    name: 'happy-fishing',
+                    detailImage: "/images/Juwa/InGamePhotos/FishGames/happyfishing.jpg",
+                    href: "/",
+                },
+            ]
         },
     },
     cashfrenzy: {

@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 type Props = {
   slide: {
     // id?: number;
+    type?: string;
     video?: string;
     image?: string;
     title?: string;
@@ -12,10 +13,22 @@ type Props = {
     isExclusive?: boolean;
     imageWidth?: number;
     imageHeight?: number;
+    detailImage?: string;
+    cat?:string;
+    sub?: string;
+    name?: string;
   };
 };
 
 export default function SlideCard({ slide }: Props) {
+  const router = useRouter();
+  const goToGames = () => {
+    if(slide.type == "sub-cat" && slide.detailImage){
+      // console.log(slide)
+      router.push(`${slide.cat}/${slide.sub}/${slide.name}`);
+    }
+  };
+
   return (
     <div className="relative w-full rounded-xl overflow-hidden bg-black">
       <div className="h-full w-full relative">
@@ -44,6 +57,7 @@ export default function SlideCard({ slide }: Props) {
                 src={slide.video}
                 autoPlay
                 muted
+                preload="none"
                 loop
                 playsInline
                 className="w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[5px]"
@@ -57,6 +71,9 @@ export default function SlideCard({ slide }: Props) {
                 width={slide.imageWidth ?? 300}
                 height={slide.imageHeight ?? 400}
                 className="w-full object-cover rounded-[5px]"
+                onClick={()=>{
+                  goToGames()
+                }}
               />
             )}
           </>
