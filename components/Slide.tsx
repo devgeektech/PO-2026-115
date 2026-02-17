@@ -16,7 +16,7 @@ type Props = {
     detailImage?: string;
     cat?:string;
     sub?: string;
-    name?: string;
+    key?: string;
   };
 };
 
@@ -25,7 +25,7 @@ export default function SlideCard({ slide }: Props) {
   const goToGames = () => {
     if(slide.type == "sub-cat" && slide.detailImage){
       // console.log(slide)
-      router.push(`${slide.cat}/${slide.sub}/${slide.name}`);
+      router.push(`${slide.cat}/${slide.sub}/${slide.key}`);
     }
   };
 

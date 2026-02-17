@@ -26,7 +26,7 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
   const game:any =
   TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item:any) =>
-      item.label.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
+      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
   );
 
   useEffect(() => {
