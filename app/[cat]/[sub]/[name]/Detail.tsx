@@ -178,7 +178,7 @@ export default function Detail({
                       Gold Coins Jackpot{" "}
                       <Image src={infoicon} alt="iconyellow.svg" />
                     </span>
-                    <span className="text-yellow-400 text-[22px] font-bold flex gap-2">
+                    <span className="text-yellow-400 text-[18px] flex-wrap lg:text-[22px] font-bold flex gap-2">
                       <Image src={iconyellow} alt="infoicon.svg" />{" "}
                       GC6,982,948,542
                     </span>
