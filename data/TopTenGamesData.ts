@@ -489,7 +489,7 @@ export const TopTenGamesData: any = {
                     key: "wildRoyalGold",
                     type: 'sub-cat',
                     cat: 'juwa',
-                    sub: 'fish',
+                    sub: 'top-hitting',
                     image: "/images/onlineSlots/Juwa/JuwaGameLogo/JuwaSlot/27.png",
                     detailImage: "/images/onlineSlots/Juwa/JuwaInGamePic/JuwaSlot/27.jpg",
                 },
@@ -498,7 +498,7 @@ export const TopTenGamesData: any = {
     },
     riverSweeps: {
         id: 1,
-        video: "/videos/pandamaster_video.mp4",
+        video: "/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4",
         isNew: true,
         isExclusive: true,
         subcategoies: {
