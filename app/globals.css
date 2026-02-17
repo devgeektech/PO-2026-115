@@ -64,16 +64,25 @@ body {
 } */
 
 .bg_img {
-  background-image: url('../public/images/Add-a-subheading_back.png');
-  background-position: center center;
+  /* background-image: url('../public/images/Add-a-subheading_back.png'); */
+  /* background-position: center center;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: #24083399;
+  border: 2px solid #24083399;
+  border-radius: 100px;
+  transition: 0.5s all ease-in-out;
+}
+.bg_img:hover {
+  border: 2px solid #bc13fe;
+  background-color: #64008b;
 }
 .marquee-container {
   width: 100%;
   overflow: hidden;
   padding: 12px 0;
-  max-width: 750px;
+  /* max-width: 750px; */
+  max-width: 30%;
 }
 
 .my-marquee .swiper-wrapper {
