@@ -186,6 +186,15 @@ header.header {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 1023px) {
+  header.header {
+    background:rgba(100, 0, 139,0.5) !important;
+  }
+  header.header input {
+    background: transparent !important;
+    border: 1px solid #787878 !important;
+  }
+}
 @media only screen and (max-width: 767px) {
   header a.logosite img {
     min-width: 75px;
