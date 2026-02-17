@@ -654,18 +654,29 @@ export const TopTenGamesData: any = {
     },
     ultraPanda: {
         id: 1,
-        video: "/videos/pandamaster_video.mp4",
+        video: "/images/onlineSlots/GamesLogoAnimation/ultrapanda.mp4",
         isNew: true,
         isExclusive: true,
         subcategoies: {
-            fish: [],
-            keno: [],
+            fish: [
+                 {
+                    id: 1,
+                    isNew: true,
+                    label: "Shainrock Keno",
+                    key: "shainrockeno",
+                    type: 'sub-cat',
+                    cat: 'riversweeps',
+                    sub: 'keno',
+                    image: "/images/onlineSlots/RiverSweeps/RiversweepsGameLogo/RiverKeno/5.png",
+                    detailImage: "/images/onlineSlots/RiverSweeps/RiversweepsInGamePhoto/RiverKeno/5.jpg",
+                }
+            ],
             slot: [],
         },
     },
     vblink: {
         id: 1,
-        video: "/videos/pandamaster_video.mp4",
+        video: "/images/onlineSlots/GamesLogoAnimation/ultrapanda.mp4",
         isNew: true,
         isExclusive: true,
         subcategoies: {
@@ -673,16 +684,5 @@ export const TopTenGamesData: any = {
             keno: [],
             slot: [],
         },
-    },
-    vegassweeps: {
-        id: 1,
-        video: "/videos/pandamaster_video.mp4",
-        isNew: true,
-        isExclusive: true,
-        subcategoies: {
-            fish: [],
-            keno: [],
-            slot: [],
-        },
-    },
+    }
 };
