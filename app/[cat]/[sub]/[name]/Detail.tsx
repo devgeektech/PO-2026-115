@@ -14,26 +14,35 @@ import { ChevronDown, CrossIcon, Eye, EyeOff, XCircleIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import CommonSlider from "@/components/CommonGameSlider";
-export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: any }) {
+import Signup from "@/components/Signup";
+
+export default function Detail({
+  cat,
+  sub,
+  name,
+}: {
+  cat: any;
+  sub: any;
+  name: any;
+}) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [open, setOpen] = useState(false);
   const router = useRouter();
-  console.log(cat,"cat", sub, "sub", name, "name")
+  console.log(cat, "cat", sub, "sub", name, "name");
 
   const [showPassword, setShowPassword] = useState(false);
   const [showReferral, setShowReferral] = useState(false);
 
-  const game:any =
-  TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
-    (item:any) =>
+  const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
+    (item: any) =>
       item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
   );
+  // const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       videoRef.current?.play();
     }, 3000);
-
 
     return () => clearTimeout(timer);
   }, []);
@@ -50,7 +59,10 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
         
         </ul> */}
 
-        <h1 className="flex gap-2 items-center text-[20px] font-normal mb-6" onClick={() => router.push("/")} >
+        <h1
+          className="flex gap-2 items-center text-[20px] font-normal mb-6"
+          onClick={() => router.push("/")}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -174,7 +186,12 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
         </div> */}
 
         {/* Best For You */}
-        <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="detail" initialCategory={cat}/>
+        <CommonSlider
+          title="Top Ten Games"
+          data={TopTenGamesData}
+          type="detail"
+          initialCategory={cat}
+        />
         {/* <FishGameSlider /> */}
         {/* <Section title="Best For You" games={bestForYou} /> */}
 
@@ -182,7 +199,7 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
         {/* <Section title="New Releases" games={newReleases} /> */}
       </div>
 
-      <Modal isOpen={open} onClose={() => setOpen(false)}>
+      {/* <Modal isOpen={open} onClose={() => setOpen(false)}>
         <div className="flex justify-between items-start gap-2 flex-wrap">
           <h2 className="text-white text-xl font-semibold mb-4">SignUp</h2>
           <button
@@ -196,14 +213,12 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
         <div className="">
           <form>
             <div className="w-full max-w-md mx-auto rounded-md bg-black text-white p-6 space-y-5">
-              {/* Email */}
+
               <input
                 type="email"
                 placeholder="Email Address"
                 className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
               />
-
-              {/* Password */}
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -223,8 +238,6 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
               <p className="text-xs text-gray-400">
                 8-20 characters. At least one number & one uppercase letter.
               </p>
-
-              {/* First / Last Name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <input
                   type="text"
@@ -237,8 +250,6 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
                   className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
                 />
               </div>
-
-              {/* Date of Birth */}
               <div>
                 <p className="text-sm text-gray-400 mb-2">Date of birth</p>
 
@@ -269,8 +280,6 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
                   />
                 </div>
               </div>
-
-              {/* Referral Toggle */}
               <button
                 type="button"
                 onClick={() => setShowReferral(!showReferral)}
@@ -292,8 +301,6 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
                   className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
                 />
               )}
-
-              {/* Continue Button */}
               <button
                 onClick={() => setOpen(false)}
                 className="cursor-pointer w-full bg-[#64008b] border-2 border-[#bc13fe]  text-white py-3 rounded-md font-semibold"
@@ -303,7 +310,8 @@ export default function Detail({ cat, sub, name }: { cat: any, sub: any, name: a
             </div>
           </form>
         </div>
-      </Modal>
+      </Modal> */}
+      <Signup isOpen={open} onClose={() => setOpen(false)} />
     </>
   );
 }

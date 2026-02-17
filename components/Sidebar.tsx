@@ -82,13 +82,12 @@ export default function Sidebar({
           )}
         >
           {menu.map(({ label, icon, href }) => (
-            <a
+            <Link
               key={label}
               href={href}
-              // className="flex items-center gap-3 px-3 py-3 rounded-[20px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border border-white/10"
               onClick={onCloseMobile}
               className={clsx(
-                "flex items-center gap-3 rounded-[20px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10",
+                "relative group flex items-center gap-3 rounded-[20px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10",
                 collapsed ? "px-1 py-2 justify-center" : "px-3 py-3"
               )}
             >
@@ -99,8 +98,16 @@ export default function Sidebar({
                 width={24}
                 height={24}
               />
-              {!collapsed && <span className="">{label}</span>}
-            </a>
+
+              {!collapsed && <span>{label}</span>}
+
+              {/* Tooltip */}
+              {collapsed && (
+                <span className="absolute left-full ml-3 whitespace-nowrap bg-black text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                  {label}
+                </span>
+              )}
+            </Link>
           ))}
         </nav>
       </aside>

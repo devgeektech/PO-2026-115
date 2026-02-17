@@ -16,7 +16,7 @@ export default function Navbar({
   return (
     <header className="header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] px-4">
       {/* LEFT SECTION */}
-      <div className="flex items-center gap-4 flex-1 min-w-0">
+      <div className="flex topheader items-center gap-4 flex-1 min-w-0">
         <div className="logo lg:hidden">
           <Image width={79} height={60} src={Logo} alt="Logo" />
         </div>

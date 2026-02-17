@@ -187,7 +187,7 @@ header.header {
   }
 }
 @media only screen and (max-width: 1023px) {
-  header.header {
+  header.header .topheader {
     background:rgba(100, 0, 139,0.5) !important;
   }
   header.header input {
