@@ -97,8 +97,31 @@ export default function Detail({
           <div className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
               {/* Spin Info */}
-              <div className="bg-neutral-900 rounded-xl p-5 flex gap-4 border border-[#FFFFFF14]">
+              <div className="bg-neutral-900 rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
                 <button
+                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[20px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
+                  onClick={() => setOpen(true)}
+                >
+                  <Image
+                    src={signupimg}
+                    className="w-auto h-auto"
+                    alt="signupimg"
+                  />
+                </button>
+                {/* <button
+                  className="cursor-pointer w-full"
+                  onClick={() => setOpen(true)}
+                >
+                  <Image
+                    src={playnowimg}
+                    className="w-full h-auto"
+                    alt="playnowimg"
+                  />
+                </button> */}
+              </div>
+
+              <div className="bg-neutral-900  rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
+                {/* <button
                   className="cursor-pointer w-full"
                   onClick={() => setOpen(true)}
                 >
@@ -107,14 +130,14 @@ export default function Detail({
                     className="w-full h-auto"
                     alt="signupimg"
                   />
-                </button>
+                </button> */}
                 <button
-                  className="cursor-pointer w-full"
+                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[20px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
                   onClick={() => setOpen(true)}
                 >
                   <Image
                     src={playnowimg}
-                    className="w-full h-auto"
+                    className="w-auto h-auto"
                     alt="playnowimg"
                   />
                 </button>

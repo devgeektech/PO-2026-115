@@ -153,6 +153,13 @@ body {
 .btn_include .multiSlide  .swiper-button-prev {
     right: 200px !important;
 }
+.title_wrapper h2 {
+  border-radius: 0 20px 20px 0;
+  transition: 0.5s all ease-in-out;
+}
+.title_wrapper h2:hover {
+    background: #64008b;
+}
 
 @media only screen and (max-width: 1475px) {
   /* .marquee-container {
@@ -225,5 +232,17 @@ header.header {
   }
   .btn_include .multiSlide .swiper-button-next {
     right: 65px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .title_wrapper {
+      position: relative !important;
+  }
+  a.seeAll_btn {
+    position: absolute;
+    top: 62px;
+  }
+  .sliderwrapper {
+    margin-bottom: 0px !important;
   }
 }
