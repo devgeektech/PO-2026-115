@@ -29,19 +29,9 @@ const menu = [
     href: "#TopTenGames",
   },
   {
-    label: "Recently Played",
-    icon: "/icons/clockIcon.svg",
-    href: "#RecentlyPlayed",
-  },
-  {
     label: "Top Hitting Games",
     icon: "/icons/topHitIcon.svg",
     href: "#TopHittingGames",
-  },
-  {
-    label: "Social Casino",
-    icon: "/icons/homeIcon.svg",
-    href: "#SocialCasino",
   },
   {
     label: "Slots Games",
@@ -130,7 +120,7 @@ export default function HomePage() {
                     width={24}
                     height={24}
                   />
-                  <span className="text-sm font-medium">{label}</span>
+                  <span className="text-sm font-medium" id={`${label}Games`}>{label}</span>
                 </Link>
               ))}
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X, ChevronDown } from "lucide-react";
+import { X } from "lucide-react";
 import toast from "react-hot-toast";
 
 type SignupProps = {
@@ -15,19 +15,17 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
     phone: "",
     firstName: "",
     lastName: "",
-    month: "",
-    day: "",
-    year: "",
+    message: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const validateForm = () => {
-    const { email, phone, month, day, year } = formData;
+    const { email, phone } = formData;
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -40,24 +38,6 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phone)) {
       toast.error("Phone number must be exactly 10 digits");
-      return false;
-    }
-
-    // Date validation
-    if (!month || !day || !year) {
-      toast.error("Please enter complete date of birth");
-      return false;
-    }
-
-    const date = new Date(`${month} ${day}, ${year}`);
-    if (isNaN(date.getTime())) {
-      toast.error("Invalid date of birth");
-      return false;
-    }
-
-    const today = new Date();
-    if (date > today) {
-      toast.error("Date of birth cannot be in future");
       return false;
     }
 
@@ -175,53 +155,14 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
             />
           </div>
 
-          {/* Date of Birth */}
-          <div>
-            <p className="text-sm text-gray-400 mb-2">Date of birth</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="relative">
-                <select
-                  name="month"
-                  onChange={handleChange}
-                  className="w-full appearance-none bg-[#2c2c2c] border border-[#444] px-4 py-3 rounded-md text-white focus:outline-none focus:border-[#bc13fe]"
-                >
-                  <option value="">Month</option>
-                  <option>January</option>
-                  <option>February</option>
-                  <option>March</option>
-                  <option>April</option>
-                  <option>May</option>
-                  <option>June</option>
-                  <option>July</option>
-                  <option>August</option>
-                  <option>September</option>
-                  <option>October</option>
-                  <option>November</option>
-                  <option>December</option>
-                </select>
-                <ChevronDown
-                  size={16}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
-                />
-              </div>
-
-              <input
-                type="text"
-                name="day"
-                placeholder="Day"
-                onChange={handleChange}
-                className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
-              />
-
-              <input
-                type="text"
-                name="year"
-                placeholder="Year"
-                onChange={handleChange}
-                className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
-              />
-            </div>
-          </div>
+          {/* Message */}
+          <textarea
+            name="message"
+            placeholder="Enter your message"
+            rows={3}
+            onChange={handleChange}
+            className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+          />
 
           {/* Continue */}
           <button

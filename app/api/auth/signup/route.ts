@@ -3,30 +3,22 @@ import { connectDB } from "@/lib/db";
 import User from "@/models/User";
 import sgMail from "@sendgrid/mail";
 
-export const dynamic = "force-dynamic"; 
-// prevents static optimization in Next 15
+export const dynamic = "force-dynamic";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+if (process.env.SENDGRID_API_KEY?.startsWith("SG.")) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+}
 
 export async function POST(req: Request) {
   try {
     await connectDB();
 
     const body = await req.json();
-    const { email, phone, firstName, lastName, month, day, year } = body;
+    const { email, phone, firstName, lastName, message } = body;
 
     if (!email || !phone) {
       return NextResponse.json(
         { message: "Email and phone are required" },
-        { status: 400 }
-      );
-    }
-
-    const existingUser = await User.findOne({ email });
-
-    if (existingUser) {
-      return NextResponse.json(
-        { message: "User already exists" },
         { status: 400 }
       );
     }
@@ -36,28 +28,33 @@ export async function POST(req: Request) {
       phone,
       firstName,
       lastName,
-      dob: { month, day, year },
+      message,
     });
 
-    // ✅ Send Welcome Email
-    // await sgMail.send({
-    //   to: email,
-    //   from: process.env.SENDGRID_FROM_EMAIL!,
-    //   subject: "Welcome to Our Platform 🎉",
-    //   html: `
-    //     <h2>Welcome ${firstName || ""}!</h2>
-    //     <p>Your account has been successfully created.</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    //     <p><strong>Phone:</strong> ${phone}</p>
-    //   `,
-    // });
-
     return NextResponse.json(
-      { message: "User created & email sent", userId: newUser._id },
+      { message: "User created successfully", userId: newUser._id },
       { status: 201 }
     );
-  } catch (error) {
+
+  } catch (error: any) {
     console.error("Signup Error:", error);
+
+    // ✅ Handle duplicate email error
+    if (error.code === 11000) {
+      return NextResponse.json(
+        { message: "Email already registered" },
+        { status: 400 }
+      );
+    }
+
+    // ✅ Handle mongoose validation errors
+    if (error.name === "ValidationError") {
+      return NextResponse.json(
+        { message: "Invalid input data" },
+        { status: 400 }
+      );
+    }
+
     return NextResponse.json(
       { message: "Internal server error" },
       { status: 500 }

@@ -9,24 +9,14 @@ const menu = [
     href: "#TopTenGames",
   },
   {
-    label: "Recently Played",
-    icon: "/icons/clockIcon.svg",
-    href: "#RecentlyPlayed",
-  },
-  {
     label: "Top Hitting Games",
     icon: "/icons/topHitIcon.svg",
-    href: "#TopHittingGames",
-  },
-  {
-    label: "Social Casino",
-    icon: "/icons/homeIcon.svg",
-    href: "#SocialCasino",
+    href: "#Top-hittingGames",
   },
   {
     label: "Slots Games",
     icon: "/icons/greenDotIcon.svg",
-    href: "#SlotsGames",
+    href: "#SlotGames",
   },
   { label: "Fish Games", icon: "/icons/giftIcon.svg", href: "#FishGames" },
   { label: "Keno Games", icon: "/icons/trustIcon.svg", href: "#KenoGames" },

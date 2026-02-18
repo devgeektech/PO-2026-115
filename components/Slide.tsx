@@ -25,7 +25,7 @@ export default function SlideCard({ slide }: Props) {
   const goToGames = () => {
     if(slide.type == "sub-cat" && slide.detailImage){
       // console.log(slide)
-      router.push(`${slide.cat}/${slide.sub}/${slide.key}`);
+      router.push(`/${slide.cat}/${slide.sub}/${slide.key}`);
     }
   };
 

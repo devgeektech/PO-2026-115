@@ -18,6 +18,11 @@ const UserSchema = new Schema(
       day: String,
       year: String,
     },
+    message: {
+      type: String,
+      trim: true,
+      default: "",
+    },
   },
   { timestamps: true }
 );
