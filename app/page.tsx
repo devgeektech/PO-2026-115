@@ -31,7 +31,7 @@ const menu = [
   {
     label: "Top Hitting Games",
     icon: "/icons/topHitIcon.svg",
-    href: "#TopHittingGames",
+    href: "#Top-hittingGames",
   },
   {
     label: "Slots Games",
