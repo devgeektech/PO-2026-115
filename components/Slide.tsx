@@ -14,7 +14,7 @@ type Props = {
     imageWidth?: number;
     imageHeight?: number;
     detailImage?: string;
-    cat?:string;
+    cat?: string;
     sub?: string;
     key?: string;
   };
@@ -23,7 +23,7 @@ type Props = {
 export default function SlideCard({ slide }: Props) {
   const router = useRouter();
   const goToGames = () => {
-    if(slide.type == "sub-cat" && slide.detailImage){
+    if (slide.type == "sub-cat" && slide.detailImage) {
       // console.log(slide)
       router.push(`/${slide.cat}/${slide.sub}/${slide.key}`);
     }
@@ -31,7 +31,7 @@ export default function SlideCard({ slide }: Props) {
 
   return (
     <div className="relative w-full rounded-xl overflow-hidden bg-black">
-      <div className="h-full w-full relative">
+      <div className="h-full w-full relative cursor-pointer">
         {/* Badges */}
         {(slide.isNew || slide.isExclusive) && (
           <div className="absolute md:top-3 md:left-3 top-1 left-1 z-10 flex gap-2">
@@ -71,8 +71,8 @@ export default function SlideCard({ slide }: Props) {
                 width={slide.imageWidth ?? 300}
                 height={slide.imageHeight ?? 400}
                 className="w-full object-cover rounded-[5px]"
-                onClick={()=>{
-                  goToGames()
+                onClick={() => {
+                  goToGames();
                 }}
               />
             )}

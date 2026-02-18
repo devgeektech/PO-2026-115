@@ -78,7 +78,7 @@ export default function Detail({
             <path d="m12 19-7-7 7-7" />
             <path d="M19 12H5" />
           </svg>{" "}
-          {name}
+          <label className="cursor-pointer capitalize">{name}</label>
         </h1>
 
         {/* Main Section */}

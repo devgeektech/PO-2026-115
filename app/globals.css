@@ -87,7 +87,7 @@ body {
   transition-timing-function: linear !important;
 }
 
-.marquee-text {
+.marquee-text, h1 label {
   font-size: 22px;
   font-weight: 600;
   white-space: nowrap;
@@ -178,7 +178,7 @@ header.header {
     align-items: flex-start;
 }
 .search-wrapper {
-    max-width: 100%;
+    max-width: calc(100% - 20px);
 }
 .marquee-container {
     max-width: 100%;
@@ -196,6 +196,10 @@ header.header {
 @media only screen and (max-width: 1023px) {
   header.header .topheader {
     background:rgba(100, 0, 139,0.5) !important;
+    padding: 10px;
+  }
+  header.header {
+    padding: 10px 10px 10px 0;
   }
   header.header input {
     background: transparent !important;

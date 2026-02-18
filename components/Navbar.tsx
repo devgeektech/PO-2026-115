@@ -14,7 +14,7 @@ export default function Navbar({
   onMobileToggle: () => void;
 }) {
   return (
-    <header className="header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] px-4">
+    <header className="header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] py-4 pe-0 ps-0 lg:ps-4">
       {/* LEFT SECTION */}
       <div className="flex topheader items-center gap-4 flex-1 min-w-0">
         <div className="logo lg:hidden">
@@ -43,7 +43,7 @@ export default function Navbar({
       </div>
 
       {/* RIGHT SECTION - Search */}
-      <div className="search-wrapper relative w-full max-w-[420px] shrink-0">
+      <div className="search-wrapper relative w-full max-w-[420px] shrink-0 mx-4">
         <Search
           size={16}
           className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"

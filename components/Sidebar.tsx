@@ -44,7 +44,7 @@ export default function Sidebar({
 
       <aside
         className={clsx(
-          "fixed lg:static top-0 bottom-0 z-50 h-screen bg-[#060607] border-r border-white/10 transition-all duration-500",
+          "fixed lg:static top-0 bottom-0 z-[110] h-[100vh] bg-[#060607] transition-all duration-500",
           collapsed ? "lg:w-16" : "lg:w-[280px]",
           mobileOpen ? "translate-x-0" : "-translate-x-full",
           "lg:translate-x-0 w-[280px]"

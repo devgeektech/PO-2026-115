@@ -8,13 +8,10 @@ import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import dynamic from "next/dynamic";
-const CommonSlider = dynamic(
-  () => import("@/components/CommonGameSlider"),
-  {
-    ssr: false, // important because Swiper uses window
-    loading: () => <div className="h-[300px]" /> // skeleton placeholder
-  }
-);
+const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
+  ssr: false, // important because Swiper uses window
+  loading: () => <div className="h-[300px]" />, // skeleton placeholder
+});
 
 type menu = {
   label: string;
@@ -97,7 +94,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="sticky top-0">
           <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl p-4">
             <div className="flex gap-3 overflow-x-auto scrollbar-hide">
               {menu.map(({ label, icon, href }) => (
@@ -120,7 +117,9 @@ export default function HomePage() {
                     width={24}
                     height={24}
                   />
-                  <span className="text-sm font-medium" id={`${label}Games`}>{label}</span>
+                  <span className="text-sm font-medium" id={`${label}Games`}>
+                    {label}
+                  </span>
                 </Link>
               ))}
             </div>
@@ -128,17 +127,21 @@ export default function HomePage() {
         </div>
         <div className="w-full min-w-0 overflow-hidden">
           {" "}
-          <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" />
+          <CommonSlider
+            title="Top Ten Games"
+            data={TopTenGamesData}
+            type="topTen"
+          />
         </div>
 
         <div className="">
           <h2 className="text-[32px] font-medium">
-            Online Slots 717 – Social Casino
+            Online Slots official – Social Casino
           </h2>
           <p className="my-4 font-light text-sm leading-[160%]">
-            Welcome to ONLINE SLOTS 717, where it’s zap, wow, and bam all the
-            way to the top! Get ready for hundreds of electrifying social casino
-            games designed to keep the excitement rolling nonstop. From
+            Welcome to ONLINE SLOTS official, where it’s zap, wow, and bam all
+            the way to the top! Get ready for hundreds of electrifying social
+            casino games designed to keep the excitement rolling nonstop. From
             high-energy online slots to immersive live dealer experiences, we
             bring you the perfect blend of action, fun, and nonstop
             entertainment.
@@ -148,7 +151,7 @@ export default function HomePage() {
             some laid-back fun, you’re in for a wham-bam good time. No pressure
             just pure enjoyment. So go ahead, hit that spin button with
             confidence, and say hello to millions of exciting chances to win at
-            ONLINE SLOTS 717! 🎰⚡
+            ONLINE SLOTS official! 🎰⚡
           </p>
           <h2 className="text-[32px] font-medium my-4">
             Explore Hundreds of Social Casino Games
