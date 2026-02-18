@@ -214,7 +214,6 @@ export default function Detail({
           type="detail"
           initialCategory={cat}
         />
-        {/* <FishGameSlider /> */}
         {/* <Section title="Best For You" games={bestForYou} /> */}
 
         {/* New Releases */}

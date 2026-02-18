@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,9 +42,8 @@ const menu = [
   { label: "Keno Games", icon: "/icons/trustIcon.svg", href: "#KenoGames" },
 ];
 
-export default function HomePage() {
+export default function HomePage({ searchTerm }: { searchTerm: string }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       videoRef.current?.play();
@@ -128,7 +127,7 @@ export default function HomePage() {
         </div>
         <div className="w-full min-w-0 overflow-hidden">
           {" "}
-          <CommonSlider title="Top Ten Games" data={TopTenGamesData} type="topTen" />
+          <CommonSlider searchTerm={searchTerm} title="Top Ten Games" data={TopTenGamesData} type="topTen" />
         </div>
 
         <div className="">

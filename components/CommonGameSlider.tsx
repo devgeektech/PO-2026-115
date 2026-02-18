@@ -12,10 +12,20 @@ export default function CommonSlider({
   data,
   type,
   initialCategory = "juwa",
+  searchTerm = "",
 }: any) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(
     initialCategory
   );
+
+  const filteredGames = (games: any[]) => {
+    if (!searchTerm) return games;
+
+    return games.filter((item: any) =>
+      item.label.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  };
+  
 
   const getInitialSubCategory = (category: string) => {
     const subs = data[category]?.subcategoies
@@ -131,7 +141,7 @@ export default function CommonSlider({
                   }}
                   className="mySwiper multiSlide mt-[15px]"
                 >
-                  {games.map((item: any, index: number) => {
+                  {filteredGames(games).map((item: any, index: number) => {
                     const normalizedItem = {
                       ...item,
                       image: item.image || item.icon,
