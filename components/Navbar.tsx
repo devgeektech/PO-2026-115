@@ -8,10 +8,14 @@ export default function Navbar({
   collapsed,
   onToggle,
   onMobileToggle,
+  searchTerm,
+  setSearchTerm,
 }: {
   collapsed: boolean;
   onToggle: () => void;
   onMobileToggle: () => void;
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
 }) {
   return (
     <header className="header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] py-4 pe-0 ps-0 lg:ps-4">
@@ -49,6 +53,8 @@ export default function Navbar({
           className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
         />
         <input
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search games and game providers"
           className="w-full bg-[#171718] rounded-full border border-white/10 pl-9 pr-3 py-4 text-sm text-[#E5E5E5] outline-none focus:border-white/20"
         />

@@ -12,10 +12,20 @@ export default function CommonSlider({
   data,
   type,
   initialCategory = "juwa",
+  searchTerm = "",
 }: any) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(
     initialCategory
   );
+
+  const filteredGames = (games: any[]) => {
+    if (!searchTerm) return games;
+
+    return games.filter((item: any) =>
+      item.label.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  };
+  
 
   const getInitialSubCategory = (category: string) => {
     const subs = data[category]?.subcategoies
@@ -44,7 +54,7 @@ export default function CommonSlider({
       {type !== "detail" && (
         <div
           className="sliderwrapper relative singleLineSlider tophitgameslider"
-          id="TopHTenGames"
+          id="TopTenGames"
         >
           <div className="title_wrapper absolute left-0 top-[15px] md:top-[10px] lg:top-0">
             <h2 className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4">
@@ -99,7 +109,7 @@ export default function CommonSlider({
               >
                 {/* Title */}
                 <div className="title_wrapper absolute left-0 top-[25px] md:top-[20px] lg:top-[0px]">
-                  <h2 id={`${subCategoryName}Games`} className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4 capitalize">
+                  <h2 id={`${subCategoryName.charAt(0).toUpperCase() + subCategoryName.slice(1)}Games`} className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4 capitalize">
                     {selectedCategory ? selectedCategory : ""} {subCategoryName}{" "}
                     Games
                   </h2>
@@ -131,7 +141,7 @@ export default function CommonSlider({
                   }}
                   className="mySwiper multiSlide mt-[15px]"
                 >
-                  {games.map((item: any, index: number) => {
+                  {filteredGames(games).map((item: any, index: number) => {
                     const normalizedItem = {
                       ...item,
                       image: item.image || item.icon,
