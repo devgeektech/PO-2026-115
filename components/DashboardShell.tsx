@@ -13,7 +13,7 @@ export default function DashboardShell({
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div className="flex min-h-screen bg-black text-white overflow-hidden">
+    <div className="flex bg-black text-white">
       {/* Sidebar */}
       <Sidebar
         collapsed={collapsed}
@@ -31,7 +31,7 @@ export default function DashboardShell({
           setSearchTerm={setSearchTerm}
         />
 
-        <main className="flex-1 min-w-0 p-2 md:p-8 overflow-x-hidden">
+        <main className="flex-1 min-w-0 p-2 md:p-8">
           {React.cloneElement(children as React.ReactElement<any>, {
             searchTerm,
           })}

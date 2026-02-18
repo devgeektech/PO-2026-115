@@ -93,7 +93,7 @@ export default function HomePage({ searchTerm }: { searchTerm: string }) {
             </div>
           </div>
         </div>
-        <div className="sticky top-0">
+        <div className="sticky top-0 z-[110]">
           <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl p-4">
             <div className="flex gap-3 overflow-x-auto scrollbar-hide">
               {menu.map(({ label, icon, href }) => (
