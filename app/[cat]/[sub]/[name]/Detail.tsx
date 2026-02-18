@@ -9,7 +9,6 @@ import jackpot from "@/public/images/jackpot.png";
 import infoicon from "@/public/images/infoicon.svg";
 import deepSeaPredator from "@/public/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg";
 import Modal from "@/components/Signup";
-import FishGameSlider from "@/components/FishGameSlider";
 import { ChevronDown, CrossIcon, Eye, EyeOff, XCircleIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
