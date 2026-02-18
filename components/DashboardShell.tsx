@@ -13,7 +13,7 @@ export default function DashboardShell({
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div className="flex bg-black text-white">
+    <div className="flex min-h-screen bg-black text-white overflow-hidden">
       {/* Sidebar */}
       <Sidebar
         collapsed={collapsed}
