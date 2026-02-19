@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import SlideCard from "./Slide";
@@ -25,7 +25,6 @@ export default function CommonSlider({
       item.label.toLowerCase().includes(searchTerm.toLowerCase())
     );
   };
-  
 
   const getInitialSubCategory = (category: string) => {
     const subs = data[category]?.subcategoies
@@ -62,11 +61,16 @@ export default function CommonSlider({
             </h2>
           </div>
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             navigation
             loop={true}
             spaceBetween={8}
             slidesPerView={5}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: { slidesPerView: 3, spaceBetween: 5 },
               480: { slidesPerView: 3 },
@@ -109,7 +113,10 @@ export default function CommonSlider({
               >
                 {/* Title */}
                 <div className="title_wrapper absolute left-0 top-[25px] md:top-[20px] lg:top-[0px]">
-                  <h2 id={`${subCategoryName.charAt(0).toUpperCase() + subCategoryName.slice(1)}Games`} className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4 capitalize">
+                  <h2
+                    id={`${subCategoryName.charAt(0).toUpperCase() + subCategoryName.slice(1)}Games`}
+                    className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4 capitalize"
+                  >
                     {selectedCategory ? selectedCategory : ""} {subCategoryName}{" "}
                     Games
                   </h2>
@@ -125,11 +132,16 @@ export default function CommonSlider({
 
                 {/* Swiper */}
                 <Swiper
-                  modules={[Navigation]}
+                  modules={[Navigation, Autoplay]}
                   navigation
                   loop={true}
                   spaceBetween={16}
                   slidesPerView={5}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
                   breakpoints={{
                     0: { slidesPerView: 3, spaceBetween: 5 },
                     480: { slidesPerView: 3 },

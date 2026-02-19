@@ -115,7 +115,10 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-white text-xl font-semibold">Sign Up</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white cursor-pointer"
+          >
             <X size={20} />
           </button>
         </div>

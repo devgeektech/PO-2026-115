@@ -44,7 +44,7 @@ export default function DashboardShell({
                 <Link
                   target="_blank"
                   href={"https://web.telegram.org/k/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={telegramIcon}
@@ -58,7 +58,7 @@ export default function DashboardShell({
                 <Link
                   target="_blank"
                   href={"https://web.whatsapp.com/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={whatsappIcon}
@@ -72,7 +72,7 @@ export default function DashboardShell({
                 <Link
                   target="_blank"
                   href={"https://www.messenger.com/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={messengerIcon}
@@ -86,7 +86,7 @@ export default function DashboardShell({
                 <Link
                   target="_blank"
                   href={"https://www.facebook.com/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={facebookIcon}

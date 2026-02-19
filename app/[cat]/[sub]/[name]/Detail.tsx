@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import signupimg from "@/public/images/signup-btn.png";
-import playnowimg from "@/public/images/playnow-btn.png";
+import createaccount from "@/public/images/createaccount_btn.gif";
+import playnowimg from "@/public/images/biggestjackpot_video.gif";
 import iconyellow from "@/public/images/iconyellow.svg";
 import jackpot from "@/public/images/jackpot.png";
 import infoicon from "@/public/images/infoicon.svg";
@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import CommonSlider from "@/components/CommonGameSlider";
 import Signup from "@/components/Signup";
-
+import TextType from "@/components/TextType";
 export default function Detail({
   cat,
   sub,
@@ -59,7 +59,7 @@ export default function Detail({
         </ul> */}
 
         <h1
-          className="flex gap-2 items-center text-[20px] font-normal mb-6"
+          className="flex gap-2 items-center text-[20px] font-normal mb-6 w-fit"
           onClick={() => router.push("/")}
         >
           <svg
@@ -94,20 +94,20 @@ export default function Detail({
 
           {/* Game Info */}
           <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
-              {/* Spin Info */}
-              <div className="bg-neutral-900 rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
-                <button
-                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
-                  onClick={() => setOpen(true)}
-                >
-                  <Image
-                    src={signupimg}
-                    className="w-auto h-auto"
-                    alt="signupimg"
-                  />
-                </button>
-                {/* <button
+            {/* <div className="grid grid-cols-1 sm:grid-cols-1 gap-6"> */}
+            {/* Spin Info */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
+              <button
+                className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
+                onClick={() => setOpen(true)}
+              >
+                <Image
+                  src={createaccount}
+                  className="max-w-[300px] h-auto w-full"
+                  alt="signupimg"
+                />
+              </button>
+              {/* <button
                   className="cursor-pointer w-full"
                   onClick={() => setOpen(true)}
                 >
@@ -117,10 +117,10 @@ export default function Detail({
                     alt="playnowimg"
                   />
                 </button> */}
-              </div>
+              {/* </div> */}
 
-              <div className="bg-neutral-900  rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
-                {/* <button
+              {/* <div className="bg-neutral-900  rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]"> */}
+              {/* <button
                   className="cursor-pointer w-full"
                   onClick={() => setOpen(true)}
                 >
@@ -130,17 +130,17 @@ export default function Detail({
                     alt="signupimg"
                   />
                 </button> */}
-                <button
-                  className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
-                  onClick={() => setOpen(true)}
-                >
-                  <Image
-                    src={playnowimg}
-                    className="w-auto h-auto"
-                    alt="playnowimg"
-                  />
-                </button>
-              </div>
+              <button
+                className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] px-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
+                onClick={() => setOpen(true)}
+              >
+                <Image
+                  src={playnowimg}
+                  className="max-w-[300px] h-auto w-full"
+                  alt="playnowimg"
+                />
+              </button>
+              {/* </div> */}
 
               {/* Volatility */}
               {/* <div className="bg-neutral-900 rounded-xl p-5 border border-[#FFFFFF14]">
@@ -177,10 +177,28 @@ export default function Detail({
                       Gold Coins Jackpot{" "}
                       <Image src={infoicon} alt="iconyellow.svg" />
                     </span>
-                    <span className="text-yellow-400 text-[18px] flex-wrap lg:text-[22px] font-bold flex gap-2">
+                    {/* <span className="text-yellow-400 text-[18px] flex-wrap lg:text-[22px] font-bold flex gap-2">
                       <Image src={iconyellow} alt="infoicon.svg" />{" "}
                       GC6,982,948,542
-                    </span>
+                    </span> */}
+                    <div className="">
+                      <TextType
+                        text={[
+                          "Juwa 10 min ago",
+                          "Ultrapanda 20 min ago",
+                          "VBLink 2 minutes ago",
+                        ]}
+                        typingSpeed={75}
+                        pauseDuration={1500}
+                        showCursor
+                        cursorCharacter="_"
+                        deletingSpeed={50}
+                        variableSpeedEnabled={false}
+                        variableSpeedMin={60}
+                        variableSpeedMax={120}
+                        cursorBlinkDuration={0.5}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

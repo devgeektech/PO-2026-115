@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/images/logo777.png";
+import PlayNow from "@/public/images/biggestjackpot_video.gif";
+import CreateAccount from "@/public/images/createaccount_btn.gif";
 const aboutLinks = ["Terms of Service", "Privacy Policy"];
 
 const gameLinks = [
@@ -116,6 +118,28 @@ export default function Footer() {
             Douglas, Isle of Man, IM1 1AP.
           </p>
           <p>© 2026 onlineslotsofficial.com | All rights reserved.</p>
+        </div>
+      </div>
+      <div className="">
+        <div className="flex gap-3 p-4 bg-[#64008b80]">
+          <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
+            <Image
+              src={PlayNow}
+              alt="PlayNow"
+              width={150}
+              height={52}
+              className="w-full h-auto"
+            />
+          </button>
+          <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
+            <Image
+              src={CreateAccount}
+              alt="CreateAccount"
+              width={150}
+              height={52}
+              className="w-full h-auto"
+            />
+          </button>
         </div>
       </div>
     </footer>

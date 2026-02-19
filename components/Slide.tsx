@@ -65,11 +65,11 @@ export default function SlideCard({ slide }: Props) {
             )}
 
             {!slide.video && slide.image && (
-              <Image
+              <img
                 src={slide.image}
                 alt={slide.title ?? "slide image"}
-                width={slide.imageWidth ?? 300}
-                height={slide.imageHeight ?? 400}
+                // width={slide.imageWidth ?? 300}
+                // height={slide.imageHeight ?? 400}
                 className="w-full object-cover rounded-[5px]"
                 onClick={() => {
                   goToGames();
