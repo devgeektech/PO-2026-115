@@ -37,7 +37,7 @@ export default function Sidebar({
       <div
         onClick={onCloseMobile}
         className={clsx(
-          "fixed inset-0 bg-black/60  z-40 lg:hidden transition-opacity",
+          "fixed inset-0 bg-black/60  z-[110] lg:hidden transition-opacity",
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
         )}
       />
