@@ -120,7 +120,7 @@ export default function Footer() {
           <p>© 2026 onlineslotsofficial.com | All rights reserved.</p>
         </div>
       </div>
-      <div className="">
+      <div className="fixed bottom-0 left-0 right-0 z-[101] sm:p-4 p-2 bg-neutral-900">
         <div className="flex gap-3 p-4 bg-[#64008b80]">
           <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
             <Image
@@ -128,7 +128,7 @@ export default function Footer() {
               alt="PlayNow"
               width={150}
               height={52}
-              className="w-full h-auto"
+              className="sm:w-[150px] w-[100px] h-auto"
             />
           </button>
           <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
@@ -137,7 +137,7 @@ export default function Footer() {
               alt="CreateAccount"
               width={150}
               height={52}
-              className="w-full h-auto"
+              className="sm:w-[150px] w-[100px] h-auto"
             />
           </button>
         </div>
