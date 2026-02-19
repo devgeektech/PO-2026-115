@@ -793,7 +793,7 @@ export const TopTenGamesData: any = {
                     cat: 'ultrapanda',
                     sub: 'slot',
                     image: "/images/onlineSlots/UltraPanda/UltraPandaGameLogo/ultraPandaSlot/3.jpg",
-                    detailImage: "/images/onlineSlots/UltraPanda/UltraPandaInGamePhotos/UltraPandaSlot/4.jpg",
+                    detailImage: "/images/onlineSlots/UltraPanda/UltraPandaInGamePhotos/UltraPandaSlot/3.jpg",
                 },
                 {
                     id: 4,
@@ -945,8 +945,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vblink',
                     sub: 'fish',
-                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/1.jpg",
-                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/1.jpg",
+                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/11.jpg",
+                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/11.jpg",
                 },
                 {
                     id: 12,
@@ -956,8 +956,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vblink',
                     sub: 'fish',
-                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/1.jpg",
-                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/1.jpg",
+                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/12.jpg",
+                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/12.jpg",
                 },
                 {
                     id: 13,
@@ -967,8 +967,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vblink',
                     sub: 'fish',
-                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/1.jpg",
-                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/1.jpg",
+                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/13.jpg",
+                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/13.jpg",
                 },
                 {
                     id: 14,
@@ -978,8 +978,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vblink',
                     sub: 'fish',
-                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/1.jpg",
-                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/1.jpg",
+                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/14.jpg",
+                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/14.jpg",
                 },
                 {
                     id: 15,
@@ -989,8 +989,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vblink',
                     sub: 'fish',
-                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/1.jpg",
-                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/1.jpg",
+                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkFish/15.jpg",
+                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkFish/16.jpg",
                 },
             ],
             keno: [
@@ -1013,8 +1013,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vblink',
                     sub: 'keno',
-                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkKeno/1.jpg",
-                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkOthers/1.jpg",
+                    image: "/images/onlineSlots/Vblink/VblinkGameLogo/VblinkKeno/2.jpg",
+                    detailImage: "/images/onlineSlots/Vblink/VblinkInGamePhoto/VblinkOthers/2.jpg",
                 },
             ],
             slot: [
@@ -1126,7 +1126,7 @@ export const TopTenGamesData: any = {
         video: "/images/onlineSlots/GamesLogoAnimation/wegasweaps.mp4",
         isNew: true,
         isExclusive: true,
-        subcategories: {
+        subcategoies: {
             fish: [
                 {
                     id: 1,
@@ -1158,8 +1158,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vegasweeps',
                     sub: 'fish',
-                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/2.jpg",
-                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/2.jpg",
+                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/3.jpg",
+                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/3.jpg",
                 },
                 {
                     id: 4,
@@ -1169,8 +1169,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vegasweeps',
                     sub: 'fish',
-                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/2.jpg",
-                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/2.jpg",
+                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/4.jpg",
+                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/4.jpg",
                 },
                 {
                     id: 5,
@@ -1180,8 +1180,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vegasweeps',
                     sub: 'fish',
-                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/2.jpg",
-                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/2.jpg",
+                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/5.jpg",
+                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/5.jpg",
                 },
                 {
                     id: 6,
@@ -1191,8 +1191,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vegasweeps',
                     sub: 'fish',
-                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/2.jpg",
-                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/2.jpg",
+                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/6.jpg",
+                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/6.jpg",
                 },
                 {
                     id: 7,
@@ -1202,8 +1202,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vegasweeps',
                     sub: 'fish',
-                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/2.jpg",
-                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/2.jpg",
+                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasFish/7.jpg",
+                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasFish/7.jpg",
                 }
             ],
             keno: [
@@ -1382,8 +1382,8 @@ export const TopTenGamesData: any = {
                     type: 'sub-cat',
                     cat: 'vegasweeps',
                     sub: 'slot',
-                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasSlot/2.jpg",
-                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasSlot/2.jpg",
+                    image: "/images/onlineSlots/VegasSweeps/GameLogo/VegasSlot/10.jpg",
+                    detailImage: "/images/onlineSlots/VegasSweeps/InGamePhoto/VegasSlot/10.jpg",
                 }
             ]
         }
