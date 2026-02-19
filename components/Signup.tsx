@@ -3,7 +3,14 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import toast from "react-hot-toast";
-
+import Link from "next/link";
+import facebook from "@/public/icons/Facebook.gif";
+import Image from "next/image";
+import Lottie from "lottie-react";
+import telegramIcon from "@/public/animations/telegram.json";
+import whatsappIcon from "@/public/animations/whatsapp.json";
+import messengerIcon from "@/public/animations/messenger.json";
+import facebookIcon from "@/public/animations/facebook.json";
 type SignupProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -96,7 +103,7 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[130] flex items-center justify-center p-4">
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
@@ -114,17 +121,14 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
         </div>
 
         {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-5"
-        >
+        <form onSubmit={handleSubmit} className="space-y-5">
           {/* Email */}
           <input
             type="email"
             name="email"
             placeholder="Email Address"
             onChange={handleChange}
-            className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+            className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#bc13fe]"
           />
 
           {/* Phone */}
@@ -134,7 +138,7 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
             placeholder="Phone Number"
             maxLength={10}
             onChange={handleChange}
-            className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+            className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#bc13fe]"
           />
 
           {/* First / Last Name */}
@@ -144,14 +148,14 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}
-              className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+              className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#bc13fe]"
             />
             <input
               type="text"
               name="lastName"
               placeholder="Last Name"
               onChange={handleChange}
-              className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+              className="bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#bc13fe]"
             />
           </div>
 
@@ -161,13 +165,74 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
             placeholder="Enter your message"
             rows={3}
             onChange={handleChange}
-            className="w-full bg-[#2c2c2c] rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-300 focus:outline-none focus:border-[#bc13fe]"
+            className="w-full bg-[#2c2c2c] resize-none rounded-md border border-[#444] px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#bc13fe]"
           />
+
+          <div className="">
+            <ul className="flex justify-center items-center">
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://web.telegram.org/k/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={telegramIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://web.whatsapp.com/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={whatsappIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.messenger.com/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={messengerIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.facebook.com/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={facebookIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           {/* Continue */}
           <button
             type="submit"
-            className="w-full bg-[#64008b] border-2 border-[#bc13fe] text-white py-3 rounded-md font-semibold hover:opacity-90 transition"
+            className="cursor-pointer w-full bg-[#64008b] border-2 border-[#bc13fe] text-white py-3 rounded-md font-semibold hover:opacity-90 transition"
           >
             Continue
           </button>

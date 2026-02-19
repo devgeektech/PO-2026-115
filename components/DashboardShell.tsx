@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Link from "next/link";
+import Lottie from "lottie-react";
+import telegramIcon from "@/public/animations/telegram.json";
+import whatsappIcon from "@/public/animations/whatsapp.json";
+import messengerIcon from "@/public/animations/messenger.json";
+import facebookIcon from "@/public/animations/facebook.json";
 
 export default function DashboardShell({
   children,
@@ -32,6 +38,66 @@ export default function DashboardShell({
         />
 
         <main className="flex-1 min-w-0 p-2 md:p-8">
+          <div className="fixed top-[400px] right-0 z-[39] w-auto h-auto bg-[#1a1a1a] border border-[#2D2D2D] rounded-[6px]">
+            <ul className="flex flex-col justify-center items-center">
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://web.telegram.org/k/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={telegramIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://web.whatsapp.com/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={whatsappIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.messenger.com/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={messengerIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.facebook.com/"}
+                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={facebookIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
           {React.cloneElement(children as React.ReactElement<any>, {
             searchTerm,
           })}
