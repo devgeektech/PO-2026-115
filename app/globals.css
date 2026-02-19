@@ -168,9 +168,6 @@ body {
 }
 
 @media only screen and (max-width: 1475px) {
-  /* .marquee-container {
-      max-width: 500px;
-  } */
   .marquee-container .swiper .swiper-slide {
     margin-right: 15px !important;
   }
@@ -205,7 +202,7 @@ header.header {
     padding: 10px;
   }
   header.header {
-    padding: 10px 10px 10px 0;
+    padding: 0px 10px 10px 0;
   }
   header.header input {
     background: transparent !important;
@@ -242,6 +239,9 @@ header.header {
   }
   .btn_include .multiSlide .swiper-button-next {
     right: 65px;
+  }
+  footer.footer {
+    padding-bottom: 100px;
   }
 }
 @media only screen and (max-width: 480px) {
