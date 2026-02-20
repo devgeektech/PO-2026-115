@@ -98,14 +98,14 @@ export default function HomePage() {
           </div>
         </div>
         <div className="sticky top-0 z-[30]">
-          <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl p-4">
+          <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl md:p-4 p-2">
             <div className="flex gap-3 overflow-x-auto scrollbar-hide">
               {menu.map(({ label, icon, href }) => (
                 <Link
                   key={label}
                   className={clsx(
                     "flex items-center gap-2 whitespace-nowrap cursor-pointer",
-                    "px-5 py-2.5 rounded-[20px]",
+                    "md:px-5 px-4 md:py-2.5 py-1.5 md:rounded-[20px] rounded-[10px]",
                     "bg-white/5 text-white",
                     "border-2 border-white/10",
                     "hover:bg-[#64008b] hover:border-[#bc13fe]",
@@ -138,7 +138,7 @@ export default function HomePage() {
         </div>
 
         <div className="">
-          <h2 className="lg:text-[32px] text-[24px] font-medium">
+          <h2 className="lg:text-[32px] md:text-[24px] text-[20px] leading-[120%] font-medium">
             Online Slots official – Social Casino
           </h2>
           <p className="my-4 font-light text-sm leading-[160%]">
@@ -156,7 +156,7 @@ export default function HomePage() {
             confidence, and say hello to millions of exciting chances to win at
             ONLINE SLOTS official! 🎰⚡
           </p>
-          <h2 className="lg:text-[32px] text-[24px] font-medium my-4">
+          <h2 className="lg:text-[32px] md:text-[24px] text-[20px] leading-[120%] font-medium my-4">
             Explore Hundreds of Social Casino Games
           </h2>
           <p className="my-4 font-light text-sm leading-[160%]">

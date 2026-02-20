@@ -38,7 +38,7 @@ const gameLinks = [
 export default function Footer() {
   return (
     <footer className="footer bg-[#0e0e0e] text-white">
-      <div className="mx-auto px-6 py-12">
+      <div className="mx-auto px-2 md:px-6 md:py-12 py-6">
         {/* Logo + Description */}
         <div className="mb-10">
           <Link href={"/"} className="inline-block">
