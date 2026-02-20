@@ -46,7 +46,9 @@ export default function Navbar({
       {/* LEFT SECTION */}
       <div className="flex topheader items-center gap-4 flex-1 min-w-0">
         <div className="logo lg:hidden">
-          <Image width={79} height={60} src={Logo} alt="Logo" />
+          <Link href={"/"}>
+            <Image width={79} height={60} src={Logo} alt="Logo" />
+          </Link>
         </div>
         {/* Mobile Menu Button */}
         <button
