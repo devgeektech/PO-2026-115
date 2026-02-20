@@ -53,7 +53,6 @@ export default function HomePage() {
     return () => clearTimeout(timer);
   }, []);
 
-
   return (
     <div className="w-full text-white">
       {/* Main Content */}
@@ -139,7 +138,7 @@ export default function HomePage() {
         </div>
 
         <div className="">
-          <h2 className="text-[32px] font-medium">
+          <h2 className="lg:text-[32px] text-[24px] font-medium">
             Online Slots official – Social Casino
           </h2>
           <p className="my-4 font-light text-sm leading-[160%]">
@@ -157,7 +156,7 @@ export default function HomePage() {
             confidence, and say hello to millions of exciting chances to win at
             ONLINE SLOTS official! 🎰⚡
           </p>
-          <h2 className="text-[32px] font-medium my-4">
+          <h2 className="lg:text-[32px] text-[24px] font-medium my-4">
             Explore Hundreds of Social Casino Games
           </h2>
           <p className="my-4 font-light text-sm leading-[160%]">
