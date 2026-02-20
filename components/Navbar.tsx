@@ -130,7 +130,7 @@ export default function Navbar({
                 {filteredGames.map((item: any, index: number) => (
                   <SwiperSlide
                     onClick={() => {
-                      setSearchTerm(""); // ✅ Clear search → closes dropdown
+                      setSearchTerm(""); 
                     }}
                     key={`${item.label}-${index}`}
                   >

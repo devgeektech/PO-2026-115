@@ -16,7 +16,7 @@ type SignupProps = {
   onClose: () => void;
 };
 
-export default function Signup({ isOpen, onClose }: SignupProps) {
+export default function Signup({ isOpen, onClose }: any) {
   const [formData, setFormData] = useState({
     email: "",
     phone: "",
