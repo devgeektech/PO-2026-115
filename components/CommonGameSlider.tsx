@@ -136,7 +136,7 @@ export default function CommonSlider({
                     setSelectedSubCategory(subCategoryName);
                     setOpen(true);
                   }}
-                  className="seeAll_btn bg-white cursor-pointer z-[12] rounded-full md:px-5 md:py-2 px-2 py-1 md:text-[20px] text-[14px] md:top-[8px] top-[15px] text-[#bc13fe] absolute right-0"
+                  className="seeAll_btn bg-white cursor-pointer z-[101] rounded-full md:px-5 md:py-2 px-2 py-1 md:text-[20px] text-[14px] md:top-[8px] sm:top-[16px] xs:top-[16px] top-[26px] text-[#bc13fe] absolute right-0"
                 >
                   See All
                 </button>
@@ -184,8 +184,8 @@ export default function CommonSlider({
       <GridModal
         isOpen={open}
         onClose={() => setOpen(false)}
-        title="Delete Confirmation"
-        description="Are you sure you want to delete this item?"
+        title="View All Games"
+        description="Here are all the games in this category."
         confirmText="Delete"
         cancelText="Cancel"
         onConfirm={handleDelete}

@@ -38,7 +38,7 @@ export default function DashboardShell({
         />
 
         <main className="flex-1 min-w-0 p-2 md:p-8">
-          <div className=" fixed socialMenu top-[100px] md:top-[120px] lg:top-[400px] right-0 z-[101] w-auto h-auto rounded-[6px]">
+          <div className=" fixed socialMenu top-[100px] md:top-[120px] lg:top-[400px] right-0 z-[105] w-auto h-auto rounded-[6px]">
             <ul className="flex flex-col justify-center items-center">
               <li>
                 <Link
