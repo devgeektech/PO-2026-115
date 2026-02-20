@@ -7,13 +7,11 @@ import SlideCard from "./Slide";
 import Link from "next/link";
 import { useState } from "react";
 import GridModal from "./GridModal";
-
 export default function CommonSlider({
   title,
   data,
   type,
   initialCategory = "juwa",
-  searchTerm = "",
 }: any) {
   const [open, setOpen] = useState(false);
 
@@ -27,11 +25,7 @@ export default function CommonSlider({
   );
 
   const filteredGames = (games: any[]) => {
-    if (!searchTerm) return games;
-
-    return games.filter((item: any) =>
-      item.label.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    return games
   };
 
   const getInitialSubCategory = (category: string) => {
@@ -113,8 +107,14 @@ export default function CommonSlider({
               (subCategoryName !== "top-hitting" && type === "detail") ||
               type !== "detail"
           )
-          .map(([subCategoryName, games]: any) =>
-            games && games.length > 0 ? (
+          .map(([subCategoryName, games]: any) => {
+            if (!games || games.length === 0) return null;
+
+            const visibleGames = filteredGames(games);
+
+            if (visibleGames.length === 0) return null;
+
+            return (
               <div
                 key={subCategoryName}
                 className="sliderwrapper relative singleLineSlider btn_include mb-10"
@@ -125,8 +125,7 @@ export default function CommonSlider({
                     id={`${subCategoryName.charAt(0).toUpperCase() + subCategoryName.slice(1)}Games`}
                     className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4 capitalize"
                   >
-                    {selectedCategory ? selectedCategory : ""} {subCategoryName}{" "}
-                    Games
+                    {selectedCategory ? selectedCategory : ""} {subCategoryName} Games
                   </h2>
                 </div>
 
@@ -164,7 +163,7 @@ export default function CommonSlider({
                   }}
                   className="mySwiper multiSlide mt-[15px]"
                 >
-                  {filteredGames(games).map((item: any, index: number) => {
+                  {visibleGames.map((item: any, index: number) => {
                     const normalizedItem = {
                       ...item,
                       image: item.image || item.icon,
@@ -178,8 +177,8 @@ export default function CommonSlider({
                   })}
                 </Swiper>
               </div>
-            ) : null
-          )}
+            );
+          })}
 
       <GridModal
         isOpen={open}
