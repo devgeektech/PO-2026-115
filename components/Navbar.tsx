@@ -1,8 +1,8 @@
+import Link from "next/link";
 import { Menu, Search } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Logo from "@/public/images/logo777.png";
@@ -37,12 +37,12 @@ export default function Navbar({
 
   const filteredGames = searchTerm
     ? allGames.filter((item: any) =>
-        item.label?.toLowerCase().includes(searchTerm.toLowerCase()),
+        item.label?.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : [];
 
   return (
-    <header className="header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] py-4 pe-0 ps-0 lg:ps-4">
+    <header className="relative header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] py-4 pe-0 ps-0 lg:ps-4">
       {/* LEFT SECTION */}
       <div className="flex topheader items-center gap-4 flex-1 min-w-0">
         <div className="logo lg:hidden">
@@ -85,11 +85,11 @@ export default function Navbar({
       </div> */}
 
       {/* RIGHT SECTION - Search */}
-      <div className="search-wrapper relative w-full max-w-[420px] shrink-0 mx-4">
-        <Search
+      <div className="search-wrapper w-full max-w-[420px] shrink-0 mx-4">
+        {/* <Search
           size={16}
           className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-        />
+        /> */}
         <input
           value={searchTerm}
           onChange={(e) => {
@@ -102,13 +102,13 @@ export default function Navbar({
 
         {/* 🔴 SEARCH DROPDOWN */}
         {searchTerm && (
-          <div className="absolute left-0 top-full mt-3 w-[700px] bg-[#a32626] p-6 rounded-md shadow-2xl z-50">
+          <div className="absolute left-0 top-full mt-3 w-full bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] p-6 rounded-md shadow-2xl z-50">
             <h3 className="text-white text-lg mb-4 font-semibold">Results</h3>
 
             {filteredGames.length > 0 ? (
               <Swiper
-                modules={[Navigation, Autoplay]}
-                navigation
+                modules={[Autoplay]}
+                // navigation
                 loop={false}
                 spaceBetween={16}
                 slidesPerView={5}
@@ -137,6 +137,7 @@ export default function Navbar({
                         ...item,
                         image: item.image || item.icon,
                       }}
+                      fromSearchComponent={true}
                     />
                   </SwiperSlide>
                 ))}

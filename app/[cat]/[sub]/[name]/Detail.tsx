@@ -96,7 +96,7 @@ export default function Detail({
           <div className="space-y-6">
             {/* <div className="grid grid-cols-1 sm:grid-cols-1 gap-6"> */}
             {/* Spin Info */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]">
+            <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 gap-6 rounded-xl p-5 gap-4 border border-[#FFFFFF14]">
               <button
                 className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] p-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
                 onClick={() => setOpen(true)}

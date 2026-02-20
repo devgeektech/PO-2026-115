@@ -18,9 +18,13 @@ type Props = {
     sub?: string;
     key?: string;
   };
+  fromSearchComponent?: boolean;
 };
 
-export default function SlideCard({ slide }: Props) {
+export default function SlideCard({
+  slide,
+  fromSearchComponent = false,
+}: Props) {
   const router = useRouter();
   const goToGames = () => {
     if (slide.type == "sub-cat" && slide.detailImage) {
@@ -34,9 +38,13 @@ export default function SlideCard({ slide }: Props) {
       <div className="h-full w-full relative cursor-pointer">
         {/* Badges */}
         {(slide.isNew || slide.isExclusive) && (
-          <div className="absolute md:top-3 md:left-3 top-1 left-1 z-10 flex gap-2">
+          <div
+            className={`${fromSearchComponent ? "top-[5px] left-[5px]  " : " md:top-3 md:left-3 top-1 left-1  "}   z-10 absolute gap-2 flex`}
+          >
             {slide.isNew && (
-              <span className="bg-[#2A9CFF] border-2 border-[#006ECD] text-white text-[10px] px-2 py-0 sm:text-sm sm:px-4 sm:py-1 rounded-full">
+              <span
+                className={`${fromSearchComponent ? "text-[10px] sm:px-2 sm:py-0" : "text-[14px] sm:px-4 sm:py-1"} bg-[#2A9CFF] border-2 border-[#006ECD] text-white  sm:text-sm rounded-full`}
+              >
                 NEW
               </span>
             )}

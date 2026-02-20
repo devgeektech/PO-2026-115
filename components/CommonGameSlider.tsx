@@ -25,7 +25,7 @@ export default function CommonSlider({
   );
 
   const filteredGames = (games: any[]) => {
-    return games
+    return games;
   };
 
   const getInitialSubCategory = (category: string) => {
@@ -125,7 +125,8 @@ export default function CommonSlider({
                     id={`${subCategoryName.charAt(0).toUpperCase() + subCategoryName.slice(1)}Games`}
                     className="pe-4 z-[100] text-[20px] md:text-[24px] lg:text-[32px] font-medium relative before:content-[''] before:absolute before:left-0 before:w-[5px] before:h-full before:bg-[#bc13fe] pl-4 capitalize"
                   >
-                    {selectedCategory ? selectedCategory : ""} {subCategoryName} Games
+                    {selectedCategory ? selectedCategory : ""} {subCategoryName}{" "}
+                    Games
                   </h2>
                 </div>
 
@@ -183,7 +184,7 @@ export default function CommonSlider({
       <GridModal
         isOpen={open}
         onClose={() => setOpen(false)}
-        title="View All Games"
+        title="All Games"
         description="Here are all the games in this category."
         confirmText="Delete"
         cancelText="Cancel"

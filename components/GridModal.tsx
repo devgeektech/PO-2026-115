@@ -62,17 +62,17 @@ export default function GridModal({
       />
 
       <div className="relative z-100 w-full max-w-[800px] rounded-2xl bg-[#111111] border border-[#2a2a2a] shadow-2xl">
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between pt-4 ps-4 pe-4 pb-0">
           <h2 className="text-lg font-semibold">{title}</h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-black cursor-pointer"
+            className="text-gray-500 hover:text-white cursor-pointer"
           >
             ✕
           </button>
         </div>
         <div className="p-4">
-          <ul className="overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[450px] sm:max-h-[250px] lg:max-h-[400px]">
+          <ul className="overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[450px] sm:max-h-[250px] lg:max-h-[450px] xl:max-h-[650px]">
             {filteredGames.map((game, index) => (
               <li key={index}>
                 <img

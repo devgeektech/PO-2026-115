@@ -103,13 +103,14 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[130] flex items-center justify-center p-4">
+    <div className="signupBG fixed inset-0 z-[130] flex items-center md:justify-start justify-center p-4">
       {/* Overlay */}
+      {/* <div className="absolute inset-0" onClick={onClose} /> */}
       <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        className="absolute inset-0 bg-gradient-to-r 
+      from-black/100 via-black/75 to-black/0"
         onClick={onClose}
       />
-
       {/* Modal Box */}
       <div className="relative z-10 w-full max-w-md bg-[#111111] border border-[#2a2a2a] rounded-xl p-6 shadow-2xl animate-in fade-in zoom-in-95 max-h-[90vh] overflow-y-auto">
         {/* Header */}
@@ -177,7 +178,7 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
                 <Link
                   target="_blank"
                   href={"https://web.telegram.org/k/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={telegramIcon}
@@ -191,7 +192,7 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
                 <Link
                   target="_blank"
                   href={"https://web.whatsapp.com/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={whatsappIcon}
@@ -205,7 +206,7 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
                 <Link
                   target="_blank"
                   href={"https://www.messenger.com/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={messengerIcon}
@@ -219,7 +220,7 @@ export default function Signup({ isOpen, onClose }: SignupProps) {
                 <Link
                   target="_blank"
                   href={"https://www.facebook.com/"}
-                  className="w-[50px] h-[50px] overflow-hidden flex items-center justify-center"
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
                     animationData={facebookIcon}
