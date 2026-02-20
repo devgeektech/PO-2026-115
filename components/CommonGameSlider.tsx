@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import SlideCard from "./Slide";
 import Link from "next/link";
 import { useState } from "react";
+import GridModal from "./GridModal";
 
 export default function CommonSlider({
   title,
@@ -14,6 +15,13 @@ export default function CommonSlider({
   initialCategory = "juwa",
   searchTerm = "",
 }: any) {
+  const [open, setOpen] = useState(false);
+
+  const handleDelete = () => {
+    console.log("Deleted");
+    setOpen(false);
+  };
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(
     initialCategory
   );
@@ -52,7 +60,7 @@ export default function CommonSlider({
     <>
       {type !== "detail" && (
         <div
-          className="sliderwrapper relative singleLineSlider tophitgameslider"
+          className="sliderwrapper relative singleLineSlider tophitgameslider mb-10"
           id="TopTenGames"
         >
           <div className="title_wrapper absolute left-0 top-[15px] md:top-[10px] lg:top-0">
@@ -123,12 +131,15 @@ export default function CommonSlider({
                 </div>
 
                 {/* See All Button */}
-                <Link
-                  href={"/"}
+                <button
+                  onClick={() => {
+                    setSelectedSubCategory(subCategoryName);
+                    setOpen(true);
+                  }}
                   className="seeAll_btn bg-white cursor-pointer z-[12] rounded-full md:px-5 md:py-2 px-2 py-1 md:text-[20px] text-[14px] md:top-[8px] top-[15px] text-[#bc13fe] absolute right-0"
                 >
                   See All
-                </Link>
+                </button>
 
                 {/* Swiper */}
                 <Swiper
@@ -169,6 +180,18 @@ export default function CommonSlider({
               </div>
             ) : null
           )}
+
+      <GridModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        title="Delete Confirmation"
+        description="Are you sure you want to delete this item?"
+        confirmText="Delete"
+        cancelText="Cancel"
+        onConfirm={handleDelete}
+        subCategories={subCategories}
+        selectedSubCategory={selectedSubCategory}
+      />
     </>
   );
 }

@@ -168,7 +168,7 @@ export default function HomePage({ searchTerm }: { searchTerm: string }) {
             required. Find new favorites, keep the excitement alive, and dive
             into hundreds of thrilling social casino games today! 🎰✨
           </p>
-          <Link href={"/"} className="flex items-center">
+          <Link href={"/"} className="flex items-center w-fit">
             Read more <img src="./images/doubleArrow.png" alt="doubleArrow" />
           </Link>
         </div>

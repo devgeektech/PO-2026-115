@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="mx-auto px-6 py-12">
         {/* Logo + Description */}
         <div className="mb-10">
-          <Link href={"/"}>
+          <Link href={"/"} className="inline-block">
             <Image
               width={109}
               height={100}
