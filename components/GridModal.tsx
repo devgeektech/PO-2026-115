@@ -42,7 +42,7 @@ export default function GridModal({
   }, [isOpen, onClose]);
 
   const filteredGames =
-    subCategories.find(([sub]) => sub === selectedSubCategory)?.[1] || [];
+    subCategories.find(([sub]:[string, any]) => sub === selectedSubCategory)?.[1] || [];
 
   console.log(filteredGames, "filterd games");
 
@@ -73,7 +73,7 @@ export default function GridModal({
         </div>
         <div className="p-4">
           <ul className="overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[450px] sm:max-h-[250px] lg:max-h-[450px] xl:max-h-[650px]">
-            {filteredGames.map((game, index) => (
+            {filteredGames.map((game:any, index:any) => (
               <li key={index}>
                 <img
                   src={game.image}
