@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/images/logo777.png";
-import PlayNow from "@/public/images/biggestjackpot_video.gif";
-import CreateAccount from "@/public/images/createaccount_btn.gif";
+// import PlayNow from "@/public/images/biggestjackpot_video.gif";
+// import CreateAccount from "@/public/images/createaccount_btn.gif";
+import telegramIcon from "@/public/animations/telegram.json";
+import whatsappIcon from "@/public/animations/whatsapp.json";
+import messengerIcon from "@/public/animations/messenger.json";
+import facebookIcon from "@/public/animations/facebook.json";
+import Lottie from "lottie-react";
 const aboutLinks = ["Terms of Service", "Privacy Policy"];
 
 const gameLinks = [
@@ -120,9 +125,9 @@ export default function Footer() {
           <p>© 2026 onlineslotsofficial.com | All rights reserved.</p>
         </div>
       </div>
-      <div className="fixed bottom-0 left-0 right-0 z-[101] sm:p-4 p-2 bg-neutral-900 md:hidden">
-        <div className="flex gap-3 p-2 bg-[#64008b80]">
-          <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
+      <div className="fixed bottom-0 left-0 right-0 z-[101] md:hidden">
+        <div className="flex justify-center gap-3 p-2 bg-[#5f0085]">
+          {/* <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
             <Image
               src={PlayNow}
               alt="PlayNow"
@@ -139,7 +144,67 @@ export default function Footer() {
               height={50}
               className="sm:w-[150px] w-[100px] h-auto"
             />
-          </button>
+          </button> */}
+          <div className="socialMenu w-auto h-auto rounded-[6px]">
+            <ul className="flex justify-center items-center">
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://web.telegram.org/k/"}
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={telegramIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://web.whatsapp.com/"}
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={whatsappIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.messenger.com/"}
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={messengerIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.facebook.com/"}
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={facebookIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

@@ -61,51 +61,28 @@ export default function GridModal({
         onClick={onClose}
       />
 
-      {/* Modal */}
-      <div className="relative z-100 w-full max-w-md rounded-2xl bg-[#111111] border border-[#2a2a2a] shadow-2xl">
-        {/* Header */}
-        <div className="flex items-center justify-between p-4">
+      <div className="relative z-100 w-full max-w-[800px] rounded-2xl bg-[#111111] border border-[#2a2a2a] shadow-2xl">
+        <div className="flex items-center justify-between pt-4 ps-4 pe-4 pb-0">
           <h2 className="text-lg font-semibold">{title}</h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-black cursor-pointer"
+            className="text-gray-500 hover:text-white cursor-pointer"
           >
             ✕
           </button>
         </div>
-
-        {/* Body */}
         <div className="p-4">
-          {/* <p className="text-gray-600">{description}</p> */}
-          {/* filteredGames.map((game: any) => (
-            <div key={game.label} className="p-2 border-b border-[#2a2a2a]">
-              <h3 className="font-medium">{game.label}</h3>
-                <img src={game.image} alt={game.label} className="w-full h-40 object-cover rounded-lg mt-2"/>
-            </div>
-          )) */}
-          <ul>
+          <ul className="overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[450px] sm:max-h-[250px] lg:max-h-[450px] xl:max-h-[650px]">
             {filteredGames.map((game, index) => (
               <li key={index}>
-                <img src={game.image} alt={game.image} />
+                <img
+                  src={game.image}
+                  alt={game.image}
+                  className="w-full h-auto"
+                />
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Footer */}
-        <div className="flex justify-end gap-3 p-4">
-          <button onClick={onClose} className="rounded-lg border px-4 py-2">
-            {cancelText}
-          </button>
-
-          {onConfirm && (
-            <button
-              onClick={onConfirm}
-              className="rounded-lg bg-blue-600 px-4 py-2 text-white"
-            >
-              {confirmText}
-            </button>
-          )}
         </div>
       </div>
     </div>
