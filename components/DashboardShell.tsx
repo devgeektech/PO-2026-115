@@ -9,7 +9,7 @@ import telegramIcon from "@/public/animations/telegram.json";
 import whatsappIcon from "@/public/animations/whatsapp.json";
 import messengerIcon from "@/public/animations/messenger.json";
 import facebookIcon from "@/public/animations/facebook.json";
-
+import { SearchProvider } from "@/context/SearchContext";
 export default function DashboardShell({
   children,
 }: {
@@ -19,6 +19,7 @@ export default function DashboardShell({
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   return (
+     <SearchProvider>
     <div className="flex min-h-screen bg-black text-white overflow-hidden">
       {/* Sidebar */}
       <Sidebar
@@ -33,8 +34,6 @@ export default function DashboardShell({
           collapsed={collapsed}
           onToggle={() => setCollapsed((p) => !p)}
           onMobileToggle={() => setMobileOpen(true)}
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
         />
 
         <main className="flex-1 min-w-0 p-2 md:p-8">
@@ -98,13 +97,16 @@ export default function DashboardShell({
               </li>
             </ul>
           </div>
-          {React.cloneElement(children as React.ReactElement<any>, {
-            searchTerm,
-          })}
+          {React.isValidElement(children)
+            ? React.cloneElement(children as React.ReactElement<any>, {
+                searchTerm,
+              })
+            : children}
         </main>
 
         <Footer />
       </div>
     </div>
+    </SearchProvider>
   );
 }

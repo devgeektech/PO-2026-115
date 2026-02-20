@@ -8,6 +8,7 @@ import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import dynamic from "next/dynamic";
+import { useSearch } from "@/context/SearchContext";
 const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
   ssr: false, // important because Swiper uses window
   loading: () => <div className="h-[300px]" />, // skeleton placeholder
@@ -39,7 +40,10 @@ const menu = [
   { label: "Keno Games", icon: "/icons/trustIcon.svg", href: "#KenoGames" },
 ];
 
-export default function HomePage({ searchTerm }: { searchTerm: string }) {
+export default function HomePage() {
+  const { searchTerm } = useSearch();
+
+  console.log("HomePage Search:", searchTerm);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -48,6 +52,7 @@ export default function HomePage({ searchTerm }: { searchTerm: string }) {
 
     return () => clearTimeout(timer);
   }, []);
+
 
   return (
     <div className="w-full text-white">
@@ -127,7 +132,6 @@ export default function HomePage({ searchTerm }: { searchTerm: string }) {
         <div className="w-full min-w-0 overflow-hidden">
           {" "}
           <CommonSlider
-            searchTerm={searchTerm}
             title="Top Ten Games"
             data={TopTenGamesData}
             type="topTen"
