@@ -21,6 +21,17 @@ export const metadata: Metadata = {
     template: "%s | Next SSR App",
   },
   description: "SEO-friendly Next.js application using SSR and Tailwind CSS",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   keywords: ["Next.js", "SSR", "Tailwind", "SEO", "Web App"],
   authors: [{ name: "Your Company" }],
   robots: {

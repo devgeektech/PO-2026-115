@@ -127,98 +127,82 @@ export default function Footer() {
         </div>
       </div>
       <div className="fixed bottom-0 left-0 right-0 z-[101] md:hidden">
-        <div className="bg_trans flex justify-center gap-3 p-2 bg-[#5f0085]">
-          {/* <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
-            <Image
-              src={PlayNow}
-              alt="PlayNow"
-              width={150}
-              height={50}
-              className="sm:w-[150px] w-[100px] h-auto"
-            />
-          </button>
-          <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
-            <Image
-              src={CreateAccount}
-              alt="CreateAccount"
-              width={150}
-              height={50}
-              className="sm:w-[150px] w-[100px] h-auto"
-            />
-          </button> */}
-          <div className="socialMenu w-auto h-auto rounded-[6px]">
-            <ul className="flex justify-center items-center">
-              <li>
-                <Link
-                  target="_blank"
-                  href={"https://web.telegram.org/k/"}
-                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
-                >
-                  <Lottie
-                    animationData={telegramIcon}
-                    loop={true}
-                    autoplay={true}
-                    className="scale-130"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href={"https://web.whatsapp.com/"}
-                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
-                >
-                  <Lottie
-                    animationData={whatsappIcon}
-                    loop={true}
-                    autoplay={true}
-                    className="scale-130"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href={"https://www.messenger.com/"}
-                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
-                >
-                  <Lottie
-                    animationData={messengerIcon}
-                    loop={true}
-                    autoplay={true}
-                    className="scale-130"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href={"https://www.facebook.com/"}
-                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
-                >
-                  <Lottie
-                    animationData={facebookIcon}
-                    loop={true}
-                    autoplay={true}
-                    className="scale-130"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href={"https://www.facebook.com/"}
-                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
-                >
-                  <Lottie
-                    animationData={smsIcon}
-                    loop={true}
-                    autoplay={true}
-                    className="scale-130"
-                  />
-                </Link>
-              </li>
-            </ul>
+        <div className="bg_trans flex justify-center gap-3 bg-[#0f0f0f]">
+          <div className="bg-[#64008b80] p-2 w-full">
+            <div className="socialMenu w-auto h-auto rounded-[6px]">
+              <ul className="flex justify-center items-center">
+                <li>
+                  <Link
+                    target="_blank"
+                    href={"https://web.telegram.org/k/"}
+                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                  >
+                    <Lottie
+                      animationData={telegramIcon}
+                      loop={true}
+                      autoplay={true}
+                      className="scale-130"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href={"https://web.whatsapp.com/"}
+                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                  >
+                    <Lottie
+                      animationData={whatsappIcon}
+                      loop={true}
+                      autoplay={true}
+                      className="scale-130"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href={"https://www.messenger.com/"}
+                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                  >
+                    <Lottie
+                      animationData={messengerIcon}
+                      loop={true}
+                      autoplay={true}
+                      className="scale-130"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href={"https://www.facebook.com/"}
+                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                  >
+                    <Lottie
+                      animationData={facebookIcon}
+                      loop={true}
+                      autoplay={true}
+                      className="scale-130"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    target="_blank"
+                    href={"https://www.facebook.com/"}
+                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                  >
+                    <Lottie
+                      animationData={smsIcon}
+                      loop={true}
+                      autoplay={true}
+                      className="scale-130"
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

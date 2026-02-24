@@ -89,7 +89,7 @@ body {
   }
 } */
 .signupBG  {
-  background-image: url('../public/images/modalBG.jpg');
+  background-image: url('../public/images/Create_account_BG.jpg');
   background-position: center center;
   background-size: cover;
 }
@@ -107,14 +107,22 @@ body {
   border: 2px solid #bc13fe;
   background-color: #64008b;
 }
+
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  padding: 12px 0;
+  padding: 20px 0;
 }
 
-.my-marquee .swiper-wrapper {
+.marquee-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+.marquee-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
 }
  
 .marquee-text, h1 label, .typeText {
@@ -142,7 +150,8 @@ body {
 .swiper.multiSlide {
     padding-top: 80px;
 }
-.multiSlide .swiper-button-prev:focus, .multiSlide .swiper-button-next:focus {
+.multiSlide .swiper-button-prev:focus, .multiSlide .swiper-button-prev:hover, 
+.multiSlide .swiper-button-next:focus, .multiSlide .swiper-button-next:hover {
     opacity: 0.7 !important;
 }
 .multiSlide .swiper-button-next {
@@ -199,6 +208,38 @@ body {
     height: auto !important;
 }
 
+
+
+
+
+
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  /* background: #000; */
+  padding: 20px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  gap: 2rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
 @media only screen and (max-width: 1475px) {
   .marquee-container .swiper .swiper-slide {
     margin-right: 15px !important;
@@ -227,6 +268,9 @@ header.header {
     letter-spacing: normal;
     font-size: 16px;
   }
+  .marquee-track {
+    gap: 1rem;
+  }
 }
 @media only screen and (max-width: 1023px) {
   header.header .topheader {
@@ -239,6 +283,10 @@ header.header {
   header.header input {
     background: transparent !important;
     border: 1px solid #787878 !important;
+  }
+  .marquee-container {
+    max-width: calc(100% - 150px);
+    width: calc(100% - 150px);
   }
 }
 @media only screen and (max-width: 767px) {

@@ -46,7 +46,7 @@ export default function DashboardShell({
                 <li>
                   <Link
                     target="_blank"
-                    href="https://web.telegram.org/k/"
+                    href="http://t.me/onlineslotsofficial"
                     className="w-[75px] h-[75px] flex items-center justify-center"
                   >
                     <Lottie animationData={telegramIcon} loop autoplay />
@@ -56,7 +56,7 @@ export default function DashboardShell({
                 <li>
                   <Link
                     target="_blank"
-                    href="https://web.whatsapp.com/"
+                    href="https://wa.me/qr/OG5BNF6LOMCNP1"
                     className="w-[75px] h-[75px] flex items-center justify-center"
                   >
                     <Lottie animationData={whatsappIcon} loop autoplay />

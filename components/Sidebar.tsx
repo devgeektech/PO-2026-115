@@ -85,7 +85,7 @@ export default function Sidebar({
               onClick={onCloseMobile}
               className={clsx(
                 "relative group flex items-center gap-3 rounded-[20px] transition-all duration-300 hover:bg-[#64008b] text-gray-300 border-2 border-white/10",
-                collapsed ? "px-1 py-2 justify-center" : "px-3 py-3"
+                collapsed ? "px-1 py-2 justify-center" : "px-3 py-2 lg:py-3"
               )}
             >
               <Image

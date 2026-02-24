@@ -108,7 +108,8 @@ export default function Signup({ isOpen, onClose }: any) {
       {/* <div className="absolute inset-0" onClick={onClose} /> */}
       <div
         className="absolute inset-0 bg-gradient-to-r 
-      from-black/100 via-black/75 to-black/0"
+      from-black/100 via-black/5 to-black/0
+      "
         onClick={onClose}
       />
       {/* Modal Box */}
