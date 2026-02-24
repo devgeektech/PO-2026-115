@@ -7,6 +7,7 @@ import telegramIcon from "@/public/animations/telegram.json";
 import whatsappIcon from "@/public/animations/whatsapp.json";
 import messengerIcon from "@/public/animations/messenger.json";
 import facebookIcon from "@/public/animations/facebook.json";
+import smsIcon from "@/public/animations/sms.json";
 import Lottie from "lottie-react";
 const aboutLinks = ["Terms of Service", "Privacy Policy"];
 
@@ -37,7 +38,7 @@ const gameLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer bg-[#0e0e0e] text-white">
+    <footer className="footer bg-[#0f0f0f] text-white">
       <div className="mx-auto px-2 md:px-6 md:py-12 py-6">
         {/* Logo + Description */}
         <div className="mb-10">
@@ -126,7 +127,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="fixed bottom-0 left-0 right-0 z-[101] md:hidden">
-        <div className="flex justify-center gap-3 p-2 bg-[#5f0085]">
+        <div className="bg_trans flex justify-center gap-3 p-2 bg-[#5f0085]">
           {/* <button className="cursor-pointer px-2 py-1 rounded-[5px] transition-all duration-500 ease-in-out hover:bg-[#64008b] hover:border-[#bc13fe] text-[16px] text-gray-300 border-2 border-white/10">
             <Image
               src={PlayNow}
@@ -197,6 +198,20 @@ export default function Footer() {
                 >
                   <Lottie
                     animationData={facebookIcon}
+                    loop={true}
+                    autoplay={true}
+                    className="scale-130"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  target="_blank"
+                  href={"https://www.facebook.com/"}
+                  className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                >
+                  <Lottie
+                    animationData={smsIcon}
                     loop={true}
                     autoplay={true}
                     className="scale-130"

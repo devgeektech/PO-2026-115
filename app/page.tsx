@@ -23,7 +23,7 @@ type menu = {
 const menu = [
   {
     label: "Top Ten Games",
-    icon: "/icons/topHitIcon.svg",
+    icon: "/icons/topTenIcon.svg",
     href: "#TopTenGames",
   },
   {
@@ -33,11 +33,11 @@ const menu = [
   },
   {
     label: "Slots Games",
-    icon: "/icons/greenDotIcon.svg",
+    icon: "/icons/slotsIcon.svg",
     href: "#SlotsGames",
   },
-  { label: "Fish Games", icon: "/icons/giftIcon.svg", href: "#FishGames" },
-  { label: "Keno Games", icon: "/icons/trustIcon.svg", href: "#KenoGames" },
+  { label: "Fish Games", icon: "/icons/fishIcon.svg", href: "#FishGames" },
+  { label: "Keno Games", icon: "/icons/kenoGames.svg", href: "#KenoGames" },
 ];
 
 export default function HomePage() {
@@ -83,12 +83,15 @@ export default function HomePage() {
                 alt="joinnow.gif"
                 className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
+            </div>
+            <div className="bg_img w-max flex items-center gap-2">
               <Image
                 src={biggestjackpot}
                 alt="gifimg.gif"
                 className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
               />
-
+            </div>
+            <div className="bg_img w-max flex items-center gap-2">
               <Image
                 src={exclusivepromo}
                 alt="exclusivepromo.gif"
@@ -97,7 +100,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="sticky top-0 z-[30]">
+        <div className="sticky top-0 z-[102]">
           <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl md:p-4 p-2">
             <div className="flex gap-3 overflow-x-auto scrollbar-hide">
               {menu.map(({ label, icon, href }) => (

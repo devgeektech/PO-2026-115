@@ -10,6 +10,7 @@ import whatsappIcon from "@/public/animations/whatsapp.json";
 import messengerIcon from "@/public/animations/messenger.json";
 import facebookIcon from "@/public/animations/facebook.json";
 import { SearchProvider } from "@/context/SearchContext";
+
 export default function DashboardShell({
   children,
 }: {
@@ -18,9 +19,10 @@ export default function DashboardShell({
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <SearchProvider>
-      <div className="flex min-h-screen bg-black text-white overflow-hidden">
+      <div className="flex h-full bg-black text-white">
         {/* Sidebar */}
         <Sidebar
           collapsed={collapsed}
@@ -29,74 +31,60 @@ export default function DashboardShell({
         />
 
         {/* Main Content Area */}
-        <div className="flex flex-col flex-1 min-w-0 border-l border-l-[#FFFFFF14]">
+        <div className="flex flex-col flex-1 min-w-0 border-l border-l-[#FFFFFF14] overflow-hidden">
           <Navbar
             collapsed={collapsed}
             onToggle={() => setCollapsed((p) => !p)}
             onMobileToggle={() => setMobileOpen(true)}
           />
 
-          <main className="flex-1 min-w-0 p-2 md:p-8">
-            <div className=" fixed socialMenu top-[100px] md:block hidden md:top-[120px] lg:top-[400px] right-0 z-[105] w-auto h-auto rounded-[6px]">
-              <ul className="flex flex-col justify-center items-center">
+          {/* Scrollable Content */}
+          <main className="flex-1 overflow-y-auto p-2 md:p-8 relative">
+            {/* Social Menu */}
+            <div className="fixed right-0 z-[105] hidden md:block top-[200px]">
+              <ul className="flex flex-col items-center">
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://web.telegram.org/k/"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    href="https://web.telegram.org/k/"
+                    className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie
-                      animationData={telegramIcon}
-                      loop={true}
-                      autoplay={true}
-                      className="scale-130"
-                    />
+                    <Lottie animationData={telegramIcon} loop autoplay />
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://web.whatsapp.com/"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    href="https://web.whatsapp.com/"
+                    className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie
-                      animationData={whatsappIcon}
-                      loop={true}
-                      autoplay={true}
-                      className="scale-130"
-                    />
+                    <Lottie animationData={whatsappIcon} loop autoplay />
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://www.messenger.com/"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    href="https://www.messenger.com/"
+                    className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie
-                      animationData={messengerIcon}
-                      loop={true}
-                      autoplay={true}
-                      className="scale-130"
-                    />
+                    <Lottie animationData={messengerIcon} loop autoplay />
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://www.facebook.com/"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    href="https://www.facebook.com/"
+                    className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie
-                      animationData={facebookIcon}
-                      loop={true}
-                      autoplay={true}
-                      className="scale-130"
-                    />
+                    <Lottie animationData={facebookIcon} loop autoplay />
                   </Link>
                 </li>
               </ul>
             </div>
+
             {React.isValidElement(children)
               ? React.cloneElement(children as React.ReactElement<any>, {
                   searchTerm,
