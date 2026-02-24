@@ -207,7 +207,7 @@ export default function Footer() {
               <li>
                 <Link
                   target="_blank"
-                  href={"https://www.facebook.com/"}
+                  href={"sms:+12145515913"}
                   className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                 >
                   <Lottie
