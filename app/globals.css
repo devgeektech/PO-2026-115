@@ -116,7 +116,7 @@ body {
 .my-marquee .swiper-wrapper {
   transition-timing-function: linear !important;
 }
-
+ 
 .marquee-text, h1 label, .typeText {
   font-size: 22px;
   font-weight: 600;
