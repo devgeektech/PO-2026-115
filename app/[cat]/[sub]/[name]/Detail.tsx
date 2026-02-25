@@ -43,49 +43,49 @@ export default function Detail({
     (item: any) =>
       item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
   );
-  // const [open, setOpen] = useState(false);
 
-  const [points, setPoints] = useState(60);
+  const [liveData, setLiveData] = useState<
+    { points: number; time: string }[]
+  >([]);
 
-  const [timeText, setTimeText] = useState("");
+  // const generateRandomTime = () => {
+  //   const isSeconds = Math.random() < 0.5;
 
+  //   if (isSeconds) {
+  //     const seconds = Math.floor(Math.random() * (60 - 5 + 1)) + 5;
+  //     return `${seconds} seconds ago`;
+  //   } else {
+  //     const minutes = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+  //     return `${minutes} minutes ago`;
+  //   }
+  // };
+  useEffect(() => {
   const generateRandomTime = () => {
-    const isSeconds = Math.random() < 0.5;
+    // total seconds between 5 sec and 5 min (300 sec)
+    const totalSeconds =
+      Math.floor(Math.random() * (300 - 5 + 1)) + 5;
 
-    if (isSeconds) {
-      const seconds = Math.floor(Math.random() * (60 - 5 + 1)) + 5;
-      return `${seconds} seconds ago`;
+    if (totalSeconds < 60) {
+      return `${totalSeconds} seconds ago`;
     } else {
-      const minutes = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-      return `${minutes} minutes ago`;
+      const minutes = Math.floor(totalSeconds / 60);
+      return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const random = Math.floor(Math.random() * (4500 - 60 + 1)) + 60;
-      setPoints(random);
-    }, 2000); // change every 2 seconds
+  const generateRandomPoints = () => {
+    return Math.floor(Math.random() * (4500 - 60 + 1)) + 60;
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  const data = Array(4)
+    .fill(null)
+    .map(() => ({
+      points: generateRandomPoints(),
+      time: generateRandomTime(),
+    }));
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      videoRef.current?.play();
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-  useEffect(() => {
-    setTimeText(generateRandomTime());
-
-    const interval = setInterval(() => {
-      setTimeText(generateRandomTime());
-    }, 3000); // changes every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
+  setLiveData(data);
+}, []);
   return (
     <>
       <div className="bg-black text-white">
@@ -173,7 +173,7 @@ export default function Detail({
               <div className="bg-neutral-800 marquee p-2 rounded-lg flex gap-2 items-center justify-between">
                 <div className="marquee-track">
                   <div className="">
-                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
+                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
                       <div className="">
                         <video
                           autoPlay
@@ -191,21 +191,21 @@ export default function Detail({
                       <div className="flex flex-col gap-3">
                         <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          {timeText}
+                         {liveData[0]?.time}
                         </span>
                         <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                          “Big hit” to “Live hits”
+                          Live hits
                           {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
                         </span>
                         <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[0]?.points}{" "}
                           pts
                         </span>
                       </div>
                     </div>
                   </div>
                   <div className="">
-                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#6c3ad5] p-4 border border-[#9967e4]">
+                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#6c3ad5] p-4 border border-[#9967e4]">
                       <div className="">
                         <video
                           autoPlay
@@ -223,21 +223,21 @@ export default function Detail({
                       <div className="flex flex-col gap-3">
                         <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          {timeText}
+                         {liveData[1]?.time}
                         </span>
                         <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                          “Big hit” to “Live hits”
+                            Live hits
                           {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
                         </span>
                         <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[0]?.points}{" "}
                           pts
                         </span>
                       </div>
                     </div>
                   </div>
                   <div className="">
-                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#5b1288] p-4 border border-[#992cc1]">
+                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#5b1288] p-4 border border-[#992cc1]">
                       <div className="">
                         <video
                           autoPlay
@@ -255,21 +255,21 @@ export default function Detail({
                       <div className="flex flex-col gap-3">
                         <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          {timeText}
+                          {liveData[2]?.time}
                         </span>
                         <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                          “Big hit” to “Live hits”
+                          Live hits
                           {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
                         </span>
                         <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[2]?.points}{" "}
                           pts
                         </span>
                       </div>
                     </div>
                   </div>
                   <div className="">
-                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
+                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
                       <div className="">
                         <video
                           autoPlay
@@ -287,14 +287,14 @@ export default function Detail({
                       <div className="flex flex-col gap-3">
                         <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          {timeText}
+                         {liveData[3]?.time}
                         </span>
                         <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                          “Big hit” to “Live hits”
+                             Live hits
                           {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
                         </span>
                         <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[3]?.points}
                           pts
                         </span>
                       </div>
@@ -455,44 +455,3 @@ export default function Detail({
   );
 }
 
-/* ---------- Reusable Section Component ---------- */
-
-function Section({
-  title,
-  games,
-}: {
-  title: string;
-  games: { title: string; provider: string; image: string }[];
-}) {
-  return (
-    <div className="mb-14">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <button className="text-sm text-red-500 hover:text-red-400">
-          See All
-        </button>
-      </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {games.map((game, index) => (
-          <div
-            key={index}
-            className="bg-neutral-900 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer"
-          >
-            <Image
-              src={game.image}
-              alt={game.title}
-              width={300}
-              height={400}
-              className="w-full h-52 object-cover"
-            />
-            <div className="p-3">
-              <h3 className="text-sm font-medium">{game.title}</h3>
-              <p className="text-xs text-gray-400">{game.provider}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
