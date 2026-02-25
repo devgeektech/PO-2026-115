@@ -22,20 +22,8 @@ import { TopTenGamesData } from "@/data/TopTenGamesData";
 import CommonSlider from "@/components/CommonGameSlider";
 import Signup from "@/components/Signup";
 import TextType from "@/components/TextType";
-export default function Detail({
-  cat,
-  sub,
-  name,
-}: {
-  cat: any;
-  sub: any;
-  name: any;
-}) {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [open, setOpen] = useState(false);
-  const router = useRouter();
-  console.log(cat, "cat", sub, "sub", name, "name");
-  const videos = [
+
+  const initialVideos = [
     {
       src: "/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4",
       shadow: "shadow-[inset_0px_0px_20px_#470203]",
@@ -102,9 +90,23 @@ export default function Detail({
       border: "border-[#8b5055]",
     },
   ];
+export default function Detail({
+  cat,
+  sub,
+  name,
+}: {
+  cat: any;
+  sub: any;
+  name: any;
+}) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
+  console.log(cat, "cat", sub, "sub", name, "name");
+
   const [showPassword, setShowPassword] = useState(false);
   const [showReferral, setShowReferral] = useState(false);
-
+  const [videos, setVideos] = useState(initialVideos);
   const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item: any) =>
       item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase(),
@@ -140,6 +142,19 @@ export default function Detail({
 
     setLiveData(data);
   }, []);
+
+  useEffect(() => {
+    const shuffleArray = (array: typeof initialVideos) => {
+      return [...array].sort(() => Math.random() - 0.5);
+    };
+
+    const interval = setInterval(() => {
+      setVideos((prev) => shuffleArray(prev));
+    }, 40000); // shuffle every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div className="bg-black text-white">
