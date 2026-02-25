@@ -106,7 +106,11 @@ export default function Detail({
 
   const [showPassword, setShowPassword] = useState(false);
   const [showReferral, setShowReferral] = useState(false);
-  const [videos, setVideos] = useState(initialVideos);
+  const shuffleArray = (array: typeof initialVideos) => {
+    return [...array].sort(() => Math.random() - 0.5);
+  };
+
+  const [videos, setVideos] = useState(() => shuffleArray(initialVideos));
   const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item: any) =>
       item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
@@ -144,13 +148,9 @@ export default function Detail({
   }, []);
 
   useEffect(() => {
-    const shuffleArray = (array: typeof initialVideos) => {
-      return [...array].sort(() => Math.random() - 0.5);
-    };
-
     const interval = setInterval(() => {
       setVideos((prev) => shuffleArray(prev));
-    }, 40000); // shuffle every 5 seconds
+    }, 40000);
 
     return () => clearInterval(interval);
   }, []);

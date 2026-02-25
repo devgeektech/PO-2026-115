@@ -4735,7 +4735,7 @@ export const TopTenGamesData: any = {
                     id: 9,
                     isNew: true,
                     label: "Mummy's Gold",
-                    key: "mymmys-gold",
+                    key: "mummys-gold",
                     type: "sub-cat",
                     cat: "orionstars",
                     sub: "fish",
