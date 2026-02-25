@@ -23,73 +23,73 @@ import CommonSlider from "@/components/CommonGameSlider";
 import Signup from "@/components/Signup";
 import TextType from "@/components/TextType";
 
-  const initialVideos = [
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#6c3ad5]",
-      border: "border-[#9967e4]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/vblink.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#5b1288]",
-      border: "border-[#992cc1]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/gameVault.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/cashFrenzy.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/cashMachine.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/fabulourJuwa.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/FireKerin.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/gameRoom.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/Juwa.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/milkyWays.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/orionstars.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-    {
-      src: "/images/onlineSlots/GamesLogoAnimation/wegasweaps.mp4",
-      shadow: "shadow-[inset_0px_0px_20px_#470203]",
-      border: "border-[#8b5055]",
-    },
-  ];
+const initialVideos = [
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#470203]",
+    border: "border-[#8b5055]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#6c3ad5]",
+    border: "border-[#9967e4]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/vblink.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#5b1288]",
+    border: "border-[#992cc1]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/gameVault.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#842158]",
+    border: "border-[#ef70bb]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/cashFrenzy.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#470203]",
+    border: "border-[#8b5055]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/cashMachine.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#72039a]",
+    border: "border-[#ab499f]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/fabulourJuwa.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#0012f5]",
+    border: "border-[#4285f6]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/FireKerin.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#421d10]",
+    border: "border-[#97696b]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/gameRoom.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#3e2000]",
+    border: "border-[#e3ba52]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/Juwa.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#4c1f45]",
+    border: "border-[#d054b0]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/milkyWays.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#3b1c32]",
+    border: "border-[#d29ea9]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/orionstars.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#5f074c]",
+    border: "border-[#f80094]",
+  },
+  {
+    src: "/images/onlineSlots/GamesLogoAnimation/wegasweaps.mp4",
+    shadow: "shadow-[inset_0px_0px_20px_#6e0735]",
+    border: "border-[#fba7f6]",
+  },
+];
 export default function Detail({
   cat,
   sub,
@@ -109,11 +109,11 @@ export default function Detail({
   const [videos, setVideos] = useState(initialVideos);
   const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item: any) =>
-      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase(),
+      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
   );
 
   const [liveData, setLiveData] = useState<{ points: number; time: string }[]>(
-    [],
+    []
   );
 
   useEffect(() => {
