@@ -9,7 +9,14 @@ import jackpot from "@/public/images/jackpot.png";
 import infoicon from "@/public/images/infoicon.svg";
 import deepSeaPredator from "@/public/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg";
 import Modal from "@/components/Signup";
-import { ChevronDown, CrossIcon, Eye, EyeOff, XCircleIcon } from "lucide-react";
+import {
+  ChevronDown,
+  Clock,
+  CrossIcon,
+  Eye,
+  EyeOff,
+  XCircleIcon,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import CommonSlider from "@/components/CommonGameSlider";
@@ -165,23 +172,37 @@ export default function Detail({
             {/* Jackpot */}
             <div className="bg-neutral-900 rounded-xl ">
               <h3 className="text-[20px] font-normal p-4">
-                Opt-In For A Chance To Win
+                Real Players, Real Wins – Live!
               </h3>
               <div className="bg-neutral-800 p-2 rounded-lg flex items-center justify-between">
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
                   <div className="">
-                    <Image src={jackpot} alt="jackpot.png" />
+                    {/* <Image src={jackpot} alt="jackpot.png" /> */}
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-[75px] h-[75px] rounded-[6px] overflow-hidden"
+                    >
+                      <source
+                        src="/videos/pandamaster_video.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
                   </div>
                   <div className="flex flex-col gap-3">
-                    <span className="font-medium text-[22px] flex gap-2">
-                      Gold Coins Jackpot{" "}
-                      <Image src={infoicon} alt="iconyellow.svg" />
+                    <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
+                      <Clock className="w-3 h-3" />5 mins ago
                     </span>
-                    {/* <span className="text-yellow-400 text-[18px] flex-wrap lg:text-[22px] font-bold flex gap-2">
-                      <Image src={iconyellow} alt="infoicon.svg" />{" "}
-                      GC6,982,948,542
-                    </span> */}
-                    <div className="">
+                    <span className="font-medium text-[22px] flex gap-2">
+                      “Big hit” to “Live hits”
+                      {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
+                    </span>
+                    <span className="text-yellow-400 text-[18px] flex-wrap lg:text-[22px] font-bold flex gap-2">
+                      <Image src={iconyellow} alt="infoicon.svg" /> 4500 pts
+                    </span>
+                    {/* <div className="">
                       <TextType
                         text={[
                           "Juwa 10 min ago",
@@ -198,7 +219,7 @@ export default function Detail({
                         variableSpeedMax={120}
                         cursorBlinkDuration={0.5}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
