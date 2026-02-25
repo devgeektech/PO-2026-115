@@ -101,7 +101,6 @@ export default function Detail({
       shadow: "shadow-[inset_0px_0px_20px_#470203]",
       border: "border-[#8b5055]",
     },
-    
   ];
   const [showPassword, setShowPassword] = useState(false);
   const [showReferral, setShowReferral] = useState(false);
