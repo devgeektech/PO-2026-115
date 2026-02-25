@@ -58,14 +58,14 @@ export default function Sidebar({
       >
         <Link
           href="/"
-          className="flex items-center justify-center mt-[10px] mb-[25px]"
+          className="flex items-center justify-center mt-[10px] lg:mb-[25px] mb-[15px]"
         >
           <Image
-            width={collapsed ? 48 : 109}
-            height={collapsed ? 40 : 90}
+            width={collapsed ? 48 : 89}
+            height={collapsed ? 40 : 70}
             className={clsx(
               "transition-all duration-500",
-              collapsed ? "min-w-[48px]" : "min-w-[109px]"
+              collapsed ? "min-w-[48px]" : "min-w-[89px]"
             )}
             src={Logo}
             alt="Logo"
@@ -74,7 +74,7 @@ export default function Sidebar({
 
         <nav
           className={clsx(
-            "space-y-3 transition-all duration-500",
+            "lg:space-y-3 space-y-2 transition-all duration-500",
             collapsed ? "px-1" : "px-3"
           )}
         >
