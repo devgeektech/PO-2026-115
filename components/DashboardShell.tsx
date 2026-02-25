@@ -22,6 +22,9 @@ export default function DashboardShell({
 
   return (
     <SearchProvider>
+      <div className="text-center p-2 bg-[#ab0000] text-white text-[12px] tracking-[0.8px]">
+        Strictly 18+ | We Support Responsible Play, Social Entertainment Only
+      </div>
       <div className="flex h-full bg-black text-white">
         {/* Sidebar */}
         <Sidebar

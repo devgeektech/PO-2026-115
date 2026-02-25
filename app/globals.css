@@ -299,9 +299,9 @@ header.header {
     top: 365px !important;
   }
   button.seeAll_btn {
-    top: 52px !important;
+    top: 62px !important;
   }
   .multiSlide .swiper-button-next, .multiSlide .swiper-button-prev {
-    top: 30px !important;
+    top: 40px !important;
   }
 }

@@ -45,12 +45,46 @@ export default function Detail({
   );
   // const [open, setOpen] = useState(false);
 
+  const [points, setPoints] = useState(60);
+
+  const [timeText, setTimeText] = useState("");
+
+  const generateRandomTime = () => {
+    const isSeconds = Math.random() < 0.5;
+
+    if (isSeconds) {
+      const seconds = Math.floor(Math.random() * (60 - 5 + 1)) + 5;
+      return `${seconds} seconds ago`;
+    } else {
+      const minutes = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+      return `${minutes} minutes ago`;
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const random = Math.floor(Math.random() * (4500 - 60 + 1)) + 60;
+      setPoints(random);
+    }, 2000); // change every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       videoRef.current?.play();
     }, 3000);
 
     return () => clearTimeout(timer);
+  }, []);
+  useEffect(() => {
+    setTimeText(generateRandomTime());
+
+    const interval = setInterval(() => {
+      setTimeText(generateRandomTime());
+    }, 3000); // changes every 3 seconds
+
+    return () => clearInterval(interval);
   }, []);
   return (
     <>
@@ -114,29 +148,6 @@ export default function Detail({
                   alt="signupimg"
                 />
               </button>
-              {/* <button
-                  className="cursor-pointer w-full"
-                  onClick={() => setOpen(true)}
-                >
-                  <Image
-                    src={playnowimg}
-                    className="w-full h-auto"
-                    alt="playnowimg"
-                  />
-                </button> */}
-              {/* </div> */}
-
-              {/* <div className="bg-neutral-900  rounded-xl p-5 flex items-center justify-center flex-col gap-4 border border-[#FFFFFF14]"> */}
-              {/* <button
-                  className="cursor-pointer w-full"
-                  onClick={() => setOpen(true)}
-                >
-                  <Image
-                    src={signupimg}
-                    className="w-full h-auto"
-                    alt="signupimg"
-                  />
-                </button> */}
               <button
                 className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] px-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
                 onClick={() => setOpen(true)}
@@ -147,76 +158,141 @@ export default function Detail({
                   alt="playnowimg"
                 />
               </button>
-              {/* </div> */}
-
-              {/* Volatility */}
-              {/* <div className="bg-neutral-900 rounded-xl p-5 border border-[#FFFFFF14]">
-              <div className="flex justify-between items-center mb-3">
-                <span className="text-gray-400">Volatility</span>
-                <span>Medium</span>
-              </div>
-              <div className="flex gap-1 bg-[#3C3B3B] border border-[#FFFFFF14] p-2 rounded-[4px]">
-                {[...Array(7)].map((_, i) => (
-                  <div
-                    key={i}
-                    className={`h-[18px] w-[30px] flex-1 rounded ${
-                      i < 4
-                        ? "bg-gradient-to-b from-[#F8F961] to-[#A4FE61]"
-                        : "bg-[#575757]"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div> */}
             </div>
             {/* Jackpot */}
-            <div className="bg-neutral-900 rounded-xl ">
+            <div className="bg-neutral-900 rounded-xl">
               <h3 className="text-[20px] font-normal p-4">
                 Real Players, Real Wins – Live!
               </h3>
-              <div className="bg-neutral-800 p-2 rounded-lg flex items-center justify-between">
-                <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
+              <div className="bg-neutral-800 marquee p-2 rounded-lg flex gap-2 items-center justify-between">
+                <div className="marquee-track">
                   <div className="">
-                    {/* <Image src={jackpot} alt="jackpot.png" /> */}
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-[75px] h-[75px] rounded-[6px] overflow-hidden"
-                    >
-                      <source src="/videos/pandaMaster.mp4" type="video/mp4" />
-                    </video>
+                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
+                      <div className="">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
+                        >
+                          <source
+                            src="/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {timeText}
+                        </span>
+                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
+                          “Big hit” to “Live hits”
+                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
+                        </span>
+                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
+                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          pts
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-3">
-                    <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
-                      <Clock className="w-3 h-3" />5 mins ago
-                    </span>
-                    <span className="font-medium text-[18px] flex gap-2 mt-2">
-                      “Big hit” to “Live hits”
-                      {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
-                    </span>
-                    <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                      <Image src={iconyellow} alt="infoicon.svg" /> 4500 pts
-                    </span>
-                    {/* <div className="">
-                      <TextType
-                        text={[
-                          "Juwa 10 min ago",
-                          "Ultrapanda 20 min ago",
-                          "VBLink 2 minutes ago",
-                        ]}
-                        typingSpeed={75}
-                        pauseDuration={1500}
-                        showCursor
-                        cursorCharacter="_"
-                        deletingSpeed={50}
-                        variableSpeedEnabled={false}
-                        variableSpeedMin={60}
-                        variableSpeedMax={120}
-                        cursorBlinkDuration={0.5}
-                      />
-                    </div> */}
+                  <div className="">
+                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#6c3ad5] p-4 border border-[#9967e4]">
+                      <div className="">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
+                        >
+                          <source
+                            src="/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {timeText}
+                        </span>
+                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
+                          “Big hit” to “Live hits”
+                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
+                        </span>
+                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
+                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          pts
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#5b1288] p-4 border border-[#992cc1]">
+                      <div className="">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
+                        >
+                          <source
+                            src="/images/onlineSlots/GamesLogoAnimation/vblink.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {timeText}
+                        </span>
+                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
+                          “Big hit” to “Live hits”
+                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
+                        </span>
+                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
+                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          pts
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="flex gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
+                      <div className="">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
+                        >
+                          <source
+                            src="/images/onlineSlots/GamesLogoAnimation/gameVault.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {timeText}
+                        </span>
+                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
+                          “Big hit” to “Live hits”
+                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
+                        </span>
+                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
+                          <Image src={iconyellow} alt="infoicon.svg" /> {points}{" "}
+                          pts
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
