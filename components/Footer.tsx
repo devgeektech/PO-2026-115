@@ -134,7 +134,7 @@ export default function Footer() {
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://web.telegram.org/k/"}
+                    href={"http://t.me/onlineslotsofficial"}
                     className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
@@ -148,7 +148,7 @@ export default function Footer() {
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://web.whatsapp.com/"}
+                    href={"https://wa.me/qr/OG5BNF6LOMCNP1"}
                     className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
@@ -190,7 +190,7 @@ export default function Footer() {
                 <li>
                   <Link
                     target="_blank"
-                    href={"https://www.facebook.com/"}
+                    href="sms:+12145515913"
                     className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
