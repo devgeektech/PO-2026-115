@@ -36,7 +36,7 @@ const menu = [
   {
     label: "Slots Games",
     icon: "/icons/slotsIcon.svg",
-    href: "#SlotsGames",
+    href: "#SlotGames",
   },
   { label: "Fish Games", icon: "/icons/fishIcon.svg", href: "#FishGames" },
   { label: "Keno Games", icon: "/icons/kenoGames.svg", href: "#KenoGames" },
