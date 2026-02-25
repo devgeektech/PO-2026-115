@@ -185,21 +185,18 @@ export default function Detail({
                       playsInline
                       className="w-[75px] h-[75px] rounded-[6px] overflow-hidden"
                     >
-                      <source
-                        src="/videos/pandamaster_video.mp4"
-                        type="video/mp4"
-                      />
+                      <source src="/videos/pandaMaster.mp4" type="video/mp4" />
                     </video>
                   </div>
                   <div className="flex flex-col gap-3">
                     <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
                       <Clock className="w-3 h-3" />5 mins ago
                     </span>
-                    <span className="font-medium text-[22px] flex gap-2">
+                    <span className="font-medium text-[18px] flex gap-2 mt-2">
                       “Big hit” to “Live hits”
                       {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
                     </span>
-                    <span className="text-yellow-400 text-[18px] flex-wrap lg:text-[22px] font-bold flex gap-2">
+                    <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
                       <Image src={iconyellow} alt="infoicon.svg" /> 4500 pts
                     </span>
                     {/* <div className="">
