@@ -26,9 +26,13 @@ export default function Navbar({
 
     Object.values(TopTenGamesData || {}).forEach((category: any) => {
       if (category.subcategoies) {
-        Object.values(category.subcategoies).forEach((games: any) => {
-          result.push(...games);
-        });
+        Object.entries(category.subcategoies).forEach(
+          ([subCategoryName, games]: [string, any]) => {
+            if (subCategoryName !== "top-hitting") {
+              result.push(...games);
+            }
+          },
+        );
       }
     });
 
@@ -37,7 +41,7 @@ export default function Navbar({
 
   const filteredGames = searchTerm
     ? allGames.filter((item: any) =>
-        item.label?.toLowerCase().includes(searchTerm.toLowerCase())
+        item.label?.toLowerCase().includes(searchTerm.toLowerCase()),
       )
     : [];
 
@@ -130,7 +134,7 @@ export default function Navbar({
                 {filteredGames.map((item: any, index: number) => (
                   <SwiperSlide
                     onClick={() => {
-                      setSearchTerm(""); 
+                      setSearchTerm("");
                     }}
                     key={`${item.label}-${index}`}
                   >
