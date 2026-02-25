@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 interface GridModalProps {
@@ -25,6 +25,7 @@ export default function GridModal({
   subCategories = {},
   selectedSubCategory,
 }: GridModalProps) {
+  const router = useRouter();
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -40,6 +41,13 @@ export default function GridModal({
       document.body.style.overflow = "auto";
     };
   }, [isOpen, onClose]);
+
+  const goToGames = (slide: any) => {
+    if (slide.type == "sub-cat" && slide.detailImage) {
+      // console.log(slide)
+      router.push(`/${slide.cat}/${slide.sub}/${slide.key}`);
+    }
+  };
 
   const filteredGames =
     subCategories.find(([sub]:[string, any]) => sub === selectedSubCategory)?.[1] || [];
@@ -79,6 +87,9 @@ export default function GridModal({
                   src={game.image}
                   alt={game.image}
                   className="w-full h-auto"
+                  onClick={() => {
+                  goToGames(game);
+                }}
                 />
               </li>
             ))}

@@ -150,7 +150,13 @@ export default function Detail({
               </button>
               <button
                 className="cursor-pointer flex justify-center border-2 border-white/10 bg-[#240833] px-[10px] rounded-[1rem] w-fit transition-all duration-300 hover:bg-[#64008b] hover:border-[#bc13fe]"
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                  window.location.href = "sms:+12145515913";
+                } else {
+                  setOpen(true); // desktop behavior
+                }
+              }}
               >
                 <Image
                   src={playnowimg}
