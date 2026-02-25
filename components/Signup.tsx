@@ -116,7 +116,7 @@ export default function Signup({ isOpen, onClose }: any) {
       <div className="relative z-10 w-full max-w-md bg-[#111111] border border-[#2a2a2a] rounded-xl p-6 shadow-2xl animate-in fade-in zoom-in-95 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-white text-xl font-semibold">Sign Up</h2>
+          <h2 className="text-white text-xl font-semibold">Create Account</h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white cursor-pointer"

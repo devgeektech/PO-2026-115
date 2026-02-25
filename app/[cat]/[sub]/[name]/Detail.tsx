@@ -35,57 +35,112 @@ export default function Detail({
   const [open, setOpen] = useState(false);
   const router = useRouter();
   console.log(cat, "cat", sub, "sub", name, "name");
-
+  const videos = [
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#6c3ad5]",
+      border: "border-[#9967e4]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/vblink.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#5b1288]",
+      border: "border-[#992cc1]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/gameVault.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/cashFrenzy.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/cashMachine.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/fabulourJuwa.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/FireKerin.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/gameRoom.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/Juwa.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/milkyWays.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/orionstars.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    {
+      src: "/images/onlineSlots/GamesLogoAnimation/wegasweaps.mp4",
+      shadow: "shadow-[inset_0px_0px_20px_#470203]",
+      border: "border-[#8b5055]",
+    },
+    
+  ];
   const [showPassword, setShowPassword] = useState(false);
   const [showReferral, setShowReferral] = useState(false);
 
   const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item: any) =>
-      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
+      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase(),
   );
 
-  const [liveData, setLiveData] = useState<
-    { points: number; time: string }[]
-  >([]);
+  const [liveData, setLiveData] = useState<{ points: number; time: string }[]>(
+    [],
+  );
 
-  // const generateRandomTime = () => {
-  //   const isSeconds = Math.random() < 0.5;
-
-  //   if (isSeconds) {
-  //     const seconds = Math.floor(Math.random() * (60 - 5 + 1)) + 5;
-  //     return `${seconds} seconds ago`;
-  //   } else {
-  //     const minutes = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-  //     return `${minutes} minutes ago`;
-  //   }
-  // };
   useEffect(() => {
-  const generateRandomTime = () => {
-    // total seconds between 5 sec and 5 min (300 sec)
-    const totalSeconds =
-      Math.floor(Math.random() * (300 - 5 + 1)) + 5;
+    const generateRandomTime = () => {
+      // total seconds between 5 sec and 5 min (300 sec)
+      const totalSeconds = Math.floor(Math.random() * (300 - 5 + 1)) + 5;
 
-    if (totalSeconds < 60) {
-      return `${totalSeconds} seconds ago`;
-    } else {
-      const minutes = Math.floor(totalSeconds / 60);
-      return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
-    }
-  };
+      if (totalSeconds < 60) {
+        return `${totalSeconds} seconds ago`;
+      } else {
+        const minutes = Math.floor(totalSeconds / 60);
+        return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
+      }
+    };
 
-  const generateRandomPoints = () => {
-    return Math.floor(Math.random() * (4500 - 60 + 1)) + 60;
-  };
+    const generateRandomPoints = () => {
+      return Math.floor(Math.random() * (4500 - 60 + 1)) + 60;
+    };
 
-  const data = Array(4)
-    .fill(null)
-    .map(() => ({
-      points: generateRandomPoints(),
-      time: generateRandomTime(),
-    }));
+    const data = Array(9)
+      .fill(null)
+      .map(() => ({
+        points: generateRandomPoints(),
+        time: generateRandomTime(),
+      }));
 
-  setLiveData(data);
-}, []);
+    setLiveData(data);
+  }, []);
   return (
     <>
       <div className="bg-black text-white">
@@ -172,134 +227,41 @@ export default function Detail({
               </h3>
               <div className="bg-neutral-800 marquee p-2 rounded-lg flex gap-2 items-center justify-between">
                 <div className="marquee-track">
-                  <div className="">
-                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
-                      <div className="">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
-                        >
-                          <source
-                            src="/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                         {liveData[0]?.time}
-                        </span>
-                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                          Live hits
-                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
-                        </span>
-                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[0]?.points}{" "}
-                          pts
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="">
-                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#6c3ad5] p-4 border border-[#9967e4]">
-                      <div className="">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
-                        >
-                          <source
-                            src="/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                         {liveData[1]?.time}
-                        </span>
-                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
+                  {videos.map((video, index) => (
+                    <div key={index}>
+                      <div
+                        className={`flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap ${video.shadow} p-4 border ${video.border}`}
+                      >
+                        <div>
+                          <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
+                          >
+                            <source src={video.src} type="video/mp4" />
+                          </video>
+                        </div>
+
+                        <div className="flex flex-col gap-3">
+                          <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
+                            <Clock className="w-3 h-3" />
+                            {liveData[index]?.time}
+                          </span>
+
+                          <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
                             Live hits
-                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
-                        </span>
-                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[0]?.points}{" "}
-                          pts
-                        </span>
+                          </span>
+
+                          <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
+                            <Image src={iconyellow} alt="infoicon.svg" />
+                            {liveData[index]?.points} pts
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="">
-                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#5b1288] p-4 border border-[#992cc1]">
-                      <div className="">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
-                        >
-                          <source
-                            src="/images/onlineSlots/GamesLogoAnimation/vblink.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {liveData[2]?.time}
-                        </span>
-                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                          Live hits
-                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
-                        </span>
-                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[2]?.points}{" "}
-                          pts
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="">
-                    <div className="flex min-w-[250px] gap-3 relative rounded-[20px] items-center video_wrap shadow-[inset_0px_0px_20px_#470203] p-4 border border-[#8b5055]">
-                      <div className="">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
-                        >
-                          <source
-                            src="/images/onlineSlots/GamesLogoAnimation/gameVault.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <span className="text-[#979797] absolute right-4 top-1 text-[12px] flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                         {liveData[3]?.time}
-                        </span>
-                        <span className="font-medium text-[18px] flex gap-2 mt-2 whitespace-nowrap">
-                             Live hits
-                          {/* <Image src={infoicon} alt="iconyellow.svg" /> */}
-                        </span>
-                        <span className="text-yellow-400 text-[16px] flex-wrap lg:text-[18px] font-bold flex gap-2">
-                          <Image src={iconyellow} alt="infoicon.svg" /> {liveData[3]?.points}
-                          pts
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -454,4 +416,3 @@ export default function Detail({
     </>
   );
 }
-
