@@ -52,52 +52,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-ubuntu), sans-serif;
 }
-
-/* .marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 500px;
-} */
-/* 
-.marquee span {
-  display: inline-block;
-  font-size: 30px;
-  font-weight: 700;
-  padding-left: 100%;
-  animation: marquee 15s linear infinite;
-  background: linear-gradient(
-    180deg,
-    #F3DFA3 0%,
-    #CAA972 42.9%,
-    #F6EAC5 65.38%,
-    #F8DCA4 100%
-  );
-
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
 .signupBG  {
   background-image: url('../public/images/Create_account_BG.jpg');
   background-position: center center;
   background-size: cover;
 }
 .bg_img {
-  /* background-image: url('../public/images/Add-a-subheading_back.png'); */
-  /* background-position: center center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat; */
   background: #24083399;
   border: 2px solid #24083399;
   border-radius: 100px;
