@@ -15,12 +15,33 @@ const ubuntu = Ubuntu({
 
 /* ---------------- Metadata ---------------- */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("http://3.151.125.192:3000"),
+
   title: {
-    default: "Next SSR App",
-    template: "%s | Next SSR App",
+    default: "Online Slots Official – Social Casino Games",
+    template: "%s | Online Slots Official",
   },
-  description: "SEO-friendly Next.js application using SSR and Tailwind CSS",
+
+  description:
+    "Play hundreds of exciting social casino games including slots, fish games, keno, and top hitting games. No purchase required. Pure entertainment and nonstop fun!",
+
+  keywords: [
+    "online slots",
+    "social casino",
+    "slot games",
+    "fish games",
+    "keno games",
+    "top hitting games",
+    "free casino games",
+  ],
+
+  authors: [{ name: "Online Slots Official" }],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
     icon: [
       {
@@ -32,26 +53,25 @@ export const metadata: Metadata = {
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
-  keywords: ["Next.js", "SSR", "Tailwind", "SEO", "Web App"],
-  authors: [{ name: "Your Company" }],
-  robots: {
-    index: true,
-    follow: true,
-  },
+
   openGraph: {
-    title: "Next SSR App",
-    description: "Fast, secure and SEO-optimized Next.js app",
-    url: "https://yourdomain.com",
-    siteName: "Next SSR App",
+    title: "Online Slots Official – Social Casino",
+    description:
+      "Experience electrifying social casino games and exciting jackpot thrills.",
+    url: "http://3.151.125.192:3000",
+    siteName: "Online Slots Official",
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Next SSR App",
-    description: "Modern SSR-first Next.js application",
+    title: "Online Slots Official – Social Casino",
+    description:
+      "Play top social casino games online with nonstop entertainment.",
   },
 };
+
 
 /* ---------------- Root Layout ---------------- */
 export default function RootLayout({
