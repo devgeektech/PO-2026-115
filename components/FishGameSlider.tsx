@@ -44,7 +44,7 @@ export default function FishGameSlider() {
       >
         {Slides.map((item) => (
           <SwiperSlide key={item.id}>
-            <SlideCard slide={item} />
+            <SlideCard selectedCategory="" slide={item} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -6,15 +6,16 @@ import { useParams } from "next/navigation";
 
 
 export default function Slots() {
-  const { key } = useParams();
+  const params = useParams<{ key: string }>();
+  const key = params?.key;
   const [visibleCount, setVisibleCount] = useState(10);
 
   const slotGames = useMemo(() => {
     if (!key) return [];
 
-    return Object.values(TopTenGamesData)
+    return (Object.values(TopTenGamesData) as any[])
       .filter((platform) => platform.subcategoies?.[key])
-      .flatMap((platform) => platform.subcategoies[key] || []);
+      .flatMap((platform) => platform.subcategoies?.[key] || []);
   }, [key]);
 
   const handleLoadMore = () => {

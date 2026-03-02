@@ -171,7 +171,7 @@ export default function CommonSlider({
 
                     return (
                       <SwiperSlide key={`${item.label}-${index}`}>
-                        <SlideCard slide={normalizedItem} />
+                        <SlideCard selectedCategory = "" slide={normalizedItem} />
                       </SwiperSlide>
                     );
                   })}

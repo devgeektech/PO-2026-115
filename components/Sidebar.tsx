@@ -12,11 +12,11 @@ const menu = [
   {
     label: "Top Hitting Games",
     icon: "/icons/topHitIcon.svg",
-    href: "#Top-hittingGames",
+    href: "/category/top-hitting",
   },
-  { label: "Slots Games", icon: "/icons/slotsIcon.svg", href: "#SlotGames" },
-  { label: "Fish Games", icon: "/icons/fishIcon.svg", href: "#FishGames" },
-  { label: "Keno Games", icon: "/icons/kenoGames.svg", href: "#KenoGames" },
+  { label: "Slots Games", icon: "/icons/slotsIcon.svg", href: "/category/slot" },
+  { label: "Fish Games", icon: "/icons/fishIcon.svg", href: "/category/fish" },
+  { label: "Keno Games", icon: "/icons/kenoGames.svg", href: "/category/keno" },
 ];
 
 export default function Sidebar({
