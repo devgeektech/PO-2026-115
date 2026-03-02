@@ -51,7 +51,7 @@ export default function Navbar({
 
   return (
     <>
-      <header className="relative header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] py-4 pe-0 ps-0 lg:ps-4">
+      <header className="overflow-hidden relative header h-[120px] flex items-center gap-4 border-b border-white/10 bg-[#0f0f0f] py-4 pe-0 ps-0 lg:ps-4">
         {/* LEFT SECTION */}
         <div className="flex topheader items-center gap-4 flex-1 min-w-0">
           <div className="logo lg:hidden">
@@ -162,7 +162,7 @@ export default function Navbar({
               </div>
             )}
           </div>
-          <div className="flex items-center justify-center md:hidden">
+          <div className="flex items-center justify-center hidden mobile_view ">
             <div className="w-[300px] overflow-hidden h-[80px] max-h-[80px]">
               <button
                 className="mobile_btn relative bottom-[55px]"

@@ -20,9 +20,8 @@ export default function CommonSlider({
     setOpen(false);
   };
 
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(
-    initialCategory
-  );
+  const [selectedCategory, setSelectedCategory] =
+    useState<string>(initialCategory);
 
   const filteredGames = (games: any[]) => {
     return games;
@@ -93,7 +92,7 @@ export default function CommonSlider({
                   }}
                   className="cursor-pointer"
                 >
-                  <SlideCard slide={item} />
+                  <SlideCard selectedCategory={selectedCategory} slide={item} />
                 </div>
               </SwiperSlide>
             ))}

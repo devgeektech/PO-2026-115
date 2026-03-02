@@ -135,13 +135,13 @@ export default function Footer() {
                   <Link
                     target="_blank"
                     href={"http://t.me/onlineslotsofficial"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    className="w-[70px] h-[70px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
                       animationData={telegramIcon}
                       loop={true}
                       autoplay={true}
-                      className="scale-130"
+                      className="scale-120"
                     />
                   </Link>
                 </li>
@@ -149,13 +149,13 @@ export default function Footer() {
                   <Link
                     target="_blank"
                     href={"https://wa.me/qr/OG5BNF6LOMCNP1"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    className="w-[70px] h-[70px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
                       animationData={whatsappIcon}
                       loop={true}
                       autoplay={true}
-                      className="scale-130"
+                      className="scale-120"
                     />
                   </Link>
                 </li>
@@ -163,13 +163,13 @@ export default function Footer() {
                   <Link
                     target="_blank"
                     href={"https://www.messenger.com/"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    className="w-[70px] h-[70px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
                       animationData={messengerIcon}
                       loop={true}
                       autoplay={true}
-                      className="scale-130"
+                      className="scale-120"
                     />
                   </Link>
                 </li>
@@ -177,13 +177,13 @@ export default function Footer() {
                   <Link
                     target="_blank"
                     href={"https://www.facebook.com/"}
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    className="w-[70px] h-[70px] overflow-hidden flex items-center justify-center"
                   >
                     <Lottie
                       animationData={facebookIcon}
                       loop={true}
                       autoplay={true}
-                      className="scale-130"
+                      className="scale-120"
                     />
                   </Link>
                 </li>
@@ -191,8 +191,9 @@ export default function Footer() {
                   <Link
                     target="_blank"
                     href="sms:+12145515913"
-                    className="w-[75px] h-[75px] overflow-hidden flex items-center justify-center"
+                    className="w-[85px] h-[85px] overflow-hidden flex items-center justify-center relative"
                   >
+                    <label className="min-w-[15px] min-h-[15px] rounded-full bg-red-400 absolute z-[10] right-[20px] top-[10px]"></label>
                     <Lottie
                       animationData={smsIcon}
                       loop={true}

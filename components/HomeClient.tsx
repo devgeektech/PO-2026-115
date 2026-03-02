@@ -11,6 +11,7 @@ import dynamic from "next/dynamic";
 import { useSearch } from "@/context/SearchContext";
 import { Sign } from "crypto";
 import Signup from "@/components/Signup";
+import JackpotSlider from "./JackpotSlider";
 const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
   ssr: false, // important because Swiper uses window
   loading: () => <div className="h-[300px]" />, // skeleton placeholder
@@ -57,9 +58,12 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="w-full text-white">
+      <div className="w-full text-white homepage">
         {/* Main Content */}
         <main className="flex-1 min-w-0 md:space-y-10 space-y-4">
+          <div className="">
+            <JackpotSlider />
+          </div>
           {/* Hero Banner */}
           <div className="relative rounded-2xl overflow-hidden">
             <video

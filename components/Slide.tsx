@@ -18,10 +18,12 @@ type Props = {
     sub?: string;
     key?: string;
   };
+  selectedCategory: string;
   fromSearchComponent?: boolean;
 };
 
 export default function SlideCard({
+  selectedCategory = "",
   slide,
   fromSearchComponent = false,
 }: Props) {
@@ -68,7 +70,7 @@ export default function SlideCard({
                 preload="none"
                 loop
                 playsInline
-                className="w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[5px]"
+                className={`w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[10px] ${selectedCategory == slide.key ? "border-6 border-solid border-[#bc13fe]" : ""} `}
               />
             )}
 

@@ -34,7 +34,7 @@ export default function DashboardShell({
         />
 
         {/* Main Content Area */}
-        <div className="flex flex-col flex-1 min-w-0 border-l border-l-[#FFFFFF14] overflow-hidden">
+        <div className="flex flex-col flex-1 min-w-0 border-l border-l-[#FFFFFF14] ">
           <Navbar
             collapsed={collapsed}
             onToggle={() => setCollapsed((p) => !p)}
@@ -42,7 +42,7 @@ export default function DashboardShell({
           />
 
           {/* Scrollable Content */}
-          <main className="flex-1 overflow-y-auto p-2 md:p-8 relative">
+          <main className="flex-1 overflow-y-auto1 p-2 md:p-8 relative">
             {/* Social Menu */}
             <div className="fixed right-0 z-[105] hidden md:block top-[200px]">
               <ul className="flex flex-col items-center">
@@ -52,7 +52,9 @@ export default function DashboardShell({
                     href="http://t.me/onlineslotsofficial"
                     className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie animationData={telegramIcon} loop autoplay />
+                    <div className="lg:scale-150">
+                      <Lottie animationData={telegramIcon} loop autoplay />
+                    </div>
                   </Link>
                 </li>
 
@@ -62,7 +64,9 @@ export default function DashboardShell({
                     href="https://wa.me/qr/OG5BNF6LOMCNP1"
                     className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie animationData={whatsappIcon} loop autoplay />
+                    <div className="lg:scale-150">
+                      <Lottie animationData={whatsappIcon} loop autoplay />
+                    </div>
                   </Link>
                 </li>
 
@@ -72,7 +76,9 @@ export default function DashboardShell({
                     href="https://www.messenger.com/"
                     className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie animationData={messengerIcon} loop autoplay />
+                    <div className="lg:scale-150">
+                      <Lottie animationData={messengerIcon} loop autoplay />
+                    </div>
                   </Link>
                 </li>
 
@@ -82,7 +88,9 @@ export default function DashboardShell({
                     href="https://www.facebook.com/"
                     className="w-[75px] h-[75px] flex items-center justify-center"
                   >
-                    <Lottie animationData={facebookIcon} loop autoplay />
+                    <div className="lg:scale-150">
+                      <Lottie animationData={facebookIcon} loop autoplay />
+                    </div>
                   </Link>
                 </li>
               </ul>
