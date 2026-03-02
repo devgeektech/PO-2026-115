@@ -17,23 +17,15 @@ const gameLinks = [
     href: "#TopTenGames",
   },
   {
-    label: "Recently Played",
-    href: "#RecentlyPlayed",
-  },
-  {
     label: "Top Hitting Games",
-    href: "#TopHittingGames",
-  },
-  {
-    label: "Social Casino",
-    href: "#SocialCasino",
+    href: "/category/top-hitting",
   },
   {
     label: "Slots Games",
-    href: "#SlotsGames",
+    href: "/category/slot",
   },
-  { label: "Fish Games", href: "#FishGames" },
-  { label: "Keno Games", href: "#KenoGames" },
+  { label: "Fish Games", href: "/category/fish" },
+  { label: "Keno Games", href: "/category/keno" },
 ];
 
 export default function Footer() {

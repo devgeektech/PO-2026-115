@@ -71,18 +71,37 @@ const initialVideos = [
 ];
 
 const JackpotSlider = () => {
+  
   const shuffleArray = (array: typeof initialVideos) => {
-    return [...array].sort(() => Math.random() - 0.5);
+    const newArr = [...array];
+    for (let i = newArr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+    }
+    return newArr;
   };
-  const [videos, setVideos] = useState(() => shuffleArray(initialVideos));
-  const [liveData, setLiveData] = useState<{ points: number; time: string }[]>(
-    []
+
+  // ✅ Multiply + Shuffle
+  const multiplyAndShuffle = (
+    array: typeof initialVideos,
+    times: number
+  ) => {
+    const expanded = Array.from({ length: times }, () => array).flat();
+    return shuffleArray(expanded);
+  };
+
+  const [videos, setVideos] = useState(() =>
+    multiplyAndShuffle(initialVideos, 4) // repeat 4 times
   );
+
+  const [liveData, setLiveData] = useState<
+    { points: number; time: string }[]
+  >([]);
 
   useEffect(() => {
     const generateRandomTime = () => {
-      // total seconds between 5 sec and 5 min (300 sec)
-      const totalSeconds = Math.floor(Math.random() * (300 - 5 + 1)) + 5;
+      const totalSeconds =
+        Math.floor(Math.random() * (300 - 5 + 1)) + 5;
 
       if (totalSeconds < 60) {
         return `${totalSeconds} seconds ago`;
@@ -96,24 +115,13 @@ const JackpotSlider = () => {
       return Math.floor(Math.random() * (4500 - 60 + 1)) + 60;
     };
 
-    const data = Array(9)
-      .fill(null)
-      .map(() => ({
-        points: generateRandomPoints(),
-        time: generateRandomTime(),
-      }));
+    const data = videos.map(() => ({
+      points: generateRandomPoints(),
+      time: generateRandomTime(),
+    }));
 
     setLiveData(data);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVideos((prev) => shuffleArray(prev));
-    }, 40000);
-
-    return () => clearInterval(interval);
-  }, []);
-
+  }, [videos]);
   return (
     <>
       <div className="bg-neutral-900 rounded-xl">

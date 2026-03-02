@@ -147,6 +147,7 @@ export default function Navbar({
                         key={`${item.label}-${index}`}
                       >
                         <SlideCard
+                          selectedCategory=""
                           slide={{
                             ...item,
                             image: item.image || item.icon,

@@ -1,27 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import createaccount from "@/public/images/createaccount_btn.gif";
 import playnowimg from "@/public/images/biggestjackpot_video.gif";
-import iconyellow from "@/public/images/iconyellow.svg";
-import jackpot from "@/public/images/jackpot.png";
-import infoicon from "@/public/images/infoicon.svg";
-import deepSeaPredator from "@/public/images/Juwa/InGamePhotos/FishGames/deepSeaPredator.jpg";
-import Modal from "@/components/Signup";
-import {
-  ChevronDown,
-  Clock,
-  CrossIcon,
-  Eye,
-  EyeOff,
-  XCircleIcon,
-} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import CommonSlider from "@/components/CommonGameSlider";
 import Signup from "@/components/Signup";
-import TextType from "@/components/TextType";
 import JackpotSlider from "@/components/JackpotSlider";
 
 export default function Detail({
@@ -33,16 +18,9 @@ export default function Detail({
   sub: any;
   name: any;
 }) {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [open, setOpen] = useState(false);
   const router = useRouter();
   console.log(cat, "cat", sub, "sub", name, "name");
-
-  const [showPassword, setShowPassword] = useState(false);
-  const [showReferral, setShowReferral] = useState(false);
-  const shuffleArray = (array: typeof initialVideos) => {
-    return [...array].sort(() => Math.random() - 0.5);
-  };
 
   const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item: any) =>

@@ -70,7 +70,7 @@ export default function GridSlider() {
       >
         {Slides.map((item) => (
           <SwiperSlide key={item.id}>
-            <SlideCard slide={item} />
+            <SlideCard selectedCategory="" slide={item} />
           </SwiperSlide>
         ))}
       </Swiper>
