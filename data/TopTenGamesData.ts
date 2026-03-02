@@ -2165,7 +2165,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/1.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/1.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/1.jpg",
         },
         {
           id: 2,
@@ -2176,7 +2176,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/2.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/2.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/2.jpg",
         },
         {
           id: 3,
@@ -2187,7 +2187,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/3.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/3.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/3.jpg",
         },
         {
           id: 4,
@@ -2198,7 +2198,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/4.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/4.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/4.jpg",
         },
         {
           id: 5,
@@ -2209,7 +2209,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/5.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/5.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/5.jpg",
         },
         {
           id: 6,
@@ -2220,7 +2220,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/6.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/6.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/6.jpg",
         },
         {
           id: 7,
@@ -2231,7 +2231,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/7.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/7.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/7.jpg",
         },
         {
           id: 8,
@@ -2242,7 +2242,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/8.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/8.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/8.jpg",
         },
         {
           id: 9,
@@ -2253,7 +2253,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/9.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/9.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/9.jpg",
         },
         {
           id: 10,
@@ -2264,7 +2264,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/10.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/10.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/10.jpg",
         },
         {
           id: 11,
@@ -2275,7 +2275,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/11.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/11.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/11.jpg",
         },
         {
           id: 12,
@@ -2286,7 +2286,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/12.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/12.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/12.jpg",
         },
         {
           id: 13,
@@ -2297,7 +2297,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "keno",
           image: "/images/onlineSlots/FK/Keno/KenoLogo/13.jpeg",
-          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/13.jpeg",
+          detailImage: "/images/onlineSlots/FK/Keno/KenoIngame/13.jpg",
         },
       ],
       slot: [
@@ -2310,7 +2310,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/1.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/1.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/1.jpg",
         },
         {
           id: 2,
@@ -2321,7 +2321,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/2.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/2.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/2.jpg",
         },
         {
           id: 3,
@@ -2332,7 +2332,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/3.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/3.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/3.jpg",
         },
         {
           id: 4,
@@ -2343,7 +2343,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/4.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/4.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/4.jpg",
         },
         {
           id: 5,
@@ -2354,7 +2354,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/5.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/5.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/5.jpg",
         },
         {
           id: 6,
@@ -2365,7 +2365,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/6.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/6.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/6.jpg",
         },
         {
           id: 7,
@@ -2376,7 +2376,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/7.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/7.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/7.jpg",
         },
         {
           id: 8,
@@ -2387,7 +2387,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/8.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/8.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/8.jpg",
         },
         {
           id: 9,
@@ -2398,7 +2398,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/9.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/9.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/9.jpg",
         },
         {
           id: 10,
@@ -2409,7 +2409,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/10.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/10.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/10.jpg",
         },
         {
           id: 11,
@@ -2420,7 +2420,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/11.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/11.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/11.jpg",
         },
         {
           id: 12,
@@ -2431,7 +2431,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/12.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/12.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/12.jpg",
         },
         {
           id: 13,
@@ -2442,7 +2442,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/13.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/13.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/13.jpg",
         },
         {
           id: 14,
@@ -2453,7 +2453,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/14.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/14.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/14.jpg",
         },
         {
           id: 15,
@@ -2464,7 +2464,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/15.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/15.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/15.jpg",
         },
         {
           id: 16,
@@ -2475,7 +2475,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/16.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/16.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/16.jpg",
         },
         {
           id: 17,
@@ -2486,7 +2486,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/17.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/17.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/17.jpg",
         },
         {
           id: 18,
@@ -2497,7 +2497,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/18.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/18.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/18.jpg",
         },
         {
           id: 19,
@@ -2508,7 +2508,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/19.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/19.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/19.jpg",
         },
         {
           id: 20,
@@ -2519,7 +2519,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/20.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/20.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/20.jpg",
         },
         {
           id: 21,
@@ -2530,7 +2530,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/21.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/21.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/21.jpg",
         },
         {
           id: 22,
@@ -2541,7 +2541,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/22.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/22.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/22.jpg",
         },
         {
           id: 23,
@@ -2552,7 +2552,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/23.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/23.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/23.jpg",
         },
         {
           id: 24,
@@ -2563,7 +2563,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/24.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/24.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/24.jpg",
         },
         {
           id: 25,
@@ -2574,7 +2574,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/25.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/25.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/25.jpg",
         },
         {
           id: 26,
@@ -2585,7 +2585,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/26.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/26.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/26.jpg",
         },
         {
           id: 27,
@@ -2596,7 +2596,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/27.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/27.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/27.jpg",
         },
         {
           id: 28,
@@ -2607,7 +2607,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/28.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/28.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/28.jpg",
         },
         {
           id: 29,
@@ -2618,7 +2618,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/29.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/29.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/29.jpg",
         },
         {
           id: 30,
@@ -2629,7 +2629,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/30.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/30.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/30.jpg",
         },
         {
           id: 31,
@@ -2640,7 +2640,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/31.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/31.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/31.jpg",
         },
         {
           id: 32,
@@ -2651,7 +2651,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/32.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/32.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/32.jpg",
         },
         {
           id: 33,
@@ -2662,7 +2662,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/33.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/33.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/33.jpg",
         },
         {
           id: 34,
@@ -2673,7 +2673,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/34.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/34.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/34.jpg",
         },
         {
           id: 35,
@@ -2684,7 +2684,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/35.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/35.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/35.jpg",
         },
         {
           id: 36,
@@ -2695,7 +2695,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/36.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/36.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/36.jpg",
         },
         {
           id: 37,
@@ -2706,7 +2706,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/37.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/37.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/37.jpg",
         },
         {
           id: 38,
@@ -2717,7 +2717,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/38.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/38.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/38.jpg",
         },
         {
           id: 39,
@@ -2728,7 +2728,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/39.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/39.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/39.jpg",
         },
         {
           id: 40,
@@ -2739,7 +2739,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/40.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/40.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/40.jpg",
         },
         {
           id: 41,
@@ -2750,7 +2750,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/41.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/41.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/41.jpg",
         },
         {
           id: 42,
@@ -2761,7 +2761,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/42.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/42.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/42.jpg",
         },
         {
           id: 43,
@@ -2772,7 +2772,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/43.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/43.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/43.jpg",
         },
         {
           id: 44,
@@ -2783,7 +2783,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/44.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/44.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/44.jpg",
         },
         {
           id: 45,
@@ -2794,7 +2794,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/45.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/45.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/45.jpg",
         },
         {
           id: 46,
@@ -2805,7 +2805,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/46.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/46.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/46.jpg",
         },
         {
           id: 47,
@@ -2816,7 +2816,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/47.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/47.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/47.jpg",
         },
         {
           id: 48,
@@ -2827,7 +2827,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/48.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/48.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/48.jpg",
         },
         {
           id: 49,
@@ -2838,7 +2838,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/49.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/49.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/49.jpg",
         },
         {
           id: 50,
@@ -2849,7 +2849,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/50.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/50.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/50.jpg",
         },
         {
           id: 51,
@@ -2860,7 +2860,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/51.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/51.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/51.jpg",
         },
         {
           id: 52,
@@ -2871,7 +2871,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/52.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/52.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/52.jpg",
         },
         {
           id: 53,
@@ -2882,7 +2882,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/53.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/53.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/53.jpg",
         },
         {
           id: 54,
@@ -2893,7 +2893,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/54.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/54.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/54.jpg",
         },
         {
           id: 55,
@@ -2904,7 +2904,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/55.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/55.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/55.jpg",
         },
         {
           id: 56,
@@ -2915,7 +2915,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/56.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/56.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/56.jpg",
         },
         {
           id: 57,
@@ -2926,7 +2926,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/57.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/57.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/57.jpg",
         },
         {
           id: 58,
@@ -2937,7 +2937,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/58.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/58.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/58.jpg",
         },
         {
           id: 59,
@@ -2948,7 +2948,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/59.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/59.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/59.jpg",
         },
         {
           id: 60,
@@ -2959,7 +2959,7 @@ export const TopTenGamesData: any = {
           cat: "firekerin",
           sub: "slot",
           image: "/images/onlineSlots/FK/Slots/SlotsLogo/60.jpeg",
-          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/60.jpeg",
+          detailImage: "/images/onlineSlots/FK/Slots/SlotsInGame/60.jpg",
         },
       ],
       "top-hitting": [
