@@ -197,7 +197,7 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 55s linear infinite;
   gap: 2rem;
 }
 
