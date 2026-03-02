@@ -48,13 +48,13 @@ export default function HomePage() {
   const [open, setOpen] = useState(false);
   console.log("HomePage Search:", searchTerm);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      videoRef.current?.play();
-    }, 3000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     videoRef.current?.play();
+  //   }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
@@ -72,7 +72,7 @@ export default function HomePage() {
               loop
               autoPlay
               playsInline
-              preload="none"
+              preload="metadata"
               style={{
                 width: "100%",
                 maxHeight: "850px",
