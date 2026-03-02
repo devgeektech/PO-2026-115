@@ -1,12 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
+import { useParams } from "next/navigation";
+
 
 export default function Slots() {
-  const slotGames = TopTenGamesData.juwa.subcategoies.slot || [];
-
+  const { key } = useParams();
   const [visibleCount, setVisibleCount] = useState(10);
+
+  const slotGames = useMemo(() => {
+    if (!key) return [];
+
+    return Object.values(TopTenGamesData)
+      .filter((platform) => platform.subcategoies?.[key])
+      .flatMap((platform) => platform.subcategoies[key] || []);
+  }, [key]);
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 10);
@@ -14,7 +23,7 @@ export default function Slots() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Juwa Slot Games</h1>
+      <h1 className="text-2xl font-bold mb-6">{key} Games</h1>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {slotGames.slice(0, visibleCount).map((game, index) => (
