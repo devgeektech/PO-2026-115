@@ -3092,7 +3092,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/1.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/1.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/1.jpg",
         },
         {
           id: 2,
@@ -3103,7 +3103,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/2.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/2.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/2.jpg",
         },
         {
           id: 3,
@@ -3114,7 +3114,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/3.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/3.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/3.jpg",
         },
         {
           id: 4,
@@ -3125,7 +3125,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/4.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/4.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/4.jpg",
         },
         {
           id: 5,
@@ -3136,7 +3136,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/5.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/5.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/5.jpg",
         },
         {
           id: 6,
@@ -3147,7 +3147,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/6.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/6.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/6.jpg",
         },
         {
           id: 7,
@@ -3158,7 +3158,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/7.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/7.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/7.jpg",
         },
         {
           id: 8,
@@ -3169,7 +3169,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "fish",
           image: "/images/onlineSlots/GV/Fish/FishLogo/8.jpeg",
-          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/8.jpeg",
+          detailImage: "/images/onlineSlots/GV/Fish/FishIngame/8.jpg",
         },
       ],
       keno: [
@@ -3182,7 +3182,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "keno",
           image: "/images/onlineSlots/GV/Keno/KenoLogo/1.jpeg",
-          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/1.jpeg",
+          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/1.jpg",
         },
         {
           id: 2,
@@ -3193,7 +3193,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "keno",
           image: "/images/onlineSlots/GV/Keno/KenoLogo/2.jpeg",
-          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/2.jpeg",
+          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/2.jpg",
         },
         {
           id: 3,
@@ -3204,7 +3204,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "keno",
           image: "/images/onlineSlots/GV/Keno/KenoLogo/3.jpeg",
-          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/3.jpeg",
+          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/3.jpg",
         },
         {
           id: 4,
@@ -3215,7 +3215,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "keno",
           image: "/images/onlineSlots/GV/Keno/KenoLogo/4.jpeg",
-          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/4.jpeg",
+          detailImage: "/images/onlineSlots/GV/Keno/KenoIngame/4.jpg",
         },
       ],
       slot: [
@@ -3228,7 +3228,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/1.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/1.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/1.jpg",
         },
         {
           id: 2,
@@ -3239,7 +3239,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/2.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/2.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/2.jpg",
         },
         {
           id: 3,
@@ -3250,7 +3250,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/3.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/3.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/3.jpg",
         },
         {
           id: 4,
@@ -3261,7 +3261,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/4.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/4.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/4.jpg",
         },
         {
           id: 5,
@@ -3272,7 +3272,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/5.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/5.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/5.jpg",
         },
         {
           id: 6,
@@ -3283,7 +3283,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/6.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/6.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/6.jpg",
         },
         {
           id: 7,
@@ -3294,7 +3294,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/7.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/7.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/7.jpg",
         },
         {
           id: 8,
@@ -3305,7 +3305,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/8.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/8.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/8.jpg",
         },
         {
           id: 9,
@@ -3316,7 +3316,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/9.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/9.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/9.jpg",
         },
         {
           id: 10,
@@ -3327,7 +3327,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/10.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/10.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/10.jpg",
         },
         {
           id: 11,
@@ -3338,7 +3338,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/11.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/11.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/11.jpg",
         },
         {
           id: 12,
@@ -3349,7 +3349,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/12.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/12.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/12.jpg",
         },
         {
           id: 13,
@@ -3360,7 +3360,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/13.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/13.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/13.jpg",
         },
         {
           id: 14,
@@ -3371,7 +3371,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/14.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/14.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/14.jpg",
         },
         {
           id: 15,
@@ -3382,7 +3382,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/15.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/15.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/15.jpg",
         },
         {
           id: 16,
@@ -3393,7 +3393,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/16.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/16.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/16.jpg",
         },
         {
           id: 17,
@@ -3404,7 +3404,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/17.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/17.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/17.jpg",
         },
         {
           id: 18,
@@ -3415,7 +3415,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/18.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/18.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/18.jpg",
         },
         {
           id: 19,
@@ -3426,7 +3426,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/19.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/19.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/19.jpg",
         },
         {
           id: 20,
@@ -3437,7 +3437,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/20.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/20.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/20.jpg",
         },
         {
           id: 21,
@@ -3448,7 +3448,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/21.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/21.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/21.jpg",
         },
         {
           id: 22,
@@ -3459,7 +3459,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/22.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/22.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/22.jpg",
         },
         {
           id: 23,
@@ -3470,7 +3470,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/23.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/23.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/23.jpg",
         },
         {
           id: 24,
@@ -3481,7 +3481,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/24.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/24.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/24.jpg",
         },
         {
           id: 25,
@@ -3492,7 +3492,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/25.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/25.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/25.jpg",
         },
         {
           id: 26,
@@ -3503,7 +3503,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/26.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/26.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/26.jpg",
         },
         {
           id: 27,
@@ -3514,7 +3514,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/27.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/27.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/27.jpg",
         },
         {
           id: 28,
@@ -3525,7 +3525,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/28.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/28.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/28.jpg",
         },
         {
           id: 29,
@@ -3536,7 +3536,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/29.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/29.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/29.jpg",
         },
         {
           id: 30,
@@ -3547,7 +3547,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/30.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/30.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/30.jpg",
         },
         {
           id: 31,
@@ -3558,7 +3558,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/31.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/31.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/31.jpg",
         },
         {
           id: 32,
@@ -3569,7 +3569,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/32.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/32.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/32.jpg",
         },
         {
           id: 33,
@@ -3580,7 +3580,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/33.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/33.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/33.jpg",
         },
         {
           id: 34,
@@ -3591,7 +3591,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/34.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/34.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/34.jpg",
         },
         {
           id: 35,
@@ -3602,7 +3602,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/35.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/35.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/35.jpg",
         },
         {
           id: 36,
@@ -3613,7 +3613,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/36.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/36.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/36.jpg",
         },
         {
           id: 37,
@@ -3624,7 +3624,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/37.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/37.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/37.jpg",
         },
         {
           id: 38,
@@ -3635,7 +3635,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/38.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/38.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/38.jpg",
         },
         {
           id: 39,
@@ -3646,7 +3646,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/39.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/39.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/39.jpg",
         },
         {
           id: 40,
@@ -3657,7 +3657,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/40.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/40.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/40.jpg",
         },
         {
           id: 41,
@@ -3668,7 +3668,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/41.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/41.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/41.jpg",
         },
         {
           id: 42,
@@ -3679,7 +3679,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/42.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/42.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/42.jpg",
         },
         {
           id: 43,
@@ -3690,7 +3690,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/43.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/43.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/43.jpg",
         },
         {
           id: 44,
@@ -3701,7 +3701,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/44.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/44.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/44.jpg",
         },
         {
           id: 45,
@@ -3712,7 +3712,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/45.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/45.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/45.jpg",
         },
         {
           id: 46,
@@ -3723,7 +3723,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/46.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/46.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/46.jpg",
         },
         {
           id: 47,
@@ -3734,7 +3734,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/47.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/47.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/47.jpg",
         },
         {
           id: 48,
@@ -3745,7 +3745,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/48.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/48.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/48.jpg",
         },
         {
           id: 49,
@@ -3756,7 +3756,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/49.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/49.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/49.jpg",
         },
         {
           id: 50,
@@ -3767,7 +3767,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/50.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/50.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/50.jpg",
         },
         {
           id: 51,
@@ -3778,7 +3778,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/51.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/51.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/51.jpg",
         },
         {
           id: 52,
@@ -3789,7 +3789,7 @@ export const TopTenGamesData: any = {
           cat: "gamevault",
           sub: "slot",
           image: "/images/onlineSlots/GV/Slots/SlotsLogo/52.jpeg",
-          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/52.jpeg",
+          detailImage: "/images/onlineSlots/GV/Slots/SlotsIngame/52.jpg",
         },
       ],
       "top-hitting": [
