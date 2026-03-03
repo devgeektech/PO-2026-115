@@ -90,6 +90,7 @@ export default function Detail({
               src={game.detailImage}
               width={1200}
               height={700}
+              quality={60}
               alt="deepSeaPredator"
             />
           </div>
