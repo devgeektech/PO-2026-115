@@ -108,6 +108,7 @@ export default function Detail({
                   src={createaccount}
                   className="max-w-[300px] h-auto w-full"
                   alt="signupimg"
+                   quality={60}
                 />
               </button>
               <button
@@ -124,6 +125,7 @@ export default function Detail({
                   src={playnowimg}
                   className="max-w-[300px] h-auto w-full"
                   alt="playnowimg"
+                  quality={60}
                 />
               </button>
             </div>
