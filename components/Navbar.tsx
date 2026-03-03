@@ -163,8 +163,8 @@ export default function Navbar({
               </div>
             )}
           </div>
-          <div className="flex items-center justify-center hidden mobile_view ">
-            <div className="w-[300px] overflow-hidden h-[80px] max-h-[80px]">
+          <div className="flex items-center justify-center hidden mobile_view mx-auto">
+            <div className="w-[300px] overflow-hidden h-[80px] max-h-[80px] mx-auto">
               <button
                 className="mobile_btn relative bottom-[55px]"
                 onClick={() => {

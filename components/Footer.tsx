@@ -118,7 +118,7 @@ export default function Footer() {
           <p>© 2026 onlineslotsofficial.com | All rights reserved.</p>
         </div>
       </div>
-      <div className="fixed bottom-0 left-0 right-0 z-[101] md:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-[105] md:hidden">
         <div className="bg_trans flex justify-center gap-3 bg-[#0f0f0f]">
           <div className="bg-[#64008b80] p-2 w-full">
             <div className="socialMenu w-auto h-auto rounded-[6px]">
