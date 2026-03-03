@@ -4,7 +4,7 @@ import { Clock } from "lucide-react";
 import iconyellow from "@/public/images/iconyellow.svg";
 const initialVideos = [
   {
-    src: "public/images/onlineSlots/jackpot_images/river_sweeps.jpg",
+    src: "/images/onlineSlots/jackpot_images/river_sweeps.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#470203]",
     border: "border-[#8b5055]",
   },
