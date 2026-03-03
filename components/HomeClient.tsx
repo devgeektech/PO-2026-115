@@ -1,4 +1,5 @@
 "use client";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
@@ -7,48 +8,16 @@ import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
-import dynamic from "next/dynamic";
 import { useSearch } from "@/context/SearchContext";
 import Signup from "@/components/Signup";
-// const JackpotSlider = dynamic(() => import("./JackpotSlider"), {
-//   ssr: false,
-//   loading: () => (
-//     <div className="bg-neutral-900 rounded-xl">
-//       {/* Title shimmer */}
-//       <div className="p-4">
-//         <div className="h-6 w-64 bg-neutral-700 rounded-md animate-pulse" />
-//       </div>
-
-//       {/* Cards shimmer */}
-//       <div className="bg-neutral-800 p-4 rounded-lg flex gap-4 overflow-hidden">
-//         {[...Array(3)].map((_, i) => (
-//           <div
-//             key={i}
-//             className="min-w-[300px] rounded-[20px] p-4 border border-neutral-700 bg-neutral-850 animate-pulse"
-//           >
-//             <div className="flex gap-3 items-center">
-//               <div className="w-[75px] h-[75px] bg-neutral-700 rounded-md" />
-//               <div className="flex flex-col gap-3 w-full">
-//                 <div className="h-3 w-24 bg-neutral-700 rounded" />
-//                 <div className="h-4 w-32 bg-neutral-700 rounded" />
-//                 <div className="h-4 w-20 bg-neutral-700 rounded" />
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   ),
-// });
 import JackpotSlider from "./JackpotSlider";
-import { useInView } from "react-intersection-observer";
-
-import CommonSlider from  "@/components/CommonGameSlider";
-
-// const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
-//   ssr: false, // important because Swiper uses window
-//   loading: () => <div className="h-[300px]" />, // skeleton placeholder
-// });
+const CommonSlider = dynamic(
+  () => import("@/components/CommonGameSlider"),
+  {
+    ssr: false, // prevents server-side rendering (important if using window, video, etc.)
+    loading: () => <div className="h-[300px]" />, // optional placeholder
+  }
+);
 
 type menu = {
   label: string;
@@ -81,16 +50,6 @@ export default function HomePage() {
   const [open, setOpen] = useState(false);
   console.log("HomePage Search:", searchTerm);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     videoRef.current?.play();
-  //   }, 3000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   return (
     <>
@@ -108,7 +67,7 @@ export default function HomePage() {
               loop
               autoPlay
               playsInline
-              preload="none"
+              preload="metadata"
               style={{
                 width: "100%",
                 maxHeight: "850px",
