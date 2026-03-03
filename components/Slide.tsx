@@ -65,7 +65,7 @@ export default function SlideCard({
             {slide.video && (
               <video
                 src={slide.video}
-                // autoPlay
+                autoPlay
                 muted
                 preload="none"
                 loop
