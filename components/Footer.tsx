@@ -14,7 +14,7 @@ const aboutLinks = ["Terms of Service", "Privacy Policy"];
 const gameLinks = [
   {
     label: "Top Ten Games",
-    href: "#TopTenGames",
+    href: "/",
   },
   {
     label: "Top Hitting Games",

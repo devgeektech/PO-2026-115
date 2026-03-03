@@ -4,70 +4,65 @@ import { Clock } from "lucide-react";
 import iconyellow from "@/public/images/iconyellow.svg";
 const initialVideos = [
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/pandaMaster.mp4",
+    src: "public/images/onlineSlots/jackpot_images/river_sweeps.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#470203]",
     border: "border-[#8b5055]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/riversweeps.mp4",
+    src: "/images/onlineSlots/jackpot_images/river_sweeps.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#6c3ad5]",
     border: "border-[#9967e4]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/vblink.mp4",
+    src: "/images/onlineSlots/jackpot_images/vblink.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#5b1288]",
     border: "border-[#992cc1]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/gameVault.mp4",
+    src: "/images/onlineSlots/jackpot_images/game_vault.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#842158]",
     border: "border-[#ef70bb]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/cashFrenzy.mp4",
+    src: "/images/onlineSlots/jackpot_images/cash_frenzy.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#470203]",
     border: "border-[#8b5055]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/cashMachine.mp4",
+    src: "/images/onlineSlots/jackpot_images/cash_machine.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#72039a]",
     border: "border-[#ab499f]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/fabulourJuwa.mp4",
+    src: "/images/onlineSlots/jackpot_images/fabuous_juwa.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#0012f5]",
     border: "border-[#4285f6]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/FireKerin.mp4",
+    src: "/images/onlineSlots/jackpot_images/fire_kirin.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#421d10]",
     border: "border-[#97696b]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/gameRoom.mp4",
+    src: "/images/onlineSlots/jackpot_images/game_room.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#3e2000]",
     border: "border-[#e3ba52]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/Juwa.mp4",
+    src: "/images/onlineSlots/jackpot_images/juwa.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#4c1f45]",
     border: "border-[#d054b0]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/milkyWays.mp4",
+    src: "/images/onlineSlots/jackpot_images/miky_ways.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#3b1c32]",
     border: "border-[#d29ea9]",
   },
   {
-    src: "/images/onlineSlots/GamesLogoAnimation/orionstars.mp4",
+    src: "/images/onlineSlots/jackpot_images/orion_stars.jpg",
     shadow: "shadow-[inset_0px_0px_20px_#5f074c]",
     border: "border-[#f80094]",
-  },
-  {
-    src: "/images/onlineSlots/GamesLogoAnimation/wegasweaps.mp4",
-    shadow: "shadow-[inset_0px_0px_20px_#6e0735]",
-    border: "border-[#fba7f6]",
-  },
+  }
 ];
 
 const JackpotSlider = () => {
@@ -91,7 +86,7 @@ const JackpotSlider = () => {
   };
 
   const [videos, setVideos] = useState(() =>
-    multiplyAndShuffle(initialVideos, 4) // repeat 4 times
+    shuffleArray(initialVideos)
   );
 
   const [liveData, setLiveData] = useState<
@@ -136,7 +131,7 @@ const JackpotSlider = () => {
                   className={`flex min-w-[300px] gap-3 relative rounded-[20px] items-center video_wrap ${video.shadow} p-4 border ${video.border}`}
                 >
                   <div>
-                    <video
+                    {/* <video
                       autoPlay
                       muted
                       loop
@@ -144,7 +139,8 @@ const JackpotSlider = () => {
                       className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden"
                     >
                       <source src={video.src} type="video/mp4" />
-                    </video>
+                    </video> */}
+                    <img className="min-w-[75px] min-h-[75px] w-[75px] h-[75px] rounded-[6px] overflow-hidden" src={video.src} alt={video.src} />
                   </div>
 
                   <div className="flex flex-col gap-3">

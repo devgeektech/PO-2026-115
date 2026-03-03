@@ -9,44 +9,46 @@ import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import dynamic from "next/dynamic";
 import { useSearch } from "@/context/SearchContext";
-import { Sign } from "crypto";
 import Signup from "@/components/Signup";
-const JackpotSlider = dynamic(() => import("./JackpotSlider"), {
-  ssr: false,
-  loading: () => (
-    <div className="bg-neutral-900 rounded-xl">
-      {/* Title shimmer */}
-      <div className="p-4">
-        <div className="h-6 w-64 bg-neutral-700 rounded-md animate-pulse" />
-      </div>
+// const JackpotSlider = dynamic(() => import("./JackpotSlider"), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="bg-neutral-900 rounded-xl">
+//       {/* Title shimmer */}
+//       <div className="p-4">
+//         <div className="h-6 w-64 bg-neutral-700 rounded-md animate-pulse" />
+//       </div>
 
-      {/* Cards shimmer */}
-      <div className="bg-neutral-800 p-4 rounded-lg flex gap-4 overflow-hidden">
-        {[...Array(3)].map((_, i) => (
-          <div
-            key={i}
-            className="min-w-[300px] rounded-[20px] p-4 border border-neutral-700 bg-neutral-850 animate-pulse"
-          >
-            <div className="flex gap-3 items-center">
-              <div className="w-[75px] h-[75px] bg-neutral-700 rounded-md" />
-              <div className="flex flex-col gap-3 w-full">
-                <div className="h-3 w-24 bg-neutral-700 rounded" />
-                <div className="h-4 w-32 bg-neutral-700 rounded" />
-                <div className="h-4 w-20 bg-neutral-700 rounded" />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  ),
-});
+//       {/* Cards shimmer */}
+//       <div className="bg-neutral-800 p-4 rounded-lg flex gap-4 overflow-hidden">
+//         {[...Array(3)].map((_, i) => (
+//           <div
+//             key={i}
+//             className="min-w-[300px] rounded-[20px] p-4 border border-neutral-700 bg-neutral-850 animate-pulse"
+//           >
+//             <div className="flex gap-3 items-center">
+//               <div className="w-[75px] h-[75px] bg-neutral-700 rounded-md" />
+//               <div className="flex flex-col gap-3 w-full">
+//                 <div className="h-3 w-24 bg-neutral-700 rounded" />
+//                 <div className="h-4 w-32 bg-neutral-700 rounded" />
+//                 <div className="h-4 w-20 bg-neutral-700 rounded" />
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   ),
+// });
+import JackpotSlider from "./JackpotSlider";
 import { useInView } from "react-intersection-observer";
 
-const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
-  ssr: false, // important because Swiper uses window
-  loading: () => <div className="h-[300px]" />, // skeleton placeholder
-});
+import CommonSlider from  "@/components/CommonGameSlider";
+
+// const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
+//   ssr: false, // important because Swiper uses window
+//   loading: () => <div className="h-[300px]" />, // skeleton placeholder
+// });
 
 type menu = {
   label: string;
@@ -58,7 +60,7 @@ const menu = [
   {
     label: "Top Ten Games",
     icon: "/icons/topTenIcon.svg",
-    href: "#TopTenGames",
+    href: "/",
   },
   {
     label: "Top Hitting Games",
@@ -177,15 +179,11 @@ export default function HomePage() {
           </div>
           <div className="w-full min-w-0 overflow-hidden">
             {" "}
-             <div ref={ref}>
-              {inView && 
-                      <CommonSlider
-                        title="Top Ten Games"
-                        data={TopTenGamesData}
-                        type="topTen"
-                      />
-                      }
-            </div>
+            <CommonSlider
+              title="Top Ten Games"
+              data={TopTenGamesData}
+              type="topTen"
+            />
           </div>
 
           <div className="">

@@ -7,7 +7,7 @@ const menu = [
   {
     label: "Top Ten Games",
     icon: "/icons/topTenIcon.svg",
-    href: "#TopTenGames",
+    href: "/",
   },
   {
     label: "Top Hitting Games",
