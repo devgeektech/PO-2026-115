@@ -50,7 +50,7 @@ export default function HomePage() {
   const [open, setOpen] = useState(false);
   console.log("HomePage Search:", searchTerm);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
+  const [showIcons, setShowIcons] = useState(false);
   return (
     <>
       <div className="w-full text-white homepage">
@@ -67,6 +67,7 @@ export default function HomePage() {
               loop
               autoPlay
               playsInline
+              onLoadedData={() => setShowIcons(true)}
               preload="metadata"
               style={{
                 width: "100%",
@@ -78,6 +79,7 @@ export default function HomePage() {
             >
               <source src="/videos/bannerVideo.mp4" type="video/mp4" />
             </video>
+            {showIcons && (
             <div className="w-max absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-3">
               <div
                 className="bg_img w-max flex items-center gap-2 cursor-pointer"
@@ -104,6 +106,8 @@ export default function HomePage() {
                 />
               </div>
             </div>
+            ) 
+            }
           </div>
           <div className="sticky top-0 z-[102]">
             <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl md:p-4 p-2">
