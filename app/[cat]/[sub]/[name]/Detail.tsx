@@ -5,9 +5,22 @@ import createaccount from "@/public/images/createaccount_btn.gif";
 import playnowimg from "@/public/images/biggestjackpot_video.gif";
 import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
-import CommonSlider from "@/components/CommonGameSlider";
+// import CommonSlider from "@/components/CommonGameSlider";
 import Signup from "@/components/Signup";
-import JackpotSlider from "@/components/JackpotSlider";
+// import JackpotSlider from "@/components/JackpotSlider";
+
+import dynamic from "next/dynamic";
+
+const CommonSlider = dynamic(
+  () => import("@/components/CommonGameSlider"),
+  { ssr: false, loading: () => <div className="h-40" /> }
+);
+
+const JackpotSlider = dynamic(
+  () => import("@/components/JackpotSlider"),
+  { ssr: false }
+);
+
 
 export default function Detail({
   cat,
@@ -24,7 +37,7 @@ export default function Detail({
 
   const game: any = TopTenGamesData[cat]?.subcategoies?.[sub]?.find(
     (item: any) =>
-      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase()
+      item.key.toLowerCase().replace(/\s+/g, "-") === name.toLowerCase(),
   );
 
   return (
@@ -65,11 +78,18 @@ export default function Detail({
         {/* Main Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="lg:col-span-1 rounded-xl">
-            <img
+            {/* <img
               className="w-full h-full object-cover rounded-xl"
               src={game.detailImage}
               // width={300}
               // height={400}
+              alt="deepSeaPredator"
+            /> */}
+            <Image
+              className="max-w-[1200px] w-full h-full object-cover rounded-xl"
+              src={game.detailImage}
+              width={1200}
+              height={700}
               alt="deepSeaPredator"
             />
           </div>
