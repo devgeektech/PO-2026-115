@@ -24,7 +24,7 @@ export default function Slots() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">{key} Games</h1>
+      <h1 className="text-2xl font-bold mb-6">{key ? key.charAt(0).toUpperCase() + key.slice(1) : ""} Games</h1>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {slotGames.slice(0, visibleCount).map((game, index) => (
@@ -45,7 +45,7 @@ export default function Slots() {
             onClick={handleLoadMore}
             className="px-10 py-3 bg-[#64008b] border-[#bc13fe] text-white rounded-md  transition cursor-pointer"
           >
-            Load More
+            More {key} Games
           </button>
         </div>
       )}

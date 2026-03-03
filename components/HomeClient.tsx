@@ -1,4 +1,5 @@
 "use client";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
@@ -7,15 +8,16 @@ import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
-import dynamic from "next/dynamic";
 import { useSearch } from "@/context/SearchContext";
-import { Sign } from "crypto";
 import Signup from "@/components/Signup";
 import JackpotSlider from "./JackpotSlider";
-const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
-  ssr: false, // important because Swiper uses window
-  loading: () => <div className="h-[300px]" />, // skeleton placeholder
-});
+const CommonSlider = dynamic(
+  () => import("@/components/CommonGameSlider"),
+  {
+    ssr: false, // prevents server-side rendering (important if using window, video, etc.)
+    loading: () => <div className="h-[300px]" />, // optional placeholder
+  }
+);
 
 type menu = {
   label: string;
@@ -27,7 +29,7 @@ const menu = [
   {
     label: "Top Ten Games",
     icon: "/icons/topTenIcon.svg",
-    href: "#TopTenGames",
+    href: "/",
   },
   {
     label: "Top Hitting Games",
@@ -48,14 +50,7 @@ export default function HomePage() {
   const [open, setOpen] = useState(false);
   console.log("HomePage Search:", searchTerm);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     videoRef.current?.play();
-  //   }, 3000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
+  const [showIcons, setShowIcons] = useState(false);
   return (
     <>
       <div className="w-full text-white homepage">
@@ -72,6 +67,7 @@ export default function HomePage() {
               loop
               autoPlay
               playsInline
+              onLoadedData={() => setShowIcons(true)}
               preload="metadata"
               style={{
                 width: "100%",
@@ -83,6 +79,7 @@ export default function HomePage() {
             >
               <source src="/videos/bannerVideo.mp4" type="video/mp4" />
             </video>
+            {showIcons && (
             <div className="w-max absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-3">
               <div
                 className="bg_img w-max flex items-center gap-2 cursor-pointer"
@@ -109,6 +106,8 @@ export default function HomePage() {
                 />
               </div>
             </div>
+            ) 
+            }
           </div>
           <div className="sticky top-0 z-[102]">
             <div className="w-full border border-[#2D2D2D] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] rounded-2xl md:p-4 p-2">
