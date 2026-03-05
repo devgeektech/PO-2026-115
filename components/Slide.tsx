@@ -80,7 +80,7 @@ export default function SlideCard({
                 alt={slide.title ?? "slide image"}
                 // width={slide.imageWidth ?? 300}
                 // height={slide.imageHeight ?? 400}
-                className="w-full object-cover rounded-[5px]"
+                className={`w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[10px] ${selectedCategory == slide.key ? "border-6 border-solid border-[#bc13fe]" : ""} `}
                 onClick={() => {
                   goToGames();
                 }}

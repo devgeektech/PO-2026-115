@@ -5,9 +5,20 @@ import createaccount from "@/public/images/createaccount_btn.gif";
 import playnowimg from "@/public/images/biggestjackpot_video.gif";
 import { useRouter } from "next/navigation";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
-import CommonSlider from "@/components/CommonGameSlider";
+// import CommonSlider from "@/components/CommonGameSlider";
 import Signup from "@/components/Signup";
-import JackpotSlider from "@/components/JackpotSlider";
+// import JackpotSlider from "@/components/JackpotSlider";
+
+import dynamic from "next/dynamic";
+
+const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
+  ssr: false,
+  loading: () => <div className="h-40" />,
+});
+
+const JackpotSlider = dynamic(() => import("@/components/JackpotSlider"), {
+  ssr: false,
+});
 
 export default function Detail({
   cat,
@@ -65,11 +76,19 @@ export default function Detail({
         {/* Main Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="lg:col-span-1 rounded-xl">
+            {/* <img
+              className="w-full h-full object-cover rounded-xl"
+              src={game.detailImage}
+              width={1200}
+              height={700}
+              alt="deepSeaPredator"
+            /> */}
             <Image
               className="max-w-[1200px] w-full h-full object-cover rounded-xl"
               src={game.detailImage}
               width={1200}
               height={700}
+              quality={60}
               alt="deepSeaPredator"
             />
           </div>
@@ -87,6 +106,7 @@ export default function Detail({
                   src={createaccount}
                   className="max-w-[300px] h-auto w-full"
                   alt="signupimg"
+                  quality={60}
                 />
               </button>
               <button
@@ -103,6 +123,7 @@ export default function Detail({
                   src={playnowimg}
                   className="max-w-[300px] h-auto w-full"
                   alt="playnowimg"
+                  quality={60}
                 />
               </button>
             </div>

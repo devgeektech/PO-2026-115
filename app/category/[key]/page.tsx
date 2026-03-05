@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import { useParams } from "next/navigation";
@@ -8,7 +8,7 @@ export default function Slots() {
   const params = useParams<{ key: string }>();
   const key = params?.key;
   const [visibleCount, setVisibleCount] = useState(10);
-
+  const router = useRouter();
   const slotGames = useMemo(() => {
     if (!key) return [];
 
@@ -19,6 +19,12 @@ export default function Slots() {
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 10);
+  };
+
+  const goToGames = (slide: any) => {
+    if (slide.type == "sub-cat" && slide.detailImage) {
+      router.push(`/${slide.cat}/${slide.sub}/${slide.key}`);
+    }
   };
 
   return (
@@ -34,6 +40,9 @@ export default function Slots() {
               src={game.image}
               alt={game.label}
               className="w-full h-auto cursor-pointer"
+              onClick={() => {
+                goToGames(game);
+              }}
             />
           </li>
         ))}

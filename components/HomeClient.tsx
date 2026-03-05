@@ -8,7 +8,6 @@ import biggestjackpot from "@/public/images/biggestjackpot.gif";
 import joinnow from "@/public/images/joinnow.gif";
 import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
-import { useSearch } from "@/context/SearchContext";
 import Signup from "@/components/Signup";
 import JackpotSlider from "./JackpotSlider";
 const CommonSlider = dynamic(
@@ -46,9 +45,7 @@ const menu = [
 ];
 
 export default function HomePage() {
-  const { searchTerm } = useSearch();
   const [open, setOpen] = useState(false);
-  console.log("HomePage Search:", searchTerm);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [showIcons, setShowIcons] = useState(false);
   return (
@@ -68,7 +65,7 @@ export default function HomePage() {
               autoPlay
               playsInline
               onLoadedData={() => setShowIcons(true)}
-              preload="metadata"
+              preload="none"
               style={{
                 width: "100%",
                 maxHeight: "850px",
