@@ -36,7 +36,7 @@ export type CategoriesType = {
 export const TopTenGamesData: any = {
   juwa: {
     id: 1,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/juwa_video.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/Juwa.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -644,7 +644,7 @@ export const TopTenGamesData: any = {
   },
   riversweeps: {
     id: 2,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/riversweeps.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/riversweeps.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -879,7 +879,7 @@ export const TopTenGamesData: any = {
   },
   ultrapanda: {
     id: 1,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/ultrapanda.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/ultrapanda.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -1155,7 +1155,7 @@ export const TopTenGamesData: any = {
   },
   vblink: {
     id: 3,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/vblink.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/vblink.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -1555,7 +1555,7 @@ export const TopTenGamesData: any = {
   },
   vegasweeps: {
     id: 4,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/wegasweaps.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/wegasweaps.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -1907,7 +1907,7 @@ export const TopTenGamesData: any = {
   },
   firekerin: {
     id: 5,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/FireKerin.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/FireKerin.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -3078,7 +3078,7 @@ export const TopTenGamesData: any = {
   },
   gamevault: {
     id: 5,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/gameVault.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/gameVault.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -3908,7 +3908,7 @@ export const TopTenGamesData: any = {
   },
   milkyways: {
     id: 5,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/milkyWays.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/milkyWays.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
@@ -4606,7 +4606,7 @@ export const TopTenGamesData: any = {
   },
   orionstars: {
     id: 6,
-    video: "/images/onlineSlots/GamesLogoAnimationUpdated/orionstars.mp4",
+    image: "/images/onlineSlots/GamesLogoAnimation/orionstars.gif",
     isNew: true,
     isExclusive: true,
     subcategoies: {
