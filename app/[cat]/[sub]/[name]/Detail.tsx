@@ -65,11 +65,11 @@ export default function Detail({
         {/* Main Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="lg:col-span-1 rounded-xl">
-            <img
-              className="w-full h-full object-cover rounded-xl"
+            <Image
+              className="max-w-[1200px] w-full h-full object-cover rounded-xl"
               src={game.detailImage}
-              // width={300}
-              // height={400}
+              width={1200}
+              height={700}
               alt="deepSeaPredator"
             />
           </div>
