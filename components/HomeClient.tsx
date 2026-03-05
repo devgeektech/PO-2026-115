@@ -10,13 +10,10 @@ import exclusivepromo from "@/public/images/exclusivepromo.gif";
 import { TopTenGamesData } from "@/data/TopTenGamesData";
 import Signup from "@/components/Signup";
 import JackpotSlider from "./JackpotSlider";
-const CommonSlider = dynamic(
-  () => import("@/components/CommonGameSlider"),
-  {
-    ssr: false, // prevents server-side rendering (important if using window, video, etc.)
-    loading: () => <div className="h-[300px]" />, // optional placeholder
-  }
-);
+const CommonSlider = dynamic(() => import("@/components/CommonGameSlider"), {
+  ssr: false, // prevents server-side rendering (important if using window, video, etc.)
+  loading: () => <div className="h-[300px]" />, // optional placeholder
+});
 
 type menu = {
   label: string;
@@ -76,34 +73,93 @@ export default function HomePage() {
             >
               <source src="/videos/bannerVideo.mp4" type="video/mp4" />
             </video>
-            {showIcons && (
-            <div className="w-max absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-3">
-              <div
-                className="bg_img w-max flex items-center gap-2 cursor-pointer"
-                onClick={() => setOpen(true)}
-              >
-                <Image
+            {
+              <div className="w-max absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-3">
+                <div
+                  className="bg_img w-max flex items-center gap-2 cursor-pointer"
+                  onClick={() => setOpen(true)}
+                >
+                  {/* <Image
                   src={joinnow}
                   alt="joinnow.gif"
                   className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
-                />
+                /> */}
+                  <video
+                    ref={videoRef}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    preload="none"
+                    style={{
+                      // width: "100%",
+                      // maxHeight: "850px",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      borderRadius: "100px",
+                    }}
+                    className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
+                  >
+                    <source src="/videos/joinnow_video.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div className="bg_img w-max flex items-center gap-2">
+                  {/* <Image
+                    src={biggestjackpot}
+                    alt="gifimg.gif"
+                    className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
+                  /> */}
+                  <video
+                    ref={videoRef}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    preload="none"
+                    style={{
+                      // width: "100%",
+                      // maxHeight: "850px",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      borderRadius: "100px",
+                    }}
+                    className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
+                  >
+                    <source
+                      src="/videos/biggestjackpot_video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div className="bg_img w-max flex items-center gap-2">
+                  {/* <Image
+                    src={exclusivepromo}
+                    alt="exclusivepromo.gif"
+                    className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
+                  /> */}
+                  <video
+                    ref={videoRef}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    preload="none"
+                    style={{
+                      // width: "100%",
+                      // maxHeight: "850px",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      borderRadius: "100px",
+                    }}
+                    className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
+                  >
+                    <source
+                      src="/videos/exclusivepromo_video.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
               </div>
-              <div className="bg_img w-max flex items-center gap-2">
-                <Image
-                  src={biggestjackpot}
-                  alt="gifimg.gif"
-                  className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
-                />
-              </div>
-              <div className="bg_img w-max flex items-center gap-2">
-                <Image
-                  src={exclusivepromo}
-                  alt="exclusivepromo.gif"
-                  className="w-[75px] h-[75px] md:w-[200px] md:h-[200px] object-cover"
-                />
-              </div>
-            </div>
-            ) 
             }
           </div>
           <div className="sticky top-0 z-[102]">
