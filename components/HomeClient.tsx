@@ -71,7 +71,7 @@ export default function HomePage() {
                 borderRadius: "20px",
               }}
             >
-              <source src="/videos/bannerVideo.mp4" type="video/mp4" />
+              <source src="/videos/bannerVideoNew.mp4" type="video/mp4" />
             </video>
             {
               <div className="w-max absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-3">
