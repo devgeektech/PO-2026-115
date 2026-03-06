@@ -70,7 +70,7 @@ export default function SlideCard({
                 preload="none"
                 loop
                 playsInline
-                className={`w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[10px] ${selectedCategory == slide.key ? "border-6 border-solid border-[#bc13fe]" : ""} `}
+                className={`w-full h-[100px] sm:h-[170px] md:h-[180px] lg:h-[220px] object-cover rounded-[10px] ${selectedCategory == slide.key ? "border-6 border-solid border-[#bc13fe]" : ""} `}
               />
             )}
 
@@ -80,7 +80,7 @@ export default function SlideCard({
                 alt={slide.title ?? "slide image"}
                 // width={slide.imageWidth ?? 300}
                 // height={slide.imageHeight ?? 400}
-                className={`w-full h-[100px] sm:h-[250px] md:h-[350px] object-cover rounded-[10px] ${selectedCategory == slide.key ? "border-6 border-solid border-[#bc13fe]" : ""} `}
+                className={`w-full h-[100px] sm:h-[170px] md:h-[180px] lg:h-[220px] object-cover rounded-[10px] ${selectedCategory == slide.key ? "border-6 border-solid border-[#bc13fe]" : ""} `}
                 onClick={() => {
                   goToGames();
                 }}
